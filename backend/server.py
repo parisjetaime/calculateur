@@ -358,87 +358,87 @@ class EmissionResult(BaseModel):
 
 EMISSION_FACTORS = {
     "energy": {
-        "gas_kwh": 0.227,  # kgCO2e/kWh
-        "fuel_liter": 2.67,  # kgCO2e/L
-        "electricity_kwh": 0.0569,  # kgCO2e/kWh (France)
-        "coal_kg": 2.4,  # kgCO2e/kg
+        "gas_kwh": 0.192,  # kgCO2e/kWh - Base Carbone
+        "fuel_liter": 0.325,  # kgCO2e/L - Base Carbone
+        "electricity_kwh": 0.043197,  # kgCO2e/kWh (France) - Base Carbone V22.0
+        "coal_kg": 0.231,  # kgCO2e/kg - Base Carbone
     },
     "building_estimation": {
-        "offices": {"heating": 15.2, "electricity": 12.5, "cooling": 3.1},  # kgCO2e/m²/year
-        "retail": {"heating": 12.1, "electricity": 18.3, "cooling": 4.2},
-        "health": {"heating": 18.5, "electricity": 22.1, "cooling": 5.3},
-        "hotel_restaurant": {"heating": 16.8, "electricity": 20.4, "cooling": 4.8},
-        "sport_leisure_culture": {"heating": 14.5, "electricity": 16.2, "cooling": 3.9},
-        "education": {"heating": 13.2, "electricity": 11.8, "cooling": 2.5},
+        "offices": {"heating": 12.896, "electricity": 19.7532, "cooling": 5.2313},  # kgCO2e/m²/year
+        "retail": {"heating": 10.244, "electricity": 15.8472, "cooling": 10.7128},
+        "health": {"heating": 15.184, "electricity": 14.9544, "cooling": 10.7128},
+        "hotel_restaurant": {"heating": 13.468, "electricity": 24.552, "cooling": 10.7128},
+        "sport_leisure_culture": {"heating": 8.372, "electricity": 12.0528, "cooling": 10.7128},
+        "education": {"heating": 12.6, "electricity": 24.552, "cooling": 10.7128},
     },
     "transport": {
-        "plane_long_haul": 0.230,  # kgCO2e/passenger.km
-        "plane_medium_haul": 0.187,
-        "plane_short_haul": 0.258,
-        "car_average": 0.218,
-        "tgv": 0.0032,
-        "train_average": 0.0059,
-        "rer": 0.0039,
-        "bus": 0.103,
-        "metro": 0.0039,
-        "local_transport_euro_ratio": 0.195,  # kgCO2e/€
+        "plane_long_haul": 0.2247,  # kgCO2e/passenger.km - Base Carbone V22.0
+        "plane_medium_haul": 0.1208,
+        "plane_short_haul": 0.1302,
+        "car_average": 0.0961,  # Voiture motorisation moyenne
+        "tgv": 0.001636,
+        "train_average": 0.000127,  # Train grande ligne
+        "rer": 0.000224,
+        "bus": 0.000042,  # Autobus moyen
+        "metro": 0.000017,  # Métro IDF
+        "local_transport_euro_ratio": 1.770,  # kgCO2e/k€ (moyenne Europe)
     },
     "catering": {
-        "breakfast": 0.5,  # kgCO2e/meal
-        "lunch_meat_heavy": 5.5,
-        "lunch_balanced": 2.8,
-        "lunch_vegetarian": 1.2,
-        "dinner_meat_heavy": 5.5,
-        "dinner_balanced": 2.8,
-        "dinner_vegetarian": 1.2,
-        "snack": 0.3,
-        "water_liter": 0.0003,
-        "coffee": 0.12,
-        "soft_drink": 0.27,
-        "alcohol": 0.89,
-        "disposable_dishes_meal": 0.15,  # kgCO2e/meal
-        "disposable_dishes_snack": 0.05,
-        "reusable_dishes": 0.02,
+        "breakfast": 0.5139,  # kgCO2e/meal
+        "lunch_meat_heavy": 7.260,  # Déjeuner à dominante animale (avec boeuf)
+        "lunch_balanced": 3.49,  # Repas classique
+        "lunch_vegetarian": 1.5,  # Estimation végétarien
+        "dinner_meat_heavy": 7.260,
+        "dinner_balanced": 3.49,
+        "dinner_vegetarian": 1.5,
+        "snack": 0.5139,
+        "water_liter": 0.0003,  # Estimation
+        "coffee": 0.0077,  # kgCO2e/kg (café expresso)
+        "soft_drink": 0.0033,  # kgCO2e/unité (cola)
+        "alcohol": 1.59,  # kgCO2e/L (vin rouge)
+        "disposable_dishes_meal": 0.0004049,  # kgCO2e/personne (carton)
+        "disposable_dishes_snack": 0.000485,
+        "reusable_dishes": 0.00005,  # Très faible pour réutilisable
     },
     "accommodation": {
-        "hotel_5star": 35.2,  # kgCO2e/night
-        "hotel_3star": 18.5,
-        "hotel_1star": 10.2,
-        "other_accommodation": 8.5,
-        "family": 0,
+        "hotel_5star": 180.63,  # kgCO2e/night - Hôtels 4/5*
+        "hotel_3star": 54.40,  # Hôtels 2/3*
+        "hotel_1star": 180.74,  # Hôtels 0/1*
+        "other_accommodation": 54.40,  # Autre hébergement marchand
+        "family": 0,  # Chez la famille ou des amis
     },
     "waste": {
-        "plastic": 3.2,  # kgCO2e/kg
-        "cardboard": 0.5,
-        "paper": 0.9,
-        "aluminum": 9.2,
-        "textile": 2.1,
-        "furniture": 0.8,
+        "plastic": 2.99,  # kgCO2e/kg (PET)
+        "cardboard": 0.078,
+        "paper": 0.078,
+        "aluminum": 1.8,
+        "textile": 0.263,
+        "furniture": 1.593,  # Ameublement moyen
     },
     "communication": {
-        "poster_4m2": 2.5,  # kgCO2e/unit
-        "flyer": 0.012,
-        "banner": 8.5,
-        "streaming_hour": 0.55,  # kgCO2e/hour/1000 viewers
-        "communication_euro_ratio": 0.425,  # kgCO2e/€
+        "poster_4m2": 0.5,  # kgCO2e/unit (estimation papier)
+        "flyer": 0.01,  # Estimation basée sur poids papier
+        "banner": 0.202,  # kgCO2e/kg (kakemono PP)
+        "streaming_hour": 0.0001184,  # kgCO2e/h (1080p 60fps fixe)
+        "communication_euro_ratio": 0.653,  # kgCO2e/€
     },
     "freight": {
-        "truck_tkm": 0.14,  # kgCO2e/tonne.km
-        "plane_tkm": 1.2,
+        "truck_tkm": 0.0592,  # kgCO2e/tonne.km (Rigide 12-20 tonnes)
+        "plane_tkm": 0.115,  # Avion cargo 10-25 tonnes
     },
     "amenities": {
-        "site_rental_euro_ratio": 0.052,
-        "reception_euro_ratio": 0.125,
-        "construction_euro_ratio": 0.385,
-        "it_euro_ratio": 0.298,
+        "site_rental_euro_ratio": 0.05,  # kgCO2e/€ (estimation)
+        "reception_euro_ratio": 0.1,
+        "construction_euro_ratio": 0.35,
+        "it_euro_ratio": 9.0268,  # Informatique et équipements électroniques
     },
     "purchases": {
-        "goodies_euro_ratio": 2.85,  # kgCO2e/€
+        "goodies_euro_ratio": 5.92,  # kgCO2e/€ (Petite fourniture)
         "badges": {
-            "plastic_soft": 0.015,  # kgCO2e/badge
-            "plastic_hard": 0.025,
-            "textile": 0.008,
-            "paper": 0.003,
+            "plastic_soft": 0.000003,  # kgCO2e/badge
+            "plastic_hard": 0.000002,
+            "textile": 0.000263,
+            "paper": 0.000078,
         },
     },
 }
