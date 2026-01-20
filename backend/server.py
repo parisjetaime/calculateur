@@ -983,7 +983,7 @@ async def calculate_emissions(event_id: str):
     
     # Get top 3 emitters
     sorted_emissions = sorted(emissions_by_category.items(), key=lambda x: x[1], reverse=True)
-    top_3_emitters = [{"category": k, "emissions": v} for k, v in sorted_emissions[:3]]
+    top_3_emitters = [Top3Emitter(category=k, emissions=v) for k, v in sorted_emissions[:3]]
     
     return EmissionResult(
         event_id=event_id,
