@@ -340,6 +340,10 @@ class PurchasesDataCreate(BaseModel):
     badges_organizers: int = 0
     badges_type: str = "plastic_soft"
 
+class Top3Emitter(BaseModel):
+    category: str
+    emissions: float
+
 class EmissionResult(BaseModel):
     event_id: str
     event_name: str
@@ -347,7 +351,7 @@ class EmissionResult(BaseModel):
     emissions_by_category: Dict[str, float]
     emissions_per_participant: float
     emission_class: str  # A, B, C, D, E, F, G
-    top_3_emitters: List[Dict[str, float]]
+    top_3_emitters: List[Top3Emitter]
 
 
 # ==================== EMISSION FACTORS ====================
