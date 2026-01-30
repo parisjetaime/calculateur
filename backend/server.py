@@ -400,6 +400,91 @@ class EmissionResult(BaseModel):
 # via EMISSION_FACTORS = get_emission_factors()
 
 
+# ==================== AUTO-CALCULATION FUNCTIONS ====================
+
+def calculate_event_fields(event: EventGeneral) -> EventGeneral:
+    """
+    Calcule automatiquement tous les champs dérivés selon les formules Excel
+    """
+    # Nombre de visiteurs étrangers et DOM-TOM
+    if event.unknown_foreign_rate:
+        # Si taux inconnu, utiliser valeurs par défaut selon type événement (à implémenter)
+        event.calculated_visitors_foreign = int(event.total_visitors * 0.5)  # 50% par défaut
+    else:
+        event.calculated_visitors_foreign = int(event.total_visitors * (event.visitors_foreign_pct / 100))
+    
+    # Nombre de visiteurs franciliens
+    if event.unknown_idf_rate:
+        event.calculated_visitors_idf = int(event.total_visitors * 0.12)  # 12% par défaut
+    else:
+        event.calculated_visitors_idf = int(event.total_visitors * (event.visitors_idf_pct / 100))
+    
+    # Nombre de visiteurs nationaux non IDF
+    # = Total - Etrangers - Franciliens
+    event.calculated_visitors_national_non_idf = (
+        event.total_visitors - event.calculated_visitors_foreign - event.calculated_visitors_idf
+    )
+    
+    # Exposants/Sportifs/Artistes selon le type d'événement
+    if event.event_type == "Evenement_professionnel":
+        # Nombre moyen de personnes par exposant (hypothèse: paramètre des hypothèses)
+        persons_per_organization = 2.4  # Valeur par défaut, à charger depuis hypothèses
+        
+        if event.unknown_organizations_foreign_rate:
+            org_foreign_pct = 50.0  # Par défaut
+        else:
+            org_foreign_pct = event.organizations_foreign_pct
+        
+        if event.unknown_organizations_idf_rate:
+            org_idf_pct = 12.0  # Par défaut
+        else:
+            org_idf_pct = event.organizations_idf_pct
+        
+        # Calcul des exposants
+        event.calculated_exhibitors_foreign = int(
+            event.exhibiting_organizations * (org_foreign_pct / 100) * persons_per_organization
+        )
+        event.calculated_exhibitors_idf = int(
+            event.exhibiting_organizations * (org_idf_pct / 100) * persons_per_organization
+        )
+        event.calculated_exhibitors_national = int(
+            event.exhibiting_organizations * 
+            ((100 - org_foreign_pct - org_idf_pct) / 100) * 
+            persons_per_organization
+        )
+        
+    elif event.event_type in ["Evenement_culturel", "Evenement_sportif"]:
+        # Pour événements culturels/sportifs, utiliser directement le nombre d'artistes/sportifs
+        event.calculated_exhibitors_foreign = int(
+            event.athletes_artists_count * (event.athletes_artists_foreign_pct / 100)
+        )
+        event.calculated_exhibitors_idf = int(
+            event.athletes_artists_count * (event.athletes_artists_idf_pct / 100)
+        )
+        event.calculated_exhibitors_national = int(
+            event.athletes_artists_count * 
+            ((100 - event.athletes_artists_foreign_pct - event.athletes_artists_idf_pct) / 100)
+        )
+    else:
+        event.calculated_exhibitors_foreign = 0
+        event.calculated_exhibitors_idf = 0
+        event.calculated_exhibitors_national = 0
+    
+    # Total exposants/sportifs/artistes
+    event.calculated_total_exhibitors = (
+        event.calculated_exhibitors_foreign + 
+        event.calculated_exhibitors_national + 
+        event.calculated_exhibitors_idf
+    )
+    
+    # Totaux généraux
+    event.calculated_total_foreign = event.calculated_visitors_foreign + event.calculated_exhibitors_foreign
+    event.calculated_total_national = event.calculated_visitors_national_non_idf + event.calculated_exhibitors_national
+    event.calculated_total_idf = event.calculated_visitors_idf + event.calculated_exhibitors_idf
+    
+    return event
+
+
 # ==================== CALCULATION ENGINE ====================
 
 def calculate_energy_emissions(event: EventGeneral, energy: EnergyData) -> float:
