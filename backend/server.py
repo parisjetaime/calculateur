@@ -520,46 +520,53 @@ def calculate_energy_emissions(event: EventGeneral, energy: EnergyData) -> float
 def calculate_transport_emissions(event: EventGeneral, transport: TransportData) -> float:
     total = 0
     
+    # Utiliser les champs calculés
+    visitors_foreign = event.calculated_visitors_foreign or 0
+    visitors_national = event.calculated_visitors_national_non_idf or 0
+    exhibitors_foreign = event.calculated_exhibitors_foreign or 0
+    exhibitors_national = event.calculated_exhibitors_national or 0
+    
     # Visitors foreign - assume plane for most
-    if transport.visitors_avg_distance_foreign_km > 0:
+    if transport.visitors_avg_distance_foreign_km > 0 and visitors_foreign > 0:
         if transport.visitors_avg_distance_foreign_km > 3000:
-            factor = EMISSION_FACTORS["transport"]["plane_long_haul"]
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_long_haul", 0.2247)
         elif transport.visitors_avg_distance_foreign_km > 1000:
-            factor = EMISSION_FACTORS["transport"]["plane_medium_haul"]
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_medium_haul", 0.1208)
         else:
-            factor = EMISSION_FACTORS["transport"]["plane_short_haul"]
-        total += event.visitors_foreign * transport.visitors_avg_distance_foreign_km * 2 * factor
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_short_haul", 0.1302)
+        total += visitors_foreign * transport.visitors_avg_distance_foreign_km * 2 * factor
     
     # Visitors national - assume car/train mix (70% car, 30% train)
-    if transport.visitors_avg_distance_national_km > 0:
-        car_factor = EMISSION_FACTORS["transport"]["car_average"] * 0.7
-        train_factor = EMISSION_FACTORS["transport"]["train_average"] * 0.3
-        total += event.visitors_national_non_idf * transport.visitors_avg_distance_national_km * 2 * (car_factor + train_factor)
+    if transport.visitors_avg_distance_national_km > 0 and visitors_national > 0:
+        car_factor = EMISSION_FACTORS.get("transport", {}).get("car_average", 0.216) * 0.7
+        train_factor = EMISSION_FACTORS.get("transport", {}).get("train_average", 0.000127) * 0.3
+        total += visitors_national * transport.visitors_avg_distance_national_km * 2 * (car_factor + train_factor)
     
     # Exhibitors foreign
-    if transport.exhibitors_avg_distance_foreign_km > 0:
+    if transport.exhibitors_avg_distance_foreign_km > 0 and exhibitors_foreign > 0:
         if transport.exhibitors_avg_distance_foreign_km > 3000:
-            factor = EMISSION_FACTORS["transport"]["plane_long_haul"]
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_long_haul", 0.2247)
         elif transport.exhibitors_avg_distance_foreign_km > 1000:
-            factor = EMISSION_FACTORS["transport"]["plane_medium_haul"]
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_medium_haul", 0.1208)
         else:
-            factor = EMISSION_FACTORS["transport"]["plane_short_haul"]
-        total += event.exhibitors_foreign * transport.exhibitors_avg_distance_foreign_km * 2 * factor
+            factor = EMISSION_FACTORS.get("transport", {}).get("plane_short_haul", 0.1302)
+        total += exhibitors_foreign * transport.exhibitors_avg_distance_foreign_km * 2 * factor
     
     # Exhibitors national
-    if transport.exhibitors_avg_distance_national_km > 0:
-        car_factor = EMISSION_FACTORS["transport"]["car_average"] * 0.7
-        train_factor = EMISSION_FACTORS["transport"]["train_average"] * 0.3
-        total += event.exhibitors_national_non_idf * transport.exhibitors_avg_distance_national_km * 2 * (car_factor + train_factor)
+    if transport.exhibitors_avg_distance_national_km > 0 and exhibitors_national > 0:
+        car_factor = EMISSION_FACTORS.get("transport", {}).get("car_average", 0.216) * 0.7
+        train_factor = EMISSION_FACTORS.get("transport", {}).get("train_average", 0.000127) * 0.3
+        total += exhibitors_national * transport.exhibitors_avg_distance_national_km * 2 * (car_factor + train_factor)
     
     # Organizers
     if transport.organizers_avg_distance_km > 0 and event.organizers_count > 0:
-        car_factor = EMISSION_FACTORS["transport"]["car_average"]
+        car_factor = EMISSION_FACTORS.get("transport", {}).get("car_average", 0.216)
         total += event.organizers_count * transport.organizers_avg_distance_km * transport.organizers_round_trips * car_factor
     
     # Local transport
-    total += transport.visitors_local_transport_expenses * EMISSION_FACTORS["transport"]["local_transport_euro_ratio"]
-    total += transport.exhibitors_local_transport_expenses * EMISSION_FACTORS["transport"]["local_transport_euro_ratio"]
+    local_ratio = EMISSION_FACTORS.get("transport", {}).get("local_transport_euro_ratio", 1.770)
+    total += transport.visitors_local_transport_expenses * local_ratio
+    total += transport.exhibitors_local_transport_expenses * local_ratio
     
     return total
 
