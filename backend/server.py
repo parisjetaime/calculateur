@@ -830,6 +830,17 @@ async def get_event(event_id: str):
         event['updated_at'] = datetime.fromisoformat(event['updated_at'])
     return event
 
+@api_router.post("/events/preview", response_model=EventGeneral)
+async def preview_event_calculations(input: EventGeneralCreate):
+    """Prévisualiser les calculs sans sauvegarder l'événement"""
+    event_dict = input.model_dump()
+    event_obj = EventGeneral(**event_dict)
+    
+    # Calculer automatiquement les champs dérivés
+    event_obj = calculate_event_fields(event_obj)
+    
+    return event_obj
+
 # Energy
 @api_router.post("/energy", response_model=EnergyData)
 async def create_energy_data(input: EnergyDataCreate):
