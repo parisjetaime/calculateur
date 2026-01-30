@@ -14,36 +14,180 @@ const ENERGY_FACTORS = {
   coal_kg: 3.25,         // kgCO2e/kg - Charbon
 };
 
-// Types de bâtiments pour l'approche estimée
-const BUILDING_TYPES = [
-  { id: "bureaux", label: "Bureaux" },
-  { id: "commerces", label: "Commerces" },
-  { id: "sante", label: "Santé" },
-  { id: "hotels_restaurants", label: "Hôtels et restaurants" },
-  { id: "sport_loisir_culture", label: "Sport, loisir et culture" },
-  { id: "enseignement", label: "Enseignement" },
-];
-
-// Facteurs CEREN par type de bâtiment (kgCO2e/m²/an)
-const CEREN_FACTORS = {
-  bureaux: { chauffage: 12.896, climatisation: 5.2313, electricite: 19.7532 },
-  commerces: { chauffage: 15.2, climatisation: 8.5, electricite: 45.3 },
-  sante: { chauffage: 18.5, climatisation: 12.3, electricite: 52.1 },
-  hotels_restaurants: { chauffage: 22.1, climatisation: 15.2, electricite: 38.5 },
-  sport_loisir_culture: { chauffage: 14.2, climatisation: 6.8, electricite: 28.3 },
-  enseignement: { chauffage: 11.5, climatisation: 3.2, electricite: 15.8 },
+// Réseaux de chaleur par département et ville (source: hypotheses/energie/reseaux_chaleur.json)
+const HEAT_NETWORKS = {
+  "Essonne": {
+    "BONDOUFLE": 0.115,
+    "BRETIGNY-SUR-ORGE": 0.091,
+    "Bruyeres-le-Chatel": 0.219,
+    "DOURDAN": 0.279,
+    "Epinay-sous-Senart": 0.078,
+    "Evry": 0.146,
+    "Grigny": 0.196,
+    "LES ULIS": 0.09,
+    "Massy": 0.113,
+    "PALAISEAU": 0.094,
+    "Ris-Orangis": 0.022,
+    "Saclay": 0.19,
+    "Sainte-Genevieve-des-Bois": 0.346,
+    "Saint-Michel-Sur-Orge": 0.298,
+    "VIGNEUX SUR SEINE": 0.066,
+    "Villejust": 0.004,
+    "Viry-Chatillon": 0.242
+  },
+  "Hauts-de-Seine": {
+    "BAGNEUX": 0.087,
+    "BOULOGNE-BILLANCOURT": 0.114,
+    "Chaville": 0.247,
+    "CLICHY": 0.258,
+    "Colombes": 0.351,
+    "Courbevoie": 0.271,
+    "Gennevilliers": 0.118,
+    "LEVALLOIS PERRET": 0.203,
+    "Meudon": 0.263,
+    "NANTERRE": 0.107,
+    "Puteaux": 0.254,
+    "Suresnes": 0.269,
+    "Villeneuve-la-garenne": 0.256
+  },
+  "Paris": {
+    "PARIS": 0.18
+  },
+  "Seine-et-Marne": {
+    "Avon": 0.259,
+    "BAILLY-ROMAINVILLIERS": 0.048,
+    "BUSSY-SAINT-GEORGES": 0.295,
+    "Chelles": 0.159,
+    "Chessy": 0.263,
+    "Coulommiers": 0.026,
+    "Dammarie-les-Lys": 0.03,
+    "LE MEE-SUR-SEINE": 0.076,
+    "Meaux": 0.122,
+    "Melun": 0.089,
+    "Montereau-Fault-Yonne": 0.028,
+    "Nemours": 0.148,
+    "OZOIR-LA-FERRIERE": 0.184,
+    "ROISSY-EN-BRIE": 0.123,
+    "Torcy": 0.045,
+    "Vaux-le-Penil": 0.149,
+    "VILLENEUVE-SAINT-DENIS": 0.017
+  },
+  "Seine-Saint-Denis": {
+    "Aulnay-sous-Bois": 0.36,
+    "Bagnolet": 0.175,
+    "Bobigny": 0.23,
+    "Bondy": 0.149,
+    "Clichy-Sous-Bois": 0.255,
+    "DRANCY": 0.201,
+    "LA COURNEUVE": 0.09,
+    "LE BLANC-MESNIL": 0.107,
+    "LE BOURGET": 0.292,
+    "NEUILLY SUR MARNE": 0.077,
+    "ROSNY-SOUS-BOIS": 0.035,
+    "Saint-Denis": 0.146,
+    "SAINT-OUEN-SUR-SEINE": 0.096,
+    "Sevran": 0.133,
+    "TREMBLAY EN France": 0.071,
+    "Villepinte": 0.063
+  },
+  "Val-d'Oise": {
+    "Argenteuil": 0.049,
+    "CERGY": 0.092,
+    "Franconville": 0.254,
+    "Garges-Les-Gonesse": 0.228,
+    "GOUSSAINVILLE": 0.036,
+    "Pontoise": 0.246,
+    "ROISSY-EN-FRANCE": 0.241,
+    "Sarcelles": 0.074,
+    "TAVERNY": 0.21,
+    "Villiers-le-Bel": 0.089
+  },
+  "Val-de-Marne": {
+    "Alfortville": 0.037,
+    "ARCUEIL": 0.041,
+    "Bonneuil-sur-Marne": 0.032,
+    "Cachan": 0.088,
+    "Champigny-sur-Marne": 0.078,
+    "CHEVILLY-LARUE": 0.093,
+    "Creteil": 0.079,
+    "FONTENAY-SOUS-BOIS": 0.215,
+    "Fresnes": 0.102,
+    "IVRY-SUR-SEINE": 0.1,
+    "LIMEIL-BREVANNES": 0.084,
+    "Maisons-alfort": 0.113,
+    "Orly": 0.057,
+    "RUNGIS": 0.008,
+    "Sucy-en-Brie": 0.019,
+    "Thiais": 0.032,
+    "Villeneuve-Saint-Georges": 0.152,
+    "Vitry-sur-Seine": 0.151
+  },
+  "Yvelines": {
+    "ACHERES": 0.109,
+    "CARRIERES-SOUS-POISSY": 0.153,
+    "Carrieres-sur-Seine": 0.014,
+    "LE CHESNAY": 0.247,
+    "LES MUREAUX": 0.14,
+    "Mantes-la-Jolie": 0.139,
+    "Plaisir": 0.077,
+    "Saint-Germain-en-Laye": 0.143,
+    "Velizy-Villacoublay": 0.271,
+    "Versailles": 0.29
+  }
 };
 
-// Réseaux de chaleur par ville (facteur kgCO2e/kWh) - échantillon
-const HEAT_NETWORKS = [
-  { id: "paris_cpcu", label: "Paris - CPCU", factor: 0.115 },
-  { id: "paris_climespace", label: "Paris - Climespace (froid)", factor: 0.018, isCold: true },
-  { id: "lyon_tcl", label: "Lyon - TCL", factor: 0.089 },
-  { id: "bordeaux", label: "Bordeaux", factor: 0.078 },
-  { id: "grenoble", label: "Grenoble", factor: 0.065 },
-  { id: "nantes", label: "Nantes", factor: 0.095 },
-  { id: "autre", label: "Autre / Moyenne France", factor: 0.125 },
+// Réseaux de froid par département et ville (source: hypotheses/energie/reseaux_froid.json)
+const COLD_NETWORKS = {
+  "Essonne": { "Saclay": 0.053 },
+  "Hauts-de-Seine": {
+    "Courbevoie": 0.023,
+    "LEVALLOIS PERRET": 0.019,
+    "Suresnes": 0.033,
+    "Boulogne-Billancourt": 0.026
+  },
+  "Paris": { "PARIS": 0.016 },
+  "Seine-Saint-Denis": {
+    "LE BOURGET": 0.073,
+    "Saint-Denis": 0.012
+  },
+  "Val-d'Oise": { "ROISSY-EN-FRANCE": 0.02 },
+  "Val-de-Marne": { "Orly": 0.017 }
+};
+
+// Types de bâtiments et facteurs CEREN (source: hypotheses/energie/facteurs_ceren.json)
+const BUILDING_TYPES = [
+  { id: "Bureaux", label: "Bureaux", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
+  { id: "Commerces", label: "Commerces", climatisation: 1.9, chauffage: 36.6, electricite: 6.6 },
+  { id: "Santé", label: "Santé", climatisation: 2.1, chauffage: 40.7, electricite: 3.5 },
+  { id: "Cafés, hôtels et restaurants", label: "Cafés, hôtels et restaurants", climatisation: 1.6, chauffage: 48.6, electricite: 4.1 },
+  { id: "Sport, loisir et culture", label: "Sport, loisir et culture", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Enseignement", label: "Enseignement", climatisation: 1.5, chauffage: 31.0, electricite: 0.8 },
 ];
+
+// Générer la liste plate des villes pour le réseau de chaleur
+const getAllHeatCities = () => {
+  const cities = [];
+  Object.entries(HEAT_NETWORKS).forEach(([dept, villes]) => {
+    Object.entries(villes).forEach(([ville, factor]) => {
+      cities.push({ id: `${dept}|${ville}`, label: `${ville} (${dept})`, factor, dept, ville });
+    });
+  });
+  return cities.sort((a, b) => a.label.localeCompare(b.label));
+};
+
+// Générer la liste plate des villes pour le réseau de froid
+const getAllColdCities = () => {
+  const cities = [];
+  Object.entries(COLD_NETWORKS).forEach(([dept, villes]) => {
+    Object.entries(villes).forEach(([ville, factor]) => {
+      cities.push({ id: `${dept}|${ville}`, label: `${ville} (${dept})`, factor, dept, ville });
+    });
+  });
+  return cities.sort((a, b) => a.label.localeCompare(b.label));
+};
+
+const HEAT_CITIES = getAllHeatCities();
+const COLD_CITIES = getAllColdCities();
 
 const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => {
   const [formData, setFormData] = useState({
@@ -60,6 +204,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
     // Réseaux de chaleur et de froid
     heat_network_city: "",
     heat_network_kwh: 0,
+    cold_network_city: "",
     cold_network_kwh: 0,
     
     // Groupes électrogènes
@@ -88,6 +233,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
     coal: 0,
     heat_network: 0,
     cold_network: 0,
+    generators_energy: 0,
     generators: 0,
     total_real: 0,
     heating_estimated: 0,
@@ -115,7 +261,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
   const calculateEmissions = useCallback(() => {
     const {
       gas_kwh, fuel_liters, electricity_kwh, coal_kg,
-      heat_network_city, heat_network_kwh, cold_network_kwh,
+      heat_network_city, heat_network_kwh, cold_network_city, cold_network_kwh,
       has_generators, generator_1_power, generator_1_hours, generator_1_count,
       generator_2_power, generator_2_hours, generator_2_count,
       generator_3_power, generator_3_hours, generator_3_count,
@@ -129,15 +275,12 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
     const coalEmissions = coal_kg * ENERGY_FACTORS.coal_kg;
 
     // Émissions réseau de chaleur
-    const heatNetwork = HEAT_NETWORKS.find(n => n.id === heat_network_city);
-    const heatNetworkEmissions = heatNetwork && !heatNetwork.isCold 
-      ? heat_network_kwh * heatNetwork.factor 
-      : 0;
+    const heatCity = HEAT_CITIES.find(c => c.id === heat_network_city);
+    const heatNetworkEmissions = heatCity ? heat_network_kwh * heatCity.factor : 0;
 
     // Émissions réseau de froid
-    const coldNetworkEmissions = heatNetwork?.isCold 
-      ? cold_network_kwh * heatNetwork.factor
-      : 0;
+    const coldCity = COLD_CITIES.find(c => c.id === cold_network_city);
+    const coldNetworkEmissions = coldCity ? cold_network_kwh * coldCity.factor : 0;
 
     // Émissions groupes électrogènes
     let generatorEnergy = 0;
@@ -159,15 +302,18 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
     let electricityEstimated = 0;
 
     if (knows_consumption === "Non" && building_type && surface_m2 > 0) {
-      const factors = CEREN_FACTORS[building_type];
+      const buildingData = BUILDING_TYPES.find(b => b.id === building_type);
       const eventDuration = calculatedValues?.event_duration || 1;
       const daysPerYear = 365;
       
-      if (factors) {
-        // TODO: Prendre en compte si c'est chauffage ou climatisation selon la saison
-        heatingEstimated = (factors.chauffage * surface_m2 * eventDuration) / daysPerYear;
-        coolingEstimated = (factors.climatisation * surface_m2 * eventDuration) / daysPerYear;
-        electricityEstimated = (factors.electricite * surface_m2 * eventDuration) / daysPerYear;
+      if (buildingData) {
+        // Formules Excel:
+        // Chauffage = facteur_chauffage * surface * durée / 365
+        // Climatisation = facteur_clim * surface * durée / 365
+        // Électricité = facteur_elec * surface * durée / 365
+        heatingEstimated = (buildingData.chauffage * surface_m2 * eventDuration) / daysPerYear;
+        coolingEstimated = (buildingData.climatisation * surface_m2 * eventDuration) / daysPerYear;
+        electricityEstimated = (buildingData.electricite * surface_m2 * eventDuration) / daysPerYear;
       }
     }
 
@@ -183,6 +329,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
       coal: coalEmissions,
       heat_network: heatNetworkEmissions,
       cold_network: coldNetworkEmissions,
+      generators_energy: generatorEnergy,
       generators: generatorEmissions,
       total_real: totalReal,
       heating_estimated: heatingEstimated,
@@ -213,6 +360,13 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
 
   const showRealApproach = formData.knows_consumption === "Oui";
   const showEstimatedApproach = formData.knows_consumption === "Non" && formData.event_location === "En intérieur";
+
+  // Calculer l'énergie des groupes électrogènes pour chaque ligne
+  const getGeneratorEnergy = (power, hours, count) => {
+    if (formData.has_generators !== "Oui") return "";
+    if (!power && !hours && !count) return "";
+    return (power * hours * count).toFixed(0);
+  };
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -292,6 +446,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           value={formData.gas_kwh || ''}
                           onChange={(e) => handleChange('gas_kwh', parseFloat(e.target.value) || 0)}
                           className="h-9"
+                          placeholder="0"
                         />
                         <span className="text-sm text-gray-500 w-12">kWh</span>
                       </div>
@@ -306,6 +461,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           value={formData.fuel_liters || ''}
                           onChange={(e) => handleChange('fuel_liters', parseFloat(e.target.value) || 0)}
                           className="h-9"
+                          placeholder="0"
                         />
                         <span className="text-sm text-gray-500 w-12">L</span>
                       </div>
@@ -320,6 +476,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           value={formData.electricity_kwh || ''}
                           onChange={(e) => handleChange('electricity_kwh', parseFloat(e.target.value) || 0)}
                           className="h-9"
+                          placeholder="0"
                         />
                         <span className="text-sm text-gray-500 w-12">kWh</span>
                       </div>
@@ -334,6 +491,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           value={formData.coal_kg || ''}
                           onChange={(e) => handleChange('coal_kg', parseFloat(e.target.value) || 0)}
                           className="h-9"
+                          placeholder="0"
                         />
                         <span className="text-sm text-gray-500 w-12">kg</span>
                       </div>
@@ -349,27 +507,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   </p>
                   
                   <div className="space-y-3">
-                    <div className="grid grid-cols-3 gap-2 items-center">
-                      <Label className="text-sm">Ville</Label>
-                      <div className="col-span-2">
-                        <Select 
-                          value={formData.heat_network_city} 
-                          onValueChange={(val) => handleChange('heat_network_city', val)}
-                        >
-                          <SelectTrigger className="h-9">
-                            <SelectValue placeholder="Sélectionner une ville..." />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {HEAT_NETWORKS.map((network) => (
-                              <SelectItem key={network.id} value={network.id}>
-                                {network.label}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
+                    {/* Réseau de chaleur */}
                     <div className="grid grid-cols-3 gap-2 items-center">
                       <Label className="text-sm">Réseau de chaleur</Label>
                       <div className="col-span-2 flex items-center gap-2">
@@ -378,12 +516,29 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           min="0"
                           value={formData.heat_network_kwh || ''}
                           onChange={(e) => handleChange('heat_network_kwh', parseFloat(e.target.value) || 0)}
-                          className="h-9"
+                          className="h-9 w-24"
+                          placeholder="0"
                         />
-                        <span className="text-sm text-gray-500 w-12">kWh</span>
+                        <span className="text-xs text-gray-500">kWh</span>
+                        <Select 
+                          value={formData.heat_network_city} 
+                          onValueChange={(val) => handleChange('heat_network_city', val)}
+                        >
+                          <SelectTrigger className="h-9 flex-1">
+                            <SelectValue placeholder="Sélectionner une ville..." />
+                          </SelectTrigger>
+                          <SelectContent className="max-h-60">
+                            {HEAT_CITIES.map((city) => (
+                              <SelectItem key={city.id} value={city.id}>
+                                {city.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                     </div>
 
+                    {/* Réseau de froid */}
                     <div className="grid grid-cols-3 gap-2 items-center">
                       <Label className="text-sm">Réseau de froid</Label>
                       <div className="col-span-2 flex items-center gap-2">
@@ -392,9 +547,25 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                           min="0"
                           value={formData.cold_network_kwh || ''}
                           onChange={(e) => handleChange('cold_network_kwh', parseFloat(e.target.value) || 0)}
-                          className="h-9"
+                          className="h-9 w-24"
+                          placeholder="0"
                         />
-                        <span className="text-sm text-gray-500 w-12">kWh</span>
+                        <span className="text-xs text-gray-500">kWh</span>
+                        <Select 
+                          value={formData.cold_network_city} 
+                          onValueChange={(val) => handleChange('cold_network_city', val)}
+                        >
+                          <SelectTrigger className="h-9 flex-1">
+                            <SelectValue placeholder="Sélectionner une ville..." />
+                          </SelectTrigger>
+                          <SelectContent className="max-h-60">
+                            {COLD_CITIES.map((city) => (
+                              <SelectItem key={city.id} value={city.id}>
+                                {city.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                       </div>
                     </div>
                   </div>
@@ -424,15 +595,16 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
 
                   {formData.has_generators === "Oui" && (
                     <div className="space-y-2">
-                      <div className="grid grid-cols-4 gap-2 text-xs font-medium text-gray-600 mb-1">
+                      <div className="grid grid-cols-5 gap-2 text-xs font-medium text-gray-600 mb-1">
                         <div></div>
                         <div>Puissance (kW)</div>
                         <div>Temps (h)</div>
                         <div>Nombre</div>
+                        <div>Énergie (kWh)</div>
                       </div>
                       
                       {[1, 2, 3].map((i) => (
-                        <div key={i} className="grid grid-cols-4 gap-2">
+                        <div key={i} className="grid grid-cols-5 gap-2">
                           <Label className="text-xs text-gray-500 self-center">Groupe {i}</Label>
                           <Input
                             type="number"
@@ -440,6 +612,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                             value={formData[`generator_${i}_power`] || ''}
                             onChange={(e) => handleChange(`generator_${i}_power`, parseFloat(e.target.value) || 0)}
                             className="h-8 text-sm"
+                            placeholder="0"
                           />
                           <Input
                             type="number"
@@ -447,6 +620,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                             value={formData[`generator_${i}_hours`] || ''}
                             onChange={(e) => handleChange(`generator_${i}_hours`, parseFloat(e.target.value) || 0)}
                             className="h-8 text-sm"
+                            placeholder="0"
                           />
                           <Input
                             type="number"
@@ -454,7 +628,15 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                             value={formData[`generator_${i}_count`] || ''}
                             onChange={(e) => handleChange(`generator_${i}_count`, parseInt(e.target.value) || 0)}
                             className="h-8 text-sm"
+                            placeholder="0"
                           />
+                          <div className="h-8 flex items-center text-sm text-[#0d5f4d] font-medium bg-gray-50 rounded px-2">
+                            {getGeneratorEnergy(
+                              formData[`generator_${i}_power`],
+                              formData[`generator_${i}_hours`],
+                              formData[`generator_${i}_count`]
+                            )}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -473,7 +655,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                 
                 <div className="space-y-3">
                   <div className="grid grid-cols-3 gap-2 items-center">
-                    <Label className="text-sm">Type de bâtiment</Label>
+                    <Label className="text-sm">Dans quel type de bâtiment l'événement aura-t-il lieu ?</Label>
                     <div className="col-span-2">
                       <Select 
                         value={formData.building_type} 
@@ -494,7 +676,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   </div>
 
                   <div className="grid grid-cols-3 gap-2 items-center">
-                    <Label className="text-sm">Surface brute occupée</Label>
+                    <Label className="text-sm">Quelle surface brute occupée par l'événement (m²) ?</Label>
                     <div className="col-span-2 flex items-center gap-2">
                       <Input
                         type="number"
@@ -502,6 +684,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                         value={formData.surface_m2 || ''}
                         onChange={(e) => handleChange('surface_m2', parseFloat(e.target.value) || 0)}
                         className="h-9"
+                        placeholder="0"
                       />
                       <span className="text-sm text-gray-500">m²</span>
                     </div>
@@ -528,9 +711,11 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   2.1. Approche par la consommation réelle
                 </h4>
                 
+                <p className="text-xs text-gray-600 mb-2">Combustibles et électricité</p>
+                
                 <div className="space-y-1">
                   <div className="grid grid-cols-12 gap-2 py-2 border-b-2 border-[#0d5f4d] bg-[#f0f7f5] px-2 rounded-t">
-                    <div className="col-span-7 text-sm font-semibold text-[#0d5f4d]">Combustible</div>
+                    <div className="col-span-7 text-sm font-semibold text-[#0d5f4d]">Source</div>
                     <div className="col-span-3 text-sm font-semibold text-[#0d5f4d] text-right">Émissions</div>
                     <div className="col-span-2 text-sm font-semibold text-[#0d5f4d]">Unité</div>
                   </div>
@@ -538,7 +723,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Gaz</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.gas.toFixed(2)}
+                      {calculatedEmissions.gas.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -546,7 +731,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Fioul</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.fuel.toFixed(2)}
+                      {calculatedEmissions.fuel.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -554,7 +739,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Électricité</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.electricity.toFixed(2)}
+                      {calculatedEmissions.electricity.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -562,17 +747,18 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Charbon</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.coal.toFixed(2)}
+                      {calculatedEmissions.coal.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
 
                   <div className="border-t border-gray-200 my-2"></div>
+                  <p className="text-xs text-gray-600 mb-2">Réseaux de chaleur et de froid</p>
 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Réseau chaleur</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.heat_network.toFixed(2)}
+                      {calculatedEmissions.heat_network.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -580,25 +766,28 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                   <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
                     <div className="col-span-7 text-sm">Réseau froid</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.cold_network.toFixed(2)}
-                    </div>
-                    <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
-                  </div>
-
-                  <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
-                    <div className="col-span-7 text-sm">Total groupes électrogènes</div>
-                    <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.generators.toFixed(2)}
+                      {calculatedEmissions.cold_network.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
 
                   <div className="border-t border-gray-200 my-2"></div>
+                  <p className="text-xs text-gray-600 mb-2">Groupes électrogènes</p>
+
+                  <div className="grid grid-cols-12 gap-2 py-2 px-2 hover:bg-gray-50">
+                    <div className="col-span-7 text-sm">Total groupes électrogènes</div>
+                    <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
+                      {calculatedEmissions.generators.toFixed(1)}
+                    </div>
+                    <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
+                  </div>
+
+                  <div className="border-t-2 border-[#0d5f4d] my-2"></div>
 
                   <div className="grid grid-cols-12 gap-2 py-3 px-2 bg-[#e8f5f0] rounded">
                     <div className="col-span-7 text-sm font-semibold">Total énergie</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.total_real.toFixed(2)}
+                      {calculatedEmissions.total_real.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -626,7 +815,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                       Émissions GES chauffage
                     </div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.heating_estimated.toFixed(2)}
+                      {calculatedEmissions.heating_estimated.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -637,7 +826,7 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                       Émissions GES climatisation
                     </div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.cooling_estimated.toFixed(2)}
+                      {calculatedEmissions.cooling_estimated.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
@@ -648,17 +837,17 @@ const EnergySection = ({ onSave, initialData, eventData, calculatedValues }) => 
                       Émissions GES électricité
                     </div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.electricity_estimated.toFixed(2)}
+                      {calculatedEmissions.electricity_estimated.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
 
-                  <div className="border-t border-gray-200 my-2"></div>
+                  <div className="border-t-2 border-[#0d5f4d] my-2"></div>
 
                   <div className="grid grid-cols-12 gap-2 py-3 px-2 bg-[#e8f5f0] rounded">
                     <div className="col-span-7 text-sm font-semibold">Total</div>
                     <div className="col-span-3 text-sm text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.total_estimated.toFixed(2)}
+                      {calculatedEmissions.total_estimated.toFixed(1)}
                     </div>
                     <div className="col-span-2 text-sm text-gray-600">kgCO2e</div>
                   </div>
