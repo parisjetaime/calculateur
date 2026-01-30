@@ -554,13 +554,23 @@ def calculate_accommodation_emissions(event: EventGeneral, accommodation: Accomm
     return total
 
 def calculate_waste_emissions(waste: WasteData) -> float:
+    # Utiliser des facteurs par défaut car non présents dans les nouvelles hypothèses
+    waste_factors = {
+        "plastic": 2.99,
+        "cardboard": 0.078,
+        "paper": 0.078,
+        "aluminum": 1.8,
+        "textile": 0.263,
+        "furniture": 1.593,
+    }
+    
     total = 0
-    total += waste.plastic_kg * EMISSION_FACTORS["waste"]["plastic"]
-    total += waste.cardboard_kg * EMISSION_FACTORS["waste"]["cardboard"]
-    total += waste.paper_kg * EMISSION_FACTORS["waste"]["paper"]
-    total += waste.aluminum_kg * EMISSION_FACTORS["waste"]["aluminum"]
-    total += waste.textile_kg * EMISSION_FACTORS["waste"]["textile"]
-    total += waste.furniture_kg * EMISSION_FACTORS["waste"]["furniture"]
+    total += waste.plastic_kg * waste_factors["plastic"]
+    total += waste.cardboard_kg * waste_factors["cardboard"]
+    total += waste.paper_kg * waste_factors["paper"]
+    total += waste.aluminum_kg * waste_factors["aluminum"]
+    total += waste.textile_kg * waste_factors["textile"]
+    total += waste.furniture_kg * waste_factors["furniture"]
     return total
 
 def calculate_communication_emissions(communication: CommunicationData) -> float:
