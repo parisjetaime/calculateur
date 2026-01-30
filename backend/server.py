@@ -759,8 +759,12 @@ def calculate_amenities_emissions(amenities: AmenitiesData) -> float:
 def calculate_purchases_emissions(event: EventGeneral, purchases: PurchasesData) -> float:
     total = 0
     
+    # Utiliser les champs calculés
+    total_visitors = event.total_visitors or 0
+    total_exhibitors = event.calculated_total_exhibitors or 0
+    
     # Goodies - utiliser le ratio de la catégorie appropriée
-    total_people = event.total_visitors + event.total_exhibitors
+    total_people = total_visitors + total_exhibitors
     goodies_ratio = EMISSION_FACTORS.get("purchases", {}).get("goodies", {}).get("fournitures_de_bureau_legeres", 5.92)
     total += total_people * purchases.goodies_expenses_per_person * goodies_ratio
     
