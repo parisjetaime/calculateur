@@ -273,36 +273,84 @@ const EventFormPage = () => {
           />
         )}
 
-        {/* Modules à implémenter */}
-        {["transport", "amenities", "catering", "accommodation", "purchases", "communication", "freight", "waste"].includes(activeTab) && (
-          <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">
-              {MODULES.find(m => m.id === activeTab)?.icon}
-            </div>
-            <h2 className="text-2xl font-bold text-[#0d5f4d] mb-2">
-              {MODULES.find(m => m.id === activeTab)?.label}
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Ce module sera implémenté prochainement avec la même structure à deux colonnes.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Button
-                variant="outline"
-                onClick={goToPreviousModule}
-                className="border-[#0d5f4d] text-[#0d5f4d]"
-              >
-                <ChevronLeft className="mr-2 h-4 w-4" />
-                Module précédent
-              </Button>
-              <Button
-                onClick={goToNextModule}
-                className="bg-[#0d5f4d] hover:bg-[#0a4a3d] text-white"
-              >
-                Module suivant
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-          </div>
+        {/* Module Transport */}
+        {activeTab === "transport" && (
+          <TransportSection
+            initialData={transportData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("transport", data)}
+          />
+        )}
+
+        {/* Module Aménagements */}
+        {activeTab === "amenities" && (
+          <AmenitiesSection
+            initialData={amenitiesData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("amenities", data)}
+          />
+        )}
+
+        {/* Module Restauration */}
+        {activeTab === "catering" && (
+          <CateringSection
+            initialData={cateringData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("catering", data)}
+          />
+        )}
+
+        {/* Module Hébergements */}
+        {activeTab === "accommodation" && (
+          <AccommodationSection
+            initialData={accommodationData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("accommodation", data)}
+          />
+        )}
+
+        {/* Module Achats/Goodies */}
+        {activeTab === "purchases" && (
+          <PurchasesSection
+            initialData={purchasesData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("purchases", data)}
+          />
+        )}
+
+        {/* Module Communication */}
+        {activeTab === "communication" && (
+          <CommunicationSection
+            initialData={communicationData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("communication", data)}
+          />
+        )}
+
+        {/* Module Fret */}
+        {activeTab === "freight" && (
+          <FreightSection
+            initialData={freightData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("freight", data)}
+          />
+        )}
+
+        {/* Module Déchets */}
+        {activeTab === "waste" && (
+          <WasteSection
+            initialData={wasteData}
+            eventData={eventData}
+            calculatedValues={calculatedValues}
+            onSave={(data) => handleSaveSection("waste", data)}
+          />
         )}
 
         {/* Navigation en bas de page */}
