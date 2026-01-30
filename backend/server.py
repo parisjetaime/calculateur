@@ -581,15 +581,16 @@ def calculate_communication_emissions(communication: CommunicationData) -> float
 
 def calculate_freight_emissions(freight: FreightData) -> float:
     total = 0
-    # Assuming truck transport
-    factor = EMISSION_FACTORS["freight"]["truck_tkm"]
+    
+    # Utiliser les facteurs du fret - camion par défaut
+    truck_factor = EMISSION_FACTORS.get("freight", {}).get("distances", {}).get("poids_lourd_rigide_12_20_t", 0.0592)
     
     if freight.decor_weight_kg > 0:
-        total += (freight.decor_weight_kg / 1000) * freight.decor_distance_km * factor
+        total += (freight.decor_weight_kg / 1000) * freight.decor_distance_km * truck_factor
     if freight.equipment_weight_kg > 0:
-        total += (freight.equipment_weight_kg / 1000) * freight.equipment_distance_km * factor
+        total += (freight.equipment_weight_kg / 1000) * freight.equipment_distance_km * truck_factor
     if freight.food_weight_kg > 0:
-        total += (freight.food_weight_kg / 1000) * freight.food_distance_km * factor
+        total += (freight.food_weight_kg / 1000) * freight.food_distance_km * truck_factor
     
     return total
 
