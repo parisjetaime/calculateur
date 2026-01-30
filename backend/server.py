@@ -595,10 +595,21 @@ def calculate_freight_emissions(freight: FreightData) -> float:
 
 def calculate_amenities_emissions(amenities: AmenitiesData) -> float:
     total = 0
-    total += amenities.site_rental_expenses * EMISSION_FACTORS["amenities"]["site_rental_euro_ratio"]
-    total += amenities.reception_expenses * EMISSION_FACTORS["amenities"]["reception_euro_ratio"]
-    total += amenities.construction_expenses * EMISSION_FACTORS["amenities"]["construction_euro_ratio"]
-    total += amenities.it_expenses * EMISSION_FACTORS["amenities"]["it_euro_ratio"]
+    
+    # Utiliser les nouveaux ratios des hypothèses
+    amenities_factors = EMISSION_FACTORS.get("amenities", {})
+    
+    # Convertir les kgCO2/k€ en kgCO2/€
+    site_rental_ratio = amenities_factors.get("location_site", 170.0) / 1000
+    reception_ratio = amenities_factors.get("accueil", 170.0) / 1000
+    construction_ratio = amenities_factors.get("construction", 360.0) / 1000
+    it_ratio = amenities_factors.get("informatique_et_equipements_electroniques", 400.0) / 1000
+    
+    total += amenities.site_rental_expenses * site_rental_ratio
+    total += amenities.reception_expenses * reception_ratio
+    total += amenities.construction_expenses * construction_ratio
+    total += amenities.it_expenses * it_ratio
+    
     return total
 
 def calculate_purchases_emissions(event: EventGeneral, purchases: PurchasesData) -> float:
