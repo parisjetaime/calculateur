@@ -375,23 +375,29 @@ def calculate_energy_emissions(event: EventGeneral, energy: EnergyData) -> float
     total = 0
     
     if energy.approach == "real":
-        total += energy.gas_kwh * EMISSION_FACTORS["energy"]["gas_kwh"]
-        total += energy.fuel_liters * EMISSION_FACTORS["energy"]["fuel_liter"]
-        total += energy.electricity_kwh * EMISSION_FACTORS["energy"]["electricity_kwh"]
-        total += energy.coal_kg * EMISSION_FACTORS["energy"]["coal_kg"]
+        total += energy.gas_kwh * EMISSION_FACTORS.get("energy", {}).get("gas_kwh", 0.216)
+        total += energy.fuel_liters * EMISSION_FACTORS.get("energy", {}).get("fuel_liter", 0.325)
+        total += energy.electricity_kwh * EMISSION_FACTORS.get("energy", {}).get("electricity_kwh", 0.043197)
+        total += energy.coal_kg * EMISSION_FACTORS.get("energy", {}).get("coal_kg", 0.231)
     else:  # estimated
         if energy.building_type and energy.surface_m2:
-            building_factors = EMISSION_FACTORS["building_estimation"].get(
-                energy.building_type, EMISSION_FACTORS["building_estimation"]["offices"]
+            building_factors = EMISSION_FACTORS.get("building_estimation", {}).get(
+                energy.building_type, EMISSION_FACTORS.get("building_estimation", {}).get("bureaux", {
+                    "heating": 12.896,
+                    "electricity": 19.7532,
+                    "cooling": 5.2313
+                })
             )
             days_per_year = 365
             event_fraction = event.event_duration_days / days_per_year
             total += energy.surface_m2 * event_fraction * (
-                building_factors["heating"] + building_factors["electricity"] + building_factors["cooling"]
+                building_factors.get("heating", 0) + 
+                building_factors.get("electricity", 0) + 
+                building_factors.get("cooling", 0)
             )
     
     if energy.has_generators:
-        total += energy.generators_fuel_liters * EMISSION_FACTORS["energy"]["fuel_liter"]
+        total += energy.generators_fuel_liters * EMISSION_FACTORS.get("energy", {}).get("fuel_liter", 0.325)
     
     return total
 
