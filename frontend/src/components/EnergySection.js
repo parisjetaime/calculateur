@@ -154,14 +154,32 @@ const COLD_NETWORKS = {
   "Val-de-Marne": { "Orly": 0.017 }
 };
 
-// Types de bâtiments et facteurs CEREN (source: hypotheses/energie/facteurs_ceren.json)
+// Types de bâtiments et facteurs CEREN (source: hypotheses/energie/lieux_ceren_correspondance.json)
 const BUILDING_TYPES = [
-  { id: "Bureaux", label: "Bureaux", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
-  { id: "Commerces", label: "Commerces", climatisation: 1.9, chauffage: 36.6, electricite: 6.6 },
-  { id: "Santé", label: "Santé", climatisation: 2.1, chauffage: 40.7, electricite: 3.5 },
-  { id: "Cafés, hôtels et restaurants", label: "Cafés, hôtels et restaurants", climatisation: 1.6, chauffage: 48.6, electricite: 4.1 },
-  { id: "Sport, loisir et culture", label: "Sport, loisir et culture", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
-  { id: "Enseignement", label: "Enseignement", climatisation: 1.5, chauffage: 31.0, electricite: 0.8 },
+  { id: "Campus, incubateur ou université", label: "Campus, incubateur ou université", climatisation: 1.5, chauffage: 31.0, electricite: 0.8 },
+  { id: "Centre culturel", label: "Centre culturel", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Centre de congrès", label: "Centre de congrès", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Château, musée ou monument", label: "Château, musée ou monument", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Grand équipement sportif", label: "Grand équipement sportif", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Restaurant, bar ou brasserie", label: "Restaurant, bar ou brasserie", climatisation: 1.6, chauffage: 48.6, electricite: 4.1 },
+  { id: "Salle de spectacle", label: "Salle de spectacle", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Salle de réception, de réunion", label: "Salle de réception, de réunion", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
+  { id: "Hôtel ou autre type d'hébergement", label: "Hôtel ou autre type d'hébergement", climatisation: 1.6, chauffage: 48.6, electricite: 4.1 },
+  { id: "Autre équipement sportif", label: "Autre équipement sportif", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Autre institution publique", label: "Autre institution publique", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
+  { id: "Grand parc d'exposition", label: "Grand parc d'exposition", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Auditorium", label: "Auditorium", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
+  { id: "Stade", label: "Stade", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Gymnase", label: "Gymnase", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Salle de spectacle polyvalente", label: "Salle de spectacle polyvalente", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Hippodrome", label: "Hippodrome", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Patinoire", label: "Patinoire", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Vélodrome", label: "Vélodrome", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Piscine", label: "Piscine", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Musées", label: "Musées", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Monuments", label: "Monuments", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Centre d'exposition", label: "Centre d'exposition", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Galeries d'art", label: "Galeries d'art", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
 ];
 
 // Générer la liste plate des villes pour le réseau de chaleur
