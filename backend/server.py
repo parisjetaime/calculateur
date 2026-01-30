@@ -799,6 +799,9 @@ async def create_event(input: EventGeneralCreate):
     event_dict = input.model_dump()
     event_obj = EventGeneral(**event_dict)
     
+    # Calculer automatiquement les champs dérivés
+    event_obj = calculate_event_fields(event_obj)
+    
     doc = event_obj.model_dump()
     doc['created_at'] = doc['created_at'].isoformat()
     doc['updated_at'] = doc['updated_at'].isoformat()
