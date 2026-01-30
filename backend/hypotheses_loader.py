@@ -102,10 +102,17 @@ def get_emission_factors():
         for cat in hyp['achats_goodies']['ratio_categorie']:
             goodies_dict[cat['id']] = cat['valeur']
         
-        # Helper pour ratios aménagements
+        # Helper pour ratios aménagements - gérer dict ou liste
         amenities_dict = {}
-        for item in hyp['amenagements']['ratio_monetaire']:
-            amenities_dict[item['id']] = item['valeur']
+        amenities_data = hyp['amenagements']['ratio_monetaire']
+        if isinstance(amenities_data, dict):
+            # Si c'est un dict direct (comme dans ce cas)
+            amenities_dict = {k.lower().replace(' ', '_').replace('é', 'e').replace('è', 'e'): v 
+                            for k, v in amenities_data.items()}
+        elif isinstance(amenities_data, list):
+            # Si c'est une liste d'objets
+            for item in amenities_data:
+                amenities_dict[item['id']] = item['valeur']
         
         # Helper pour fret
         fret_distances_dict = {}
