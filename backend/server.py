@@ -596,12 +596,23 @@ def calculate_amenities_emissions(amenities: AmenitiesData) -> float:
 def calculate_purchases_emissions(event: EventGeneral, purchases: PurchasesData) -> float:
     total = 0
     
-    # Goodies
+    # Goodies - utiliser le ratio de la catégorie appropriée
     total_people = event.total_visitors + event.total_exhibitors
-    total += total_people * purchases.goodies_expenses_per_person * EMISSION_FACTORS["purchases"]["goodies_euro_ratio"]
+    goodies_ratio = EMISSION_FACTORS.get("purchases", {}).get("goodies", {}).get("fournitures_de_bureau_legeres", 5.92)
+    total += total_people * purchases.goodies_expenses_per_person * goodies_ratio
     
-    # Badges
-    badge_factor = EMISSION_FACTORS["purchases"]["badges"][purchases.badges_type]
+    # Badges - nouveau mapping
+    badge_mapping = {
+        "plastic_soft": "plastique_souple",
+        "plastic_hard": "plastique_rigide",
+        "textile": "textile",
+        "paper": "papier",
+    }
+    
+    badge_factor = EMISSION_FACTORS.get("purchases", {}).get("badges", {}).get(
+        badge_mapping.get(purchases.badges_type, "plastique_souple"), 
+        0.130419
+    )
     total += (purchases.badges_visitors + purchases.badges_exhibitors + purchases.badges_organizers) * badge_factor
     
     return total
