@@ -487,21 +487,48 @@ def calculate_catering_emissions(event: EventGeneral, catering: CateringData) ->
 def calculate_accommodation_emissions(event: EventGeneral, accommodation: AccommodationData) -> float:
     total = 0
     
+    # Mapping des clés vers les IDs des hypothèses
+    hotel_mapping = {
+        'hotel_5star': 'hotel_5_etoiles',
+        'hotel_3star': 'hotel_3_etoiles',
+        'hotel_1star': 'hotel_sans_classement',  # ou hotel_2_etoiles selon le besoin
+        'other_accommodation': 'autre_hebergement_marchand',
+        'family': 'chez_la_famille_ou_des_amis',
+    }
+    
     # Foreign visitors
     if event.visitors_foreign > 0 and accommodation.foreign_avg_nights > 0:
-        total += (event.visitors_foreign * accommodation.foreign_avg_nights * 
-                 (accommodation.foreign_hotel_5star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_5star"] +
-                  accommodation.foreign_hotel_3star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_3star"] +
-                  accommodation.foreign_hotel_1star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_1star"] +
-                  accommodation.foreign_other_accommodation_pct / 100 * EMISSION_FACTORS["accommodation"]["other_accommodation"]))
+        emissions = 0
+        if accommodation.foreign_hotel_5star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_5star'], 17.11)
+            emissions += event.visitors_foreign * accommodation.foreign_avg_nights * (accommodation.foreign_hotel_5star_pct / 100) * factor
+        if accommodation.foreign_hotel_3star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_3star'], 8.47)
+            emissions += event.visitors_foreign * accommodation.foreign_avg_nights * (accommodation.foreign_hotel_3star_pct / 100) * factor
+        if accommodation.foreign_hotel_1star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_1star'], 4.73)
+            emissions += event.visitors_foreign * accommodation.foreign_avg_nights * (accommodation.foreign_hotel_1star_pct / 100) * factor
+        if accommodation.foreign_other_accommodation_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['other_accommodation'], 10.04)
+            emissions += event.visitors_foreign * accommodation.foreign_avg_nights * (accommodation.foreign_other_accommodation_pct / 100) * factor
+        total += emissions
     
     # National non-IDF visitors
     if event.visitors_national_non_idf > 0 and accommodation.national_avg_nights > 0:
-        total += (event.visitors_national_non_idf * accommodation.national_avg_nights * 
-                 (accommodation.national_hotel_5star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_5star"] +
-                  accommodation.national_hotel_3star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_3star"] +
-                  accommodation.national_hotel_1star_pct / 100 * EMISSION_FACTORS["accommodation"]["hotel_1star"] +
-                  accommodation.national_other_accommodation_pct / 100 * EMISSION_FACTORS["accommodation"]["other_accommodation"]))
+        emissions = 0
+        if accommodation.national_hotel_5star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_5star'], 17.11)
+            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_5star_pct / 100) * factor
+        if accommodation.national_hotel_3star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_3star'], 8.47)
+            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_3star_pct / 100) * factor
+        if accommodation.national_hotel_1star_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['hotel_1star'], 4.73)
+            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_1star_pct / 100) * factor
+        if accommodation.national_other_accommodation_pct > 0:
+            factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['other_accommodation'], 10.04)
+            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_other_accommodation_pct / 100) * factor
+        total += emissions
     
     return total
 
