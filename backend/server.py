@@ -1136,7 +1136,9 @@ async def calculate_emissions(event_id: str):
     
     # Calculate totals
     total_emissions_kg = sum(emissions_by_category.values())
-    total_participants = event_obj.total_visitors + event_obj.total_exhibitors + event_obj.organizers_count
+    total_participants = (event_obj.total_visitors + 
+                         (event_obj.calculated_total_exhibitors or 0) + 
+                         event_obj.organizers_count)
     emissions_per_participant = total_emissions_kg / total_participants if total_participants > 0 else 0
     emission_class = get_emission_class(emissions_per_participant)
     
