@@ -10,6 +10,16 @@ from typing import List, Optional, Dict
 import uuid
 from datetime import datetime, timezone
 
+# Import des hypothèses
+try:
+    from hypotheses_loader import get_emission_factors
+    EMISSION_FACTORS = get_emission_factors()
+    print("✓ Hypothèses chargées depuis les fichiers JSON")
+except Exception as e:
+    print(f"⚠ Erreur lors du chargement des hypothèses: {e}")
+    print("Utilisation des facteurs par défaut")
+    EMISSION_FACTORS = {}
+
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
