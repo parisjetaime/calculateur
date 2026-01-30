@@ -527,7 +527,7 @@ def calculate_accommodation_emissions(event: EventGeneral, accommodation: Accomm
             emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_1star_pct / 100) * factor
         if accommodation.national_other_accommodation_pct > 0:
             factor = EMISSION_FACTORS.get("accommodation", {}).get(hotel_mapping['other_accommodation'], 10.04)
-            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_hotel_other_accommodation_pct / 100) * factor
+            emissions += event.visitors_national_non_idf * accommodation.national_avg_nights * (accommodation.national_other_accommodation_pct / 100) * factor
         total += emissions
     
     return total
