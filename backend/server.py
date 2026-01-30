@@ -559,15 +559,23 @@ def calculate_waste_emissions(waste: WasteData) -> float:
 
 def calculate_communication_emissions(communication: CommunicationData) -> float:
     total = 0
-    total += communication.posters_count * EMISSION_FACTORS["communication"]["poster_4m2"]
-    total += communication.flyers_count * EMISSION_FACTORS["communication"]["flyer"]
-    total += communication.banners_count * EMISSION_FACTORS["communication"]["banner"]
     
+    # Supports physiques - utiliser les nouveaux facteurs
+    poster_factor = EMISSION_FACTORS.get("communication", {}).get("affichage_4_m2", 0.5)
+    flyer_factor = EMISSION_FACTORS.get("communication", {}).get("tract_21x297", 0.01)
+    banner_factor = EMISSION_FACTORS.get("communication", {}).get("kakemono_200_cm", 0.202)
+    
+    total += communication.posters_count * poster_factor
+    total += communication.flyers_count * flyer_factor
+    total += communication.banners_count * banner_factor
+    
+    # Streaming - valeur par défaut
     if communication.streaming_hours > 0 and communication.streaming_audience > 0:
-        total += (communication.streaming_hours * communication.streaming_audience / 1000 * 
-                 EMISSION_FACTORS["communication"]["streaming_hour"])
+        total += (communication.streaming_hours * communication.streaming_audience / 1000 * 0.0001184)
     
-    total += communication.communication_expenses * EMISSION_FACTORS["communication"]["communication_euro_ratio"]
+    # Ratio monétaire
+    comm_ratio = EMISSION_FACTORS.get("communication_ratio", 0.170)
+    total += communication.communication_expenses * comm_ratio
     
     return total
 
