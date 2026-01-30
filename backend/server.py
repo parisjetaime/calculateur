@@ -444,43 +444,58 @@ def calculate_transport_emissions(event: EventGeneral, transport: TransportData)
 def calculate_catering_emissions(event: EventGeneral, catering: CateringData) -> float:
     total = 0
     
-    # Breakfasts
-    total += catering.breakfasts_count * EMISSION_FACTORS["catering"]["breakfast"]
+    # Mapping des types de repas vers les IDs des hypothèses
+    regime_mapping = {
+        'meat_heavy': 'a_dominante_animale_avec_boeuf',
+        'balanced': 'classique',
+        'vegetarian': 'vegetarien',
+    }
     
-    # Lunches
+    # Petit-déjeuner et collation
+    petit_dej_factor = EMISSION_FACTORS.get("catering", {}).get('petit_dejeuner_standard', 0.5139)
+    collation_factor = EMISSION_FACTORS.get("catering", {}).get('collation_standard', 0.3)
+    
+    # Breakfasts
+    total += catering.breakfasts_count * petit_dej_factor
+    
+    # Snacks
+    total += catering.snacks_count * collation_factor
+    
+    # Lunches - utiliser les nouveaux facteurs d'émission
+    meat_heavy_factor = EMISSION_FACTORS.get("catering", {}).get(regime_mapping['meat_heavy'], 7.26)
+    balanced_factor = EMISSION_FACTORS.get("catering", {}).get(regime_mapping['balanced'], 3.49)
+    vegetarian_factor = EMISSION_FACTORS.get("catering", {}).get(regime_mapping['vegetarian'], 1.5)
+    
     meat_heavy_lunches = catering.lunches_count * (catering.meals_meat_heavy_pct / 100)
     balanced_lunches = catering.lunches_count * (catering.meals_balanced_pct / 100)
     vegetarian_lunches = catering.lunches_count * (catering.meals_vegetarian_pct / 100)
     
-    total += meat_heavy_lunches * EMISSION_FACTORS["catering"]["lunch_meat_heavy"]
-    total += balanced_lunches * EMISSION_FACTORS["catering"]["lunch_balanced"]
-    total += vegetarian_lunches * EMISSION_FACTORS["catering"]["lunch_vegetarian"]
+    total += meat_heavy_lunches * meat_heavy_factor
+    total += balanced_lunches * balanced_factor
+    total += vegetarian_lunches * vegetarian_factor
     
-    # Dinners
+    # Dinners - mêmes facteurs que les déjeuners
     meat_heavy_dinners = catering.dinners_count * (catering.meals_meat_heavy_pct / 100)
     balanced_dinners = catering.dinners_count * (catering.meals_balanced_pct / 100)
     vegetarian_dinners = catering.dinners_count * (catering.meals_vegetarian_pct / 100)
     
-    total += meat_heavy_dinners * EMISSION_FACTORS["catering"]["dinner_meat_heavy"]
-    total += balanced_dinners * EMISSION_FACTORS["catering"]["dinner_balanced"]
-    total += vegetarian_dinners * EMISSION_FACTORS["catering"]["dinner_vegetarian"]
+    total += meat_heavy_dinners * meat_heavy_factor
+    total += balanced_dinners * balanced_factor
+    total += vegetarian_dinners * vegetarian_factor
     
-    # Snacks
-    total += catering.snacks_count * EMISSION_FACTORS["catering"]["snack"]
+    # Beverages - valeurs par défaut
+    total += catering.water_liters * 0.0003
+    total += catering.coffee_units * 0.0077
+    total += catering.soft_drinks_units * 0.0033
+    total += catering.alcohol_units * 1.59
     
-    # Beverages
-    total += catering.water_liters * EMISSION_FACTORS["catering"]["water_liter"]
-    total += catering.coffee_units * EMISSION_FACTORS["catering"]["coffee"]
-    total += catering.soft_drinks_units * EMISSION_FACTORS["catering"]["soft_drink"]
-    total += catering.alcohol_units * EMISSION_FACTORS["catering"]["alcohol"]
-    
-    # Dishes
+    # Dishes - valeurs par défaut
     total_meals = catering.breakfasts_count + catering.lunches_count + catering.dinners_count
     if catering.dishes_type == "disposable":
-        total += total_meals * EMISSION_FACTORS["catering"]["disposable_dishes_meal"]
-        total += catering.snacks_count * EMISSION_FACTORS["catering"]["disposable_dishes_snack"]
+        total += total_meals * 0.0004049
+        total += catering.snacks_count * 0.000485
     else:
-        total += (total_meals + catering.snacks_count) * EMISSION_FACTORS["catering"]["reusable_dishes"]
+        total += (total_meals + catering.snacks_count) * 0.00005
     
     return total
 
