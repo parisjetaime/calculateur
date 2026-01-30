@@ -43,18 +43,43 @@ class EventGeneral(BaseModel):
     
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     event_name: str
-    event_type: str
+    event_type: str  # Evenement_culturel, Evenement_professionnel, Evenement_sportif
+    event_subtype: Optional[str] = None  # Pour "Préciser" (Exposition, Conférence, etc.)
     event_duration_days: int
     start_date: Optional[str] = None
     end_date: Optional[str] = None
+    
+    # Visiteurs
     total_visitors: int
-    visitors_foreign: int
-    visitors_national_non_idf: int
-    visitors_idf: int
-    total_exhibitors: int
-    exhibitors_foreign: int
-    exhibitors_national_non_idf: int
-    exhibitors_idf: int
+    visitors_foreign_pct: float = 0  # Pourcentage
+    visitors_idf_pct: float = 0  # Pourcentage
+    unknown_foreign_rate: bool = False
+    unknown_idf_rate: bool = False
+    
+    # Organisations exposantes (événements professionnels)
+    exhibiting_organizations: int = 0
+    organizations_foreign_pct: float = 0
+    organizations_idf_pct: float = 0
+    unknown_organizations_foreign_rate: bool = False
+    unknown_organizations_idf_rate: bool = False
+    
+    # Sportifs/Artistes (événements culturels/sportifs)
+    athletes_artists_count: int = 0
+    athletes_artists_foreign_pct: float = 0
+    athletes_artists_idf_pct: float = 0
+    
+    # Champs calculés automatiquement (stockés pour référence)
+    calculated_visitors_foreign: Optional[int] = None
+    calculated_visitors_national_non_idf: Optional[int] = None
+    calculated_visitors_idf: Optional[int] = None
+    calculated_exhibitors_foreign: Optional[int] = None
+    calculated_exhibitors_national: Optional[int] = None
+    calculated_exhibitors_idf: Optional[int] = None
+    calculated_total_exhibitors: Optional[int] = None
+    calculated_total_foreign: Optional[int] = None
+    calculated_total_national: Optional[int] = None
+    calculated_total_idf: Optional[int] = None
+    
     organizers_count: int = 0
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
