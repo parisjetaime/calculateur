@@ -87,17 +87,23 @@ class EventGeneral(BaseModel):
 class EventGeneralCreate(BaseModel):
     event_name: str
     event_type: str
+    event_subtype: Optional[str] = None
     event_duration_days: int
     start_date: Optional[str] = None
     end_date: Optional[str] = None
     total_visitors: int
-    visitors_foreign: int
-    visitors_national_non_idf: int
-    visitors_idf: int
-    total_exhibitors: int
-    exhibitors_foreign: int
-    exhibitors_national_non_idf: int
-    exhibitors_idf: int
+    visitors_foreign_pct: float = 0
+    visitors_idf_pct: float = 0
+    unknown_foreign_rate: bool = False
+    unknown_idf_rate: bool = False
+    exhibiting_organizations: int = 0
+    organizations_foreign_pct: float = 0
+    organizations_idf_pct: float = 0
+    unknown_organizations_foreign_rate: bool = False
+    unknown_organizations_idf_rate: bool = False
+    athletes_artists_count: int = 0
+    athletes_artists_foreign_pct: float = 0
+    athletes_artists_idf_pct: float = 0
     organizers_count: int = 0
 
 class EnergyData(BaseModel):
