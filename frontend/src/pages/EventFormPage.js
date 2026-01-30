@@ -7,6 +7,14 @@ import { toast } from "sonner";
 import { Leaf, Save, TrendingUp, ArrowLeft, ChevronRight, ChevronLeft, CheckCircle2 } from "lucide-react";
 import GeneralSection from "@/components/GeneralSection";
 import EnergySection from "@/components/EnergySection";
+import TransportSection from "@/components/TransportSection";
+import AmenitiesSection from "@/components/AmenitiesSection";
+import CateringSection from "@/components/CateringSection";
+import AccommodationSection from "@/components/AccommodationSection";
+import PurchasesSection from "@/components/PurchasesSection";
+import CommunicationSection from "@/components/CommunicationSection";
+import FreightSection from "@/components/FreightSection";
+import WasteSection from "@/components/WasteSection";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
