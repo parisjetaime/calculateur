@@ -6,12 +6,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Calculator, Flame, Building, ThermometerSun, Snowflake } from "lucide-react";
 
-// Facteurs d'émission pour l'énergie
+// Facteurs d'émission pour l'énergie (source: Base Carbone - fichier hypotheses/energie/combustibles.json)
 const ENERGY_FACTORS = {
-  gas_kwh: 0.216,        // kgCO2e/kWh
-  fuel_liter: 2.66,      // kgCO2e/L  
-  electricity_kwh: 0.043197, // kgCO2e/kWh
-  coal_kg: 2.77,         // kgCO2e/kg
+  gas_kwh: 0.216,        // kgCO2e/kWh PCS - Gaz
+  fuel_liter: 3.25,      // kgCO2e/L - Fioul
+  electricity_kwh: 0.052, // kgCO2e/kWhe - Électricité
+  coal_kg: 3.25,         // kgCO2e/kg - Charbon
 };
 
 // Types de bâtiments pour l'approche estimée
