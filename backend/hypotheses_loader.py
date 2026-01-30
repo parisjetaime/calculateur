@@ -146,7 +146,7 @@ def get_emission_factors():
             "catering": catering_dict,
             "accommodation": accommodation_dict,
             "communication": comm_dict,
-            "communication_ratio": hyp['communication']['ratio_monetaire'][0]['valeur'] if hyp['communication']['ratio_monetaire'] else 0.653,
+            "communication_ratio": comm_ratio / 1000,  # Convertir de kgCO2/k€ en kgCO2e/€
             "purchases": {
                 'badges': badges_dict,
                 'goodies': goodies_dict,
