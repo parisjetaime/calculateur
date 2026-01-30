@@ -1,0 +1,33 @@
+{
+  "section": "Energie",
+  "table": "combustibles_et_electricite",
+  "data": {
+    "Gaz": {
+      "emissions": 0.216,
+      "unite": "kgCO2e/kWh PCS",
+      "source": "Base Carbone",
+      "id": "gaz"
+    },
+    "Fioul": {
+      "emissions": 3.25,
+      "unite": "kgCO2e/L",
+      "source": "Base Carbone",
+      "id": "fioul"
+    },
+    "Electricité": {
+      "emissions": 0.052,
+      "unite": "kgCO2e/kWhe",
+      "source": "Base Carbone",
+      "id": "electricite"
+    },
+    "Charbon": {
+      "emissions": 3.25,
+      "unite": "kgCO2e/kg",
+      "source": "Base Carbone",
+      "id": "charbon"
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

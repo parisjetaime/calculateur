@@ -1,0 +1,15 @@
+{
+  "section": "Transport",
+  "table": "ratio_monetaire_moyen_voyageur",
+  "data": {
+    "unite": "kgCO2/k€",
+    "valeurs": {
+      "Internationaux Ratio monétaire moyen calculé": 869.8199999999999,
+      "Nationaux non franciliens ratio monétaire moyen calculé": 634.13,
+      "Nationaux franciliens ratio monétaire moyen calculé": 560
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

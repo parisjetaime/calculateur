@@ -1,0 +1,41 @@
+{
+  "section": "Energie",
+  "table": "lieux_par_type_evenement",
+  "data": {
+    "Evenement_professionnel": [
+      "Campus, incubateur ou université",
+      "Centre culturel",
+      "Centre de congrès",
+      "Château, musée ou monument",
+      "Grand équipement sportif",
+      "Restaurant, bar ou brasserie",
+      "Salle de spectacle",
+      "Salle de réception, de réunion",
+      "Hôtel ou autre type d'hébergement",
+      "Autre équipement sportif",
+      "Autre institution publique",
+      "Grand parc d'exposition",
+      "Auditorium"
+    ],
+    "Evenement_sportif": [
+      "Stade",
+      "Gymnase",
+      "Salle de spectacle polyvalente (ex : AccorHotelArena)",
+      "Hippodrome",
+      "Patinoire",
+      "Vélodrome",
+      "Piscine"
+    ],
+    "Evenement_culturel": [
+      "Musées",
+      "Monuments",
+      "Centre d'exposition (ex : Grande halle de la Villette)",
+      "Galeries d'art",
+      "Salle de spectacle polyvalente (ex : AccorHotelArena)",
+      "Stade"
+    ]
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

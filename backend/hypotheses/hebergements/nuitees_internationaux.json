@@ -1,0 +1,120 @@
+{
+  "section": "6. Hébergements",
+  "table": "nuitees_internationaux",
+  "data": [
+    {
+      "type": "Congrès national",
+      "id": "congres_national",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.99,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.06,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.94,
+      "dont_hotels_4_5": 0.59032,
+      "dont_hotels_2_3": 0.31678,
+      "dont_hotels_0_1": 0.00188,
+      "dont_autre_hebergement_marchand": 0.03102
+    },
+    {
+      "type": "Congrès international",
+      "id": "congres_international",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.99,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.06,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.94,
+      "dont_hotels_4_5": 0.59032,
+      "dont_hotels_2_3": 0.31678,
+      "dont_hotels_0_1": 0.00188,
+      "dont_autre_hebergement_marchand": 0.03102
+    },
+    {
+      "type": "Salon professionnel international",
+      "id": "salon_professionnel_international",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Salon professionnel national",
+      "id": "salon_professionnel_national",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Salon grand public",
+      "id": "salon_grand_public",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Evenement d'entreprise: conventions et AG",
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Evenement d'entreprise: communication extérieure",
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Evenement d'entreprise: séminaire",
+      "id": "evenement_d_entreprise_seminaire",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Evenement d'entreprise: soirée d'entreprise",
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.2,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.8,
+      "dont_hotels_4_5": 0.2096,
+      "dont_hotels_2_3": 0.4464000000000001,
+      "dont_hotels_0_1": 0.0256,
+      "dont_autre_hebergement_marchand": 0.1184
+    },
+    {
+      "type": "Evenements sportifs et culturels",
+      "id": "evenements_sportifs_et_culturels",
+      "part_moyenne_des_visiteurs_internationaux_qui_consomment_au_moins_une_nuitee": 0.91,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_chez_la_famille_ou_des_amis": 0.186,
+      "sejour_des_visiteurs_internationaux_part_moyenne_qui_reside_en_hebergement_marchand": 0.814,
+      "dont_hotels_4_5": 0.0,
+      "dont_hotels_2_3": 0.0,
+      "dont_hotels_0_1": 0.0,
+      "dont_autre_hebergement_marchand": 0.0
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "valeurs_en_part": "0..1 (ex: 0.91 = 91%)"
+  }
+}

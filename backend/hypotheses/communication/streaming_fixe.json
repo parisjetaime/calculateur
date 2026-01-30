@@ -1,0 +1,16 @@
+{
+  "section": "8. Communication",
+  "table": "streaming_fixe",
+  "data": [
+    {
+      "type": "Streaming 1080p 60 fps via une connexion fixe",
+      "id": "streaming_1080p_60_fps_via_une_connexion_fixe",
+      "facteur_emissions": 0.0622,
+      "unite": "kgCO2e/h",
+      "source": "NegaOctet"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

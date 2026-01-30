@@ -1,0 +1,20 @@
+{
+  "section": "9. Fret",
+  "table": "approche_par_les_depenses",
+  "data": [
+    {
+      "type": "Transport terrestre",
+      "id": "transport_terrestre",
+      "valeur": 560.0
+    },
+    {
+      "type": "Transport aérien",
+      "id": "transport_aerien",
+      "valeur": 1190.0
+    }
+  ],
+  "meta": {
+    "unite": "kgCO2/k€",
+    "source": "Paramètres et hypothèses"
+  }
+}

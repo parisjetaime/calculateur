@@ -1,0 +1,54 @@
+{
+  "section": "5. Restauration",
+  "table": "depenses_restauration",
+  "data": [
+    {
+      "type": "Salon professionnel international",
+      "id": "salon_professionnel_international",
+      "depenses_restauration_personne_visiteur_exposant": 5.91
+    },
+    {
+      "type": "Salon professionnel national",
+      "id": "salon_professionnel_national",
+      "depenses_restauration_personne_visiteur_exposant": 4.62
+    },
+    {
+      "type": "Salon grand public",
+      "id": "salon_grand_public",
+      "depenses_restauration_personne_visiteur_exposant": 2.1
+    },
+    {
+      "type": "Congrès national",
+      "id": "congres_national",
+      "depenses_restauration_personne_visiteur_exposant": 67.57
+    },
+    {
+      "type": "Congrès international",
+      "id": "congres_international",
+      "depenses_restauration_personne_visiteur_exposant": 90.88
+    },
+    {
+      "type": "Evenement d'entreprise: conventions et AG",
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "depenses_restauration_personne_visiteur_exposant": 97.26
+    },
+    {
+      "type": "Evenement d'entreprise: communication extérieure",
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "depenses_restauration_personne_visiteur_exposant": 74.79
+    },
+    {
+      "type": "Evenement d'entreprise: séminaire",
+      "id": "evenement_d_entreprise_seminaire",
+      "depenses_restauration_personne_visiteur_exposant": 38.4
+    },
+    {
+      "type": "Evenement d'entreprise: soirée d'entreprise",
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "depenses_restauration_personne_visiteur_exposant": 54.34
+    }
+  ],
+  "meta": {
+    "source": "Données OTCP"
+  }
+}

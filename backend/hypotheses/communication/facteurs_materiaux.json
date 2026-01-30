@@ -1,0 +1,25 @@
+{
+  "section": "8. Communication",
+  "table": "facteurs_materiaux",
+  "data": [
+    {
+      "type": "Papier - Moyen",
+      "id": "papier_moyen",
+      "facteur_emissions": 0.919
+    },
+    {
+      "type": "Aluminium",
+      "id": "aluminium",
+      "facteur_emissions": 7.803
+    },
+    {
+      "type": "Plastique polypropylène (PP)",
+      "id": "plastique_polypropylene_pp",
+      "facteur_emissions": 2.0
+    }
+  ],
+  "meta": {
+    "unite": "kgCO2e/kg",
+    "source": "Paramètres et hypothèses"
+  }
+}

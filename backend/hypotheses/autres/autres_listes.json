@@ -1,0 +1,109 @@
+{
+  "section": "Autres",
+  "table": "Autres_listes",
+  "data": [
+    {
+      "label": "Oui",
+      "id": "oui"
+    },
+    {
+      "label": "Non, utiliser des valeurs moyennes",
+      "id": "non_utiliser_des_valeurs_moyennes"
+    },
+    {
+      "label": "Oui",
+      "id": "oui"
+    },
+    {
+      "label": "Non",
+      "id": "non"
+    },
+    {
+      "label": "Wifi",
+      "id": "wifi"
+    },
+    {
+      "label": "4G",
+      "id": "4g"
+    },
+    {
+      "label": "Les types et quantités de supports publicitaires",
+      "id": "les_types_et_quantites_de_supports_publicitaires"
+    },
+    {
+      "label": "Le dépenses en communication (en général ou par poste de dépense)",
+      "id": "le_depenses_en_communication_en_general_ou_par_poste_de_depense"
+    },
+    {
+      "label": "Aucune de ces données",
+      "id": "aucune_de_ces_donnees"
+    },
+    {
+      "label": "Les distances parcourues par les marchandises et les types de véhicules",
+      "id": "les_distances_parcourues_par_les_marchandises_et_les_types_de_vehicules"
+    },
+    {
+      "label": "Les dépenses en logistique",
+      "id": "les_depenses_en_logistique"
+    },
+    {
+      "label": "Aucune de ces données",
+      "id": "aucune_de_ces_donnees"
+    },
+    {
+      "label": "Fin de vie moyenne",
+      "id": "fin_de_vie_moyenne"
+    },
+    {
+      "label": "Incinération",
+      "id": "incineration"
+    },
+    {
+      "label": "Stockage",
+      "id": "stockage"
+    },
+    {
+      "label": "Recyclage",
+      "id": "recyclage"
+    },
+    {
+      "label": "Les types et quantités de repas fournis",
+      "id": "les_types_et_quantites_de_repas_fournis"
+    },
+    {
+      "label": "Les dépenses en restauration",
+      "id": "les_depenses_en_restauration"
+    },
+    {
+      "label": "Aucune de ces données",
+      "id": "aucune_de_ces_donnees"
+    },
+    {
+      "label": "Evenement sportif",
+      "id": "evenement_sportif"
+    },
+    {
+      "label": "Evenement culturel",
+      "id": "evenement_culturel"
+    },
+    {
+      "label": "Ordinateur portable ou télévision",
+      "id": "ordinateur_portable_ou_television"
+    },
+    {
+      "label": "Smartphone",
+      "id": "smartphone"
+    },
+    {
+      "label": "En intérieur",
+      "id": "en_interieur"
+    },
+    {
+      "label": "En extérieur",
+      "id": "en_exterieur"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

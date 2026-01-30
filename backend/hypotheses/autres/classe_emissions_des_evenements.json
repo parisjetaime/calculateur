@@ -1,0 +1,178 @@
+{
+  "section": "Autres",
+  "table": "Classe_emissions_des_evenements",
+  "data": {
+    "A": {
+      "id": "a",
+      "data": {
+        "Salon professionnel international": 115.0,
+        "Salon professionnel national": 55.0,
+        "Salon grand public": 35.0,
+        "Congrès national": 125.0,
+        "Congrès international": 215.0,
+        "Evenement d'entreprise: conventions et AG": 60.0,
+        "Evenement d'entreprise: communication extérieure": 40.0,
+        "Evenement d'entreprise: séminaire": 30.0,
+        "Evenement d'entreprise: soirée d'entreprise": 35.0,
+        "Course à pied": 30.0,
+        "Course hippique": 30.0,
+        "Sport en salle (escrime, basketball, …)": 30.0,
+        "Evenement en stade (match de football, athlétisme, …)": 30.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 30.0,
+        "Festival": 30.0,
+        "Exposition": 30.0,
+        "Spectacle en salle (concert, théatre, …)": 30.0,
+        "Evenement/spectacle en plein air": 30.0,
+        "Tournage de spots/film": 30.0
+      }
+    },
+    "B": {
+      "id": "b",
+      "data": {
+        "Salon professionnel international": 135.0,
+        "Salon professionnel national": 60.0,
+        "Salon grand public": 40.0,
+        "Congrès national": 130.0,
+        "Congrès international": 290.0,
+        "Evenement d'entreprise: conventions et AG": 85.0,
+        "Evenement d'entreprise: communication extérieure": 70.0,
+        "Evenement d'entreprise: séminaire": 50.0,
+        "Evenement d'entreprise: soirée d'entreprise": 45.0,
+        "Course à pied": 50.0,
+        "Course hippique": 50.0,
+        "Sport en salle (escrime, basketball, …)": 50.0,
+        "Evenement en stade (match de football, athlétisme, …)": 50.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 50.0,
+        "Festival": 50.0,
+        "Exposition": 50.0,
+        "Spectacle en salle (concert, théatre, …)": 50.0,
+        "Evenement/spectacle en plein air": 50.0,
+        "Tournage de spots/film": 60.0
+      }
+    },
+    "C": {
+      "id": "c",
+      "data": {
+        "Salon professionnel international": 150.0,
+        "Salon professionnel national": 65.0,
+        "Salon grand public": 50.0,
+        "Congrès national": 140.0,
+        "Congrès international": 365.0,
+        "Evenement d'entreprise: conventions et AG": 115.0,
+        "Evenement d'entreprise: communication extérieure": 100.0,
+        "Evenement d'entreprise: séminaire": 70.0,
+        "Evenement d'entreprise: soirée d'entreprise": 60.0,
+        "Course à pied": 65.0,
+        "Course hippique": 70.0,
+        "Sport en salle (escrime, basketball, …)": 65.0,
+        "Evenement en stade (match de football, athlétisme, …)": 65.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 65.0,
+        "Festival": 70.0,
+        "Exposition": 70.0,
+        "Spectacle en salle (concert, théatre, …)": 70.0,
+        "Evenement/spectacle en plein air": 70.0,
+        "Tournage de spots/film": 85.0
+      }
+    },
+    "D": {
+      "id": "d",
+      "data": {
+        "Salon professionnel international": 165.0,
+        "Salon professionnel national": 75.0,
+        "Salon grand public": 55.0,
+        "Congrès national": 145.0,
+        "Congrès international": 440.0,
+        "Evenement d'entreprise: conventions et AG": 140.0,
+        "Evenement d'entreprise: communication extérieure": 130.0,
+        "Evenement d'entreprise: séminaire": 85.0,
+        "Evenement d'entreprise: soirée d'entreprise": 70.0,
+        "Course à pied": 85.0,
+        "Course hippique": 85.0,
+        "Sport en salle (escrime, basketball, …)": 85.0,
+        "Evenement en stade (match de football, athlétisme, …)": 85.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 85.0,
+        "Festival": 90.0,
+        "Exposition": 85.0,
+        "Spectacle en salle (concert, théatre, …)": 85.0,
+        "Evenement/spectacle en plein air": 85.0,
+        "Tournage de spots/film": 110.0
+      }
+    },
+    "E": {
+      "id": "e",
+      "data": {
+        "Salon professionnel international": 240.0,
+        "Salon professionnel national": 85.0,
+        "Salon grand public": 85.0,
+        "Congrès national": 190.0,
+        "Congrès international": 510.0,
+        "Evenement d'entreprise: conventions et AG": 210.0,
+        "Evenement d'entreprise: communication extérieure": 180.0,
+        "Evenement d'entreprise: séminaire": 160.0,
+        "Evenement d'entreprise: soirée d'entreprise": 150.0,
+        "Course à pied": 120.0,
+        "Course hippique": 130.0,
+        "Sport en salle (escrime, basketball, …)": 130.0,
+        "Evenement en stade (match de football, athlétisme, …)": 120.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 120.0,
+        "Festival": 125.0,
+        "Exposition": 120.0,
+        "Spectacle en salle (concert, théatre, …)": 120.0,
+        "Evenement/spectacle en plein air": 120.0,
+        "Tournage de spots/film": 205.0
+      }
+    },
+    "F": {
+      "id": "f",
+      "data": {
+        "Salon professionnel international": 310.0,
+        "Salon professionnel national": 95.0,
+        "Salon grand public": 115.0,
+        "Congrès national": 235.0,
+        "Congrès international": 580.0,
+        "Evenement d'entreprise: conventions et AG": 280.0,
+        "Evenement d'entreprise: communication extérieure": 230.0,
+        "Evenement d'entreprise: séminaire": 225.0,
+        "Evenement d'entreprise: soirée d'entreprise": 230.0,
+        "Course à pied": 155.0,
+        "Course hippique": 180.0,
+        "Sport en salle (escrime, basketball, …)": 175.0,
+        "Evenement en stade (match de football, athlétisme, …)": 155.0,
+        "Autre évènement extérieur (beach-volley, régate, …)": 155.0,
+        "Festival": 165.0,
+        "Exposition": 155.0,
+        "Spectacle en salle (concert, théatre, …)": 155.0,
+        "Evenement/spectacle en plein air": 155.0,
+        "Tournage de spots/film": 300.0
+      }
+    },
+    "G": {
+      "id": "g",
+      "data": {
+        "Salon professionnel international": ">310",
+        "Salon professionnel national": ">95",
+        "Salon grand public": ">115",
+        "Congrès national": ">235",
+        "Congrès international": ">580",
+        "Evenement d'entreprise: conventions et AG": ">280",
+        "Evenement d'entreprise: communication extérieure": ">230",
+        "Evenement d'entreprise: séminaire": ">225",
+        "Evenement d'entreprise: soirée d'entreprise": ">230",
+        "Course à pied": ">155",
+        "Course hippique": ">180",
+        "Sport en salle (escrime, basketball, …)": ">175",
+        "Evenement en stade (match de football, athlétisme, …)": ">155",
+        "Autre évènement extérieur (beach-volley, régate, …)": ">155",
+        "Festival": ">165",
+        "Exposition": ">155",
+        "Spectacle en salle (concert, théatre, …)": ">155",
+        "Evenement/spectacle en plein air": ">155",
+        "Tournage de spots/film": ">300"
+      }
+    }
+  },
+  "meta": {
+    "unite": "kgCO2e/visiteur",
+    "source": "Paramètres et hypothèses"
+  }
+}

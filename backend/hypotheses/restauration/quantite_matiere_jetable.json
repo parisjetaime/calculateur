@@ -1,0 +1,21 @@
+{
+  "section": "5. Restauration",
+  "table": "quantite_matiere_jetable",
+  "data": [
+    {
+      "type": "Plastique (PET)",
+      "repas": 0.024,
+      "collation": 0.013000000000000001,
+      "id": "plastique_pet"
+    },
+    {
+      "type": "Carton",
+      "repas": 0.037000000000000005,
+      "collation": 0.018000000000000002,
+      "id": "carton"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

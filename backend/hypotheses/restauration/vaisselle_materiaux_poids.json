@@ -1,0 +1,97 @@
+{
+  "section": "5. Restauration",
+  "table": "vaisselle_materiaux_poids",
+  "data": [
+    {
+      "type": "Réutilisable en plastique (PP)",
+      "gobelet_verre_kg": 0.035,
+      "assiette_repas_kg": 0.2,
+      "assiette_collation_kg": 0.1,
+      "couverts_kg": 0.005,
+      "source": "Grandchamp & al",
+      "kgco2_personne_repas": 0.014787142857142856,
+      "kgco2_personne_collation": 0.009072857142857143,
+      "id": "reutilisable_en_plastique_pp"
+    },
+    {
+      "type": "Jetable en carton",
+      "gobelet_verre_kg": 0.008,
+      "assiette_repas_kg": 0.02,
+      "assiette_collation_kg": 0.01,
+      "couverts_kg": 0.003,
+      "source": "Pesée",
+      "kgco2_personne_repas": 0.014430000000000002,
+      "kgco2_personne_collation": 0.010530000000000001,
+      "id": "jetable_en_carton"
+    },
+    {
+      "type": "Jetable en plastique (PET)",
+      "gobelet_verre_kg": 0.008,
+      "assiette_repas_kg": 0.01,
+      "assiette_collation_kg": 0.005,
+      "couverts_kg": 0.002,
+      "source": "Grandchamp & al",
+      "kgco2_personne_repas": 0.07848000000000001,
+      "kgco2_personne_collation": 0.06213000000000001,
+      "id": "jetable_en_plastique_pet"
+    },
+    {
+      "type": "Réutilisable (céramique, verre et inox)",
+      "gobelet_verre_kg": 0.2,
+      "assiette_repas_kg": 0.4,
+      "assiette_collation_kg": 0.2,
+      "couverts_kg": 0.033,
+      "source": "Pesée",
+      "kgco2_personne_repas": 0.0018279175714285716,
+      "kgco2_personne_collation": 0.0014587175714285716,
+      "id": "reutilisable_ceramique_verre_et_inox"
+    },
+    {
+      "type": "Matériau",
+      "gobelet_verre_kg": "Carton jetable",
+      "assiette_repas_kg": "Verre/céramique",
+      "assiette_collation_kg": "Plastique PP réutilisable",
+      "couverts_kg": "Plastique PET jetable",
+      "source": "Plastique PS jetable",
+      "kgco2_personne_repas": "Inox",
+      "kgco2_personne_collation": null,
+      "id": "materiau"
+    },
+    {
+      "type": "Facteur d'émissions (kgCO2/kg)- Base Carbone",
+      "gobelet_verre_kg": 0.39,
+      "assiette_repas_kg": 0.923,
+      "assiette_collation_kg": 2.0,
+      "couverts_kg": 3.27,
+      "source": 2.83,
+      "kgco2_personne_repas": 2.211,
+      "kgco2_personne_collation": null,
+      "id": "facteur_d_emissions_kgco2_kg_base_carbone"
+    },
+    {
+      "type": "Nombre d'usages (non jetable)",
+      "gobelet_verre_kg": 1.0,
+      "assiette_repas_kg": 500.0,
+      "assiette_collation_kg": 35.0,
+      "couverts_kg": 1.0,
+      "source": 1.0,
+      "kgco2_personne_repas": 1000.0,
+      "kgco2_personne_collation": null,
+      "id": "nombre_d_usages_non_jetable"
+    },
+    {
+      "type": "Source nombre d'usage",
+      "gobelet_verre_kg": "/",
+      "assiette_repas_kg": "CIRAIG",
+      "assiette_collation_kg": "Grandchamp & al",
+      "couverts_kg": "/",
+      "source": "/",
+      "kgco2_personne_repas": "Hypothèse",
+      "kgco2_personne_collation": null,
+      "id": "source_nombre_d_usage"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

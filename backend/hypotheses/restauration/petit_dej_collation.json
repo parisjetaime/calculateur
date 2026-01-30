@@ -1,0 +1,58 @@
+{
+  "section": "5. Restauration",
+  "table": "petit_dej_collation",
+  "data": [
+    {
+      "type": "Croissant",
+      "kgco2e_kg": 1.46,
+      "poids_unitaire_g": 50.0,
+      "kgco2_unite": 0.073,
+      "id": "croissant"
+    },
+    {
+      "type": "Brioche",
+      "kgco2e_kg": 4.91,
+      "poids_unitaire_g": 70.0,
+      "kgco2_unite": 0.3437,
+      "id": "brioche"
+    },
+    {
+      "type": "Pain au chocolat",
+      "kgco2e_kg": 6.96,
+      "poids_unitaire_g": 60.0,
+      "kgco2_unite": 0.4176,
+      "id": "pain_au_chocolat"
+    },
+    {
+      "type": "Jus ou multifruit, pur jus, standard",
+      "kgco2e_kg": 0.801,
+      "poids_unitaire_g": 250.0,
+      "kgco2_unite": 0.20025,
+      "id": "jus_ou_multifruit_pur_jus_standard"
+    },
+    {
+      "type": "Café expresso",
+      "kgco2e_kg": 0.557,
+      "poids_unitaire_g": 40.0,
+      "kgco2_unite": 0.02228,
+      "id": "cafe_expresso"
+    },
+    {
+      "type": "Café au lait",
+      "kgco2e_kg": 0.512,
+      "poids_unitaire_g": 150.0,
+      "kgco2_unite": 0.0768,
+      "id": "cafe_au_lait"
+    },
+    {
+      "type": "Thé",
+      "kgco2e_kg": 0.0514,
+      "poids_unitaire_g": 150.0,
+      "kgco2_unite": 0.00771,
+      "id": "the"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

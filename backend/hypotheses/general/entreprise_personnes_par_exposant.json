@@ -1,0 +1,19 @@
+{
+  "section": "1. Général",
+  "table": "entreprise_personnes_par_exposant",
+  "data": [
+    {
+      "type": "Nationale",
+      "nombre_personnes_par_entreprise_exposante": 5,
+      "id": "nationale"
+    },
+    {
+      "type": "Etrangère",
+      "nombre_personnes_par_entreprise_exposante": 4.1,
+      "id": "etrangere"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

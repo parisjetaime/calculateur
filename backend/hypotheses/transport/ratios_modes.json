@@ -1,0 +1,25 @@
+{
+  "section": "Transport",
+  "table": "ratio_monetaire_par_mode_transport",
+  "data": {
+    "Transport terrestre": {
+      "unite": "kgCO2/k€",
+      "kgCO2_par_kEUR": 560,
+      "pct_visiteurs_internationaux": 0.529,
+      "pct_visiteurs_nationaux_non_franciliens": 0.8879999999999999,
+      "pct_visiteurs_nationaux_franciliens": 1,
+      "id": "transport_terrestre"
+    },
+    "Transport aérien": {
+      "unite": "kgCO2/k€",
+      "kgCO2_par_kEUR": 1190,
+      "pct_visiteurs_internationaux": 0.482,
+      "pct_visiteurs_nationaux_non_franciliens": 0.115,
+      "pct_visiteurs_nationaux_franciliens": 0,
+      "id": "transport_aerien"
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

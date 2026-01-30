@@ -1,0 +1,31 @@
+{
+  "section": "Transport",
+  "table": "transport_organisateurs_facteurs",
+  "data": {
+    "unite": "kgCO2/pers.km",
+    "valeurs": {
+      "Voiture (moyenne)": 0.216,
+      "Voiture (essence)": 0.223,
+      "Voiture (gazole)": 0.212,
+      "Voiture électrique": 0.103,
+      "Avion (court courrier)": 0.259,
+      "Avion (moyen courrier)": 0.187,
+      "Avion (long courrier)": 0.152,
+      "Métro- IDF": 0.00404,
+      "RER ou transilien": 0.00938,
+      "Tramway- IDF": 0.00388,
+      "TGV": 0.00334,
+      "TER traction moyenne": 0.0317,
+      "Train grande ligne": 0.00592,
+      "Autobus moyen": 0.202,
+      "Autobus électrique": 0.0217,
+      "Trottinette électrique": 0.0249,
+      "Vélo électrique": 0.011,
+      "Moto =< 250 cm3": 0.0736,
+      "Moto > 250 cm3": 0.194
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "section": "4. Aménagements et accueil",
+  "table": "Approche par les quantités",
+  "data": {
+    "Eau de réseau": {
+      "facteur_emissions": 0.132,
+      "unite": "kgCO2e/m3",
+      "valeur_a_entrer": "m3"
+    },
+    "Appareil photo compact": {
+      "facteur_emissions": 24.4,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Appareil photo hybride": {
+      "facteur_emissions": 29.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Appareil photo reflex": {
+      "facteur_emissions": 30.6,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Enceinte - active Bluetooth": {
+      "facteur_emissions": 8.98,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Home cinéma": {
+      "facteur_emissions": 133.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ordinateur - fixe - Bureautique": {
+      "facteur_emissions": 169.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ordinateur - fixe - haute performance": {
+      "facteur_emissions": 296.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ordinateur - portable": {
+      "facteur_emissions": 156.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Photocopieurs": {
+      "facteur_emissions": 2935.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Stéréo - classique": {
+      "facteur_emissions": 123.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Télévision - 30-40 pouces": {
+      "facteur_emissions": 340.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Télévision - 40-49 pouces": {
+      "facteur_emissions": 371.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Télévision - 49 pouces": {
+      "facteur_emissions": 500.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Groupe électrogène": {
+      "facteur_emissions": 1.83,
+      "unite": "kgCO2e/kg",
+      "valeur_a_entrer": "kg"
+    },
+    "Barre de son": {
+      "facteur_emissions": 40.2,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ecran - 21,5 pouces": {
+      "facteur_emissions": 222.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ecran - 23,8 pouces": {
+      "facteur_emissions": 248.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Ecran publicitaire - 2m²": {
+      "facteur_emissions": 1321.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Vidéo-projecteur": {
+      "facteur_emissions": 145.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Enceinte à commande vocale": {
+      "facteur_emissions": 30.7,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Imprimante jet d'encre": {
+      "facteur_emissions": 88.2,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Imprimante laser": {
+      "facteur_emissions": 197.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Imprimante multi-fonction": {
+      "facteur_emissions": 87.9,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Smartphone classique": {
+      "facteur_emissions": 16.5,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Tablette classique": {
+      "facteur_emissions": 63.2,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Climatiseur mobile": {
+      "facteur_emissions": 239.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Aspirateur professionnel - à traineaux": {
+      "facteur_emissions": 83.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Bouilloire": {
+      "facteur_emissions": 9.9,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Congélateur - armoire - 205l": {
+      "facteur_emissions": 415.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Congélateur - coffre - 261l": {
+      "facteur_emissions": 301.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Four - professionnel - vapeur combi électrique": {
+      "facteur_emissions": 865.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Mini-four": {
+      "facteur_emissions": 82.7,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Lave-vaisselle - professionnel": {
+      "facteur_emissions": 961.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Lave-vaisselle standard": {
+      "facteur_emissions": 271.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Machine à café - dosette": {
+      "facteur_emissions": 22.5,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Machine à café - expresso": {
+      "facteur_emissions": 47.6,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Machine à café - filtre": {
+      "facteur_emissions": 31.9,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Radiateur électrique - 1000 W à inertie": {
+      "facteur_emissions": 94.2,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Radiateur électrique - 1000 W à rayonnement": {
+      "facteur_emissions": 37.5,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Réfrigérateur - mini-bar - 33l": {
+      "facteur_emissions": 87.6,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Réfrigérateur - 1 grande porte - 250l": {
+      "facteur_emissions": 300.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Réfrigérateur - combiné": {
+      "facteur_emissions": 257.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Micro-onde": {
+      "facteur_emissions": 98.4,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Armoire": {
+      "facteur_emissions": 907.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Moquette (en polypropylène)": {
+      "facteur_emissions": 1.4,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Canapé - cuir": {
+      "facteur_emissions": 182.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Canapé - textile": {
+      "facteur_emissions": 179.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Chaise - bois": {
+      "facteur_emissions": 18.6,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Chaise - bois textile": {
+      "facteur_emissions": 24.8,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Chaise - plastique": {
+      "facteur_emissions": 34.4,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Salon de jardin - bois": {
+      "facteur_emissions": 69.2,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Salon de jardin - métal": {
+      "facteur_emissions": 238.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Salon de jardin - résine tressée": {
+      "facteur_emissions": 260.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Table": {
+      "facteur_emissions": 60.1,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Bâtiment agricole - structure en béton": {
+      "facteur_emissions": 0.656,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Bâtiment agricole - structure métallique": {
+      "facteur_emissions": 0.22,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Bâtiment industriel - structure en béton": {
+      "facteur_emissions": 0.825,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Bâtiment industriel - structure métallique": {
+      "facteur_emissions": 0.275,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Bâtiments de bureaux": {
+      "facteur_emissions": 0.65,
+      "unite": "kgCO2e/m2 SHON",
+      "valeur_a_entrer": "m2"
+    },
+    "Centre de loisir - structure en béton": {
+      "facteur_emissions": 0.506,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Centre de loisir - structure métallique": {
+      "facteur_emissions": 0.169,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Commerce - structure en béton": {
+      "facteur_emissions": 0.55,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Commerce - structure métallique": {
+      "facteur_emissions": 0.183,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Etablissement d'enseignement - structure en béton": {
+      "facteur_emissions": 0.44,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Etablissement de santé - structure en béton": {
+      "facteur_emissions": 0.44,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Garage - structure en béton": {
+      "facteur_emissions": 0.656,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Garage - structure métallique": {
+      "facteur_emissions": 0.22,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Parking - classique - béton armé": {
+      "facteur_emissions": 0.319,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Parking - classique - bitume": {
+      "facteur_emissions": 0.073,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Parking - classique - Semi rigide": {
+      "facteur_emissions": 0.165,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Panier de basket": {
+      "facteur_emissions": 1900.0,
+      "unite": "kgCO2e/appareil",
+      "valeur_a_entrer": "Unités"
+    },
+    "Agrès barres fixes de gymnastique": {
+      "facteur_emissions": 920.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Agrès barres assymétriques de gymnastique": {
+      "facteur_emissions": 550.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Agrès barres parallèles de gymnastique": {
+      "facteur_emissions": 480.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    },
+    "Tatami de gymnastique": {
+      "facteur_emissions": 62.0,
+      "unite": "kgCO2e/m2",
+      "valeur_a_entrer": "m2"
+    },
+    "Tatami de judo": {
+      "facteur_emissions": 140.0,
+      "unite": "kgCO2e/unité",
+      "valeur_a_entrer": "Unités"
+    }
+  }
+}

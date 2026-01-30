@@ -1,0 +1,17 @@
+{
+  "section": "5. Restauration",
+  "table": "liste_repas",
+  "data": [
+    {
+      "type": "Déjeuner",
+      "id": "dejeuner"
+    },
+    {
+      "type": "Dîner",
+      "id": "diner"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

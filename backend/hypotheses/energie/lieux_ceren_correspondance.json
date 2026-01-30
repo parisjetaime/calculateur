@@ -1,0 +1,177 @@
+{
+  "section": "Energie",
+  "table": "lieux_ceren_correspondance",
+  "data": {
+    "Campus, incubateur ou université": {
+      "categorie_ceren": "Enseignement",
+      "climatisation": 1.5,
+      "chauffage": 31.0,
+      "electricite_specifique": 0.8,
+      "id": "campus_incubateur_ou_universite"
+    },
+    "Centre culturel": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "centre_culturel"
+    },
+    "Centre de congrès": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "centre_de_congres"
+    },
+    "Château, musée ou monument": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "chateau_musee_ou_monument"
+    },
+    "Grand équipement sportif": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "grand_equipement_sportif"
+    },
+    "Restaurant, bar ou brasserie": {
+      "categorie_ceren": "Cafés, hôtels et restaurants",
+      "climatisation": 1.6,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.1,
+      "id": "restaurant_bar_ou_brasserie"
+    },
+    "Salle de spectacle": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "salle_de_spectacle"
+    },
+    "Salle de réception, de réunion": {
+      "categorie_ceren": "Bureaux",
+      "climatisation": 2.0,
+      "chauffage": 43.2,
+      "electricite_specifique": 6.3,
+      "id": "salle_de_reception_de_reunion"
+    },
+    "Hôtel ou autre type d'hébergement": {
+      "categorie_ceren": "Cafés, hôtels et restaurants",
+      "climatisation": 1.6,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.1,
+      "id": "hotel_ou_autre_type_d_hebergement"
+    },
+    "Autre équipement sportif": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "autre_equipement_sportif"
+    },
+    "Autre institution publique": {
+      "categorie_ceren": "Bureaux",
+      "climatisation": 2.0,
+      "chauffage": 43.2,
+      "electricite_specifique": 6.3,
+      "id": "autre_institution_publique"
+    },
+    "Grand parc d'exposition": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "grand_parc_d_exposition"
+    },
+    "Auditorium": {
+      "categorie_ceren": "Bureaux",
+      "climatisation": 2.0,
+      "chauffage": 43.2,
+      "electricite_specifique": 6.3,
+      "id": "auditorium"
+    },
+    "Stade": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "stade"
+    },
+    "Gymnase": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "gymnase"
+    },
+    "Salle de spectacle polyvalente (ex : AccorHotelArena)": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "salle_de_spectacle_polyvalente_ex_accorhotelarena"
+    },
+    "Hippodrome": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "hippodrome"
+    },
+    "Patinoire": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "patinoire"
+    },
+    "Vélodrome": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "velodrome"
+    },
+    "Piscine": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "piscine"
+    },
+    "Musées": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "musees"
+    },
+    "Monuments": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "monuments"
+    },
+    "Centre d'exposition (ex : Grande halle de la Villette)": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "centre_d_exposition_ex_grande_halle_de_la_villette"
+    },
+    "Galeries d'art": {
+      "categorie_ceren": "Sport, loisir et culture",
+      "climatisation": 1.0,
+      "chauffage": 48.6,
+      "electricite_specifique": 4.3,
+      "id": "galeries_d_art"
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

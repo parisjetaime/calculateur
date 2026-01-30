@@ -1,0 +1,12 @@
+{
+  "section": "Transport",
+  "table": "hypotheses",
+  "data": [
+    "Seuls les individus étrangers et non franciliens se déplacent pour accéder à l'IDF",
+    "Tous les individus ont des dépenses pour le transport local (sauf pour les évènements culturels et sportifs ou la donnée moyenne est inexistante)",
+    "Les organisateurs sont une population à part traitée différemment dans le calculateur"
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "section": "8. Communication",
+  "table": "supports_numeriques",
+  "data": [
+    {
+      "type": "Emails",
+      "id": "emails",
+      "facteur_emissions": 0.004,
+      "unite": "kgCO2e/unité",
+      "perimetre": "Monde",
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Emails avec pièce-jointe",
+      "id": "emails_avec_piece_jointe",
+      "facteur_emissions": 0.035,
+      "unite": "kgCO2e/unité",
+      "perimetre": "Monde",
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Tweet",
+      "id": "tweet",
+      "facteur_emissions": 2e-05,
+      "unite": "kgCO2e/unité",
+      "perimetre": "Monde",
+      "source": "Base Carbone"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

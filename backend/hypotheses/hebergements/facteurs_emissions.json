@@ -1,0 +1,58 @@
+{
+  "section": "6. Hébergements",
+  "table": "facteurs_emissions",
+  "data": [
+    {
+      "type": "Chez la famille ou des amis",
+      "valeur": 0.0,
+      "id": "chez_la_famille_ou_des_amis",
+      "source": "Hypothèse"
+    },
+    {
+      "type": "Hôtel sans classement",
+      "valeur": 4.73,
+      "id": "hotel_sans_classement",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Hôtel 2 étoiles",
+      "valeur": 8.53,
+      "id": "hotel_2_etoiles",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Hôtel 3 étoiles",
+      "valeur": 8.47,
+      "id": "hotel_3_etoiles",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Hôtel 4 étoiles",
+      "valeur": 11.43,
+      "id": "hotel_4_etoiles",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Hôtel 5 étoiles",
+      "valeur": 17.11,
+      "id": "hotel_5_etoiles",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Autre hébergement marchand",
+      "valeur": 10.04,
+      "id": "autre_hebergement_marchand",
+      "source": "Betterfly Tourism & ADEME"
+    },
+    {
+      "type": "Hôtel moyen",
+      "valeur": 10.04,
+      "id": "hotel_moyen",
+      "source": "Betterfly Tourism & ADEME"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2e/nuit"
+  }
+}

@@ -1,0 +1,597 @@
+{
+  "section": "5. Restauration",
+  "table": "boissons",
+  "data": [
+    {
+      "type": "Apéritif à base de vin ou vermouth",
+      "facteur_emissions_kgco2e_kg": 1.1,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.11000000000000001,
+      "id": "aperitif_a_base_de_vin_ou_vermouth"
+    },
+    {
+      "type": "Armagnac",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "armagnac"
+    },
+    {
+      "type": "Bière",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.3,
+      "facteur_emissions_kgco2e_boisson": 0.336,
+      "id": "biere"
+    },
+    {
+      "type": "Boisson à base d'avoine",
+      "facteur_emissions_kgco2e_kg": 0.536,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.134,
+      "id": "boisson_a_base_d_avoine"
+    },
+    {
+      "type": "Boisson à base de riz",
+      "facteur_emissions_kgco2e_kg": 0.373,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.09325,
+      "id": "boisson_a_base_de_riz"
+    },
+    {
+      "type": "Boisson à la noix de coco",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.28,
+      "id": "boisson_a_la_noix_de_coco"
+    },
+    {
+      "type": "Boisson à l'amande",
+      "facteur_emissions_kgco2e_kg": 0.373,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.09325,
+      "id": "boisson_a_l_amande"
+    },
+    {
+      "type": "Boisson à l'eau minérale ou de source aromatisée",
+      "facteur_emissions_kgco2e_kg": 0.387,
+      "volume_l_ou_kg": 0.3,
+      "facteur_emissions_kgco2e_boisson": 0.1161,
+      "id": "boisson_a_l_eau_minerale_ou_de_source_aromatisee"
+    },
+    {
+      "type": "Boisson au chocolat ou au cacao",
+      "facteur_emissions_kgco2e_kg": 1.48,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.37,
+      "id": "boisson_au_chocolat_ou_au_cacao"
+    },
+    {
+      "type": "Boisson au jus de fruit et au lait",
+      "facteur_emissions_kgco2e_kg": 0.942,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.2355,
+      "id": "boisson_au_jus_de_fruit_et_au_lait"
+    },
+    {
+      "type": "Boisson aromatisée au soja",
+      "facteur_emissions_kgco2e_kg": 0.443,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.11075,
+      "id": "boisson_aromatisee_au_soja"
+    },
+    {
+      "type": "Boisson nature au soja",
+      "facteur_emissions_kgco2e_kg": 0.436,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.109,
+      "id": "boisson_nature_au_soja"
+    },
+    {
+      "type": "Boisson au thé aromatisée sucrée",
+      "facteur_emissions_kgco2e_kg": 0.523,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.13075,
+      "id": "boisson_au_the_aromatisee_sucree"
+    },
+    {
+      "type": "Boisson énergisante",
+      "facteur_emissions_kgco2e_kg": 0.472,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.118,
+      "id": "boisson_energisante"
+    },
+    {
+      "type": "Boisson gazeuse sucrée",
+      "facteur_emissions_kgco2e_kg": 0.512,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.128,
+      "id": "boisson_gazeuse_sucree"
+    },
+    {
+      "type": "Boisson gazeuse sucrée à base de jus de fruits",
+      "facteur_emissions_kgco2e_kg": 0.439,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.10975,
+      "id": "boisson_gazeuse_sucree_a_base_de_jus_de_fruits"
+    },
+    {
+      "type": "Lait fermenté ou yaourt à boire",
+      "facteur_emissions_kgco2e_kg": 1.67,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.4175,
+      "id": "lait_fermente_ou_yaourt_a_boire"
+    },
+    {
+      "type": "Boisson lactée aromatisée à la fraise",
+      "facteur_emissions_kgco2e_kg": 1.38,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.345,
+      "id": "boisson_lactee_aromatisee_a_la_fraise"
+    },
+    {
+      "type": "Boisson lactée aromatisée au chocolat",
+      "facteur_emissions_kgco2e_kg": 1.38,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.345,
+      "id": "boisson_lactee_aromatisee_au_chocolat"
+    },
+    {
+      "type": "Boisson plate aux fruits non sucrée",
+      "facteur_emissions_kgco2e_kg": 0.387,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.09675,
+      "id": "boisson_plate_aux_fruits_non_sucree"
+    },
+    {
+      "type": "Boisson plate aux fruits sucrée",
+      "facteur_emissions_kgco2e_kg": 0.561,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.14025,
+      "id": "boisson_plate_aux_fruits_sucree"
+    },
+    {
+      "type": "Boisson préparée à partir de sirop à diluer type menthe",
+      "facteur_emissions_kgco2e_kg": 0.102,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.0255,
+      "id": "boisson_preparee_a_partir_de_sirop_a_diluer_type_menthe"
+    },
+    {
+      "type": "Café au lait",
+      "facteur_emissions_kgco2e_kg": 0.503,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.12575,
+      "id": "cafe_au_lait"
+    },
+    {
+      "type": "Café décaféiné/instantané, non sucré, prêt à boire",
+      "facteur_emissions_kgco2e_kg": 1.69,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.4225,
+      "id": "cafe_decafeine_instantane_non_sucre_pret_a_boire"
+    },
+    {
+      "type": "Café décaféiné/non instantané, non sucré, prêt à boire",
+      "facteur_emissions_kgco2e_kg": 0.645,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.16125,
+      "id": "cafe_decafeine_non_instantane_non_sucre_pret_a_boire"
+    },
+    {
+      "type": "Café expresso",
+      "facteur_emissions_kgco2e_kg": 0.6,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.15,
+      "id": "cafe_expresso"
+    },
+    {
+      "type": "Café non instantané, non sucré, prêt à boire",
+      "facteur_emissions_kgco2e_kg": 0.6,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.15,
+      "id": "cafe_non_instantane_non_sucre_pret_a_boire"
+    },
+    {
+      "type": "Café/instantané, non sucré, prêt à boire",
+      "facteur_emissions_kgco2e_kg": 1.59,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.3975,
+      "id": "cafe_instantane_non_sucre_pret_a_boire"
+    },
+    {
+      "type": "Champagne",
+      "facteur_emissions_kgco2e_kg": 1.23,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.123,
+      "id": "champagne"
+    },
+    {
+      "type": "Chicorée et café/instantané, non sucré, prêt à boire",
+      "facteur_emissions_kgco2e_kg": 2.3,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.575,
+      "id": "chicoree_et_cafe_instantane_non_sucre_pret_a_boire"
+    },
+    {
+      "type": "Chicorée/instantanée, non sucrée, prête à boire",
+      "facteur_emissions_kgco2e_kg": 1.31,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.3275,
+      "id": "chicoree_instantanee_non_sucree_prete_a_boire"
+    },
+    {
+      "type": "Cidre",
+      "facteur_emissions_kgco2e_kg": 1.06,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.10600000000000001,
+      "id": "cidre"
+    },
+    {
+      "type": "Cocktail à base de rhum",
+      "facteur_emissions_kgco2e_kg": 0.911,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.11843000000000001,
+      "id": "cocktail_a_base_de_rhum"
+    },
+    {
+      "type": "Cocktail à base de whisky",
+      "facteur_emissions_kgco2e_kg": 0.889,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.11557,
+      "id": "cocktail_a_base_de_whisky"
+    },
+    {
+      "type": "Cocktail sans alcool (à base de jus de fruits et de sirop)",
+      "facteur_emissions_kgco2e_kg": 0.921,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.11973,
+      "id": "cocktail_sans_alcool_a_base_de_jus_de_fruits_et_de_sirop"
+    },
+    {
+      "type": "Cocktail type punch",
+      "facteur_emissions_kgco2e_kg": 0.921,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.11973,
+      "id": "cocktail_type_punch"
+    },
+    {
+      "type": "Cola",
+      "facteur_emissions_kgco2e_kg": 0.512,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.128,
+      "id": "cola"
+    },
+    {
+      "type": "Crème de cassis",
+      "facteur_emissions_kgco2e_kg": 1.48,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.19240000000000002,
+      "id": "creme_de_cassis"
+    },
+    {
+      "type": "Diabolo (limonade et sirop)",
+      "facteur_emissions_kgco2e_kg": 0.56,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.14,
+      "id": "diabolo_limonade_et_sirop"
+    },
+    {
+      "type": "Eau minérale aromatisée",
+      "facteur_emissions_kgco2e_kg": 0.387,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.09675,
+      "id": "eau_minerale_aromatisee"
+    },
+    {
+      "type": "Eau minérale ou de source",
+      "facteur_emissions_kgco2e_kg": 0.268,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.067,
+      "id": "eau_minerale_ou_de_source"
+    },
+    {
+      "type": "Gin",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "gin"
+    },
+    {
+      "type": "Jus d'ananas à base de concentré",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.28,
+      "id": "jus_d_ananas_a_base_de_concentre"
+    },
+    {
+      "type": "Jus d'ananas",
+      "facteur_emissions_kgco2e_kg": 4.72,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 1.18,
+      "id": "jus_d_ananas"
+    },
+    {
+      "type": "Jus de pomme",
+      "facteur_emissions_kgco2e_kg": 0.502,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.1255,
+      "id": "jus_de_pomme"
+    },
+    {
+      "type": "Jus d'orange à base de concentré",
+      "facteur_emissions_kgco2e_kg": 1.1,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.275,
+      "id": "jus_d_orange_a_base_de_concentre"
+    },
+    {
+      "type": "Jus d'organge maison",
+      "facteur_emissions_kgco2e_kg": 0.907,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.22675,
+      "id": "jus_d_organge_maison"
+    },
+    {
+      "type": "Jus de betterave",
+      "facteur_emissions_kgco2e_kg": 1.16,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.29,
+      "id": "jus_de_betterave"
+    },
+    {
+      "type": "Jus de carotte",
+      "facteur_emissions_kgco2e_kg": 0.35,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.0875,
+      "id": "jus_de_carotte"
+    },
+    {
+      "type": "Jus de fruits rouges",
+      "facteur_emissions_kgco2e_kg": 0.627,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.15675,
+      "id": "jus_de_fruits_rouges"
+    },
+    {
+      "type": "Jus de mangue",
+      "facteur_emissions_kgco2e_kg": 0.478,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.1195,
+      "id": "jus_de_mangue"
+    },
+    {
+      "type": "Jus de pamplemousse (pomelo)",
+      "facteur_emissions_kgco2e_kg": 0.999,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.24975,
+      "id": "jus_de_pamplemousse_pomelo"
+    },
+    {
+      "type": "Jus de raisin",
+      "facteur_emissions_kgco2e_kg": 0.447,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.11175,
+      "id": "jus_de_raisin"
+    },
+    {
+      "type": "Jus de tomate",
+      "facteur_emissions_kgco2e_kg": 0.499,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.12475,
+      "id": "jus_de_tomate"
+    },
+    {
+      "type": "Jus multifruit",
+      "facteur_emissions_kgco2e_kg": 0.913,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.22825,
+      "id": "jus_multifruit"
+    },
+    {
+      "type": "Kir (au vin blanc)",
+      "facteur_emissions_kgco2e_kg": 1.31,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.1703,
+      "id": "kir_au_vin_blanc"
+    },
+    {
+      "type": "Kir royal (au champagne)",
+      "facteur_emissions_kgco2e_kg": 1.33,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.17290000000000003,
+      "id": "kir_royal_au_champagne"
+    },
+    {
+      "type": "Lait de coco ou Crème de coco",
+      "facteur_emissions_kgco2e_kg": 0.507,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.12675,
+      "id": "lait_de_coco_ou_creme_de_coco"
+    },
+    {
+      "type": "Limonade",
+      "facteur_emissions_kgco2e_kg": 0.512,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.128,
+      "id": "limonade"
+    },
+    {
+      "type": "Liqueur",
+      "facteur_emissions_kgco2e_kg": 1.39,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.034749999999999996,
+      "id": "liqueur"
+    },
+    {
+      "type": "Marsala",
+      "facteur_emissions_kgco2e_kg": 1.19,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.119,
+      "id": "marsala"
+    },
+    {
+      "type": "Nectar multifruit",
+      "facteur_emissions_kgco2e_kg": 0.913,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.22825,
+      "id": "nectar_multifruit"
+    },
+    {
+      "type": "Nectar d'abricot",
+      "facteur_emissions_kgco2e_kg": 0.333,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.08325,
+      "id": "nectar_d_abricot"
+    },
+    {
+      "type": "Nectar d'orange",
+      "facteur_emissions_kgco2e_kg": 0.781,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.19525,
+      "id": "nectar_d_orange"
+    },
+    {
+      "type": "Nectar de banane",
+      "facteur_emissions_kgco2e_kg": 0.47,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.1175,
+      "id": "nectar_de_banane"
+    },
+    {
+      "type": "Nectar de mangue",
+      "facteur_emissions_kgco2e_kg": 0.596,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.149,
+      "id": "nectar_de_mangue"
+    },
+    {
+      "type": "Nectar de pêche",
+      "facteur_emissions_kgco2e_kg": 0.933,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.23325,
+      "id": "nectar_de_peche"
+    },
+    {
+      "type": "Nectar de poire",
+      "facteur_emissions_kgco2e_kg": 0.82,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.205,
+      "id": "nectar_de_poire"
+    },
+    {
+      "type": "Panaché",
+      "facteur_emissions_kgco2e_kg": 1.0,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.13,
+      "id": "panache"
+    },
+    {
+      "type": "Pastis",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "pastis"
+    },
+    {
+      "type": "Pétillant de fruits",
+      "facteur_emissions_kgco2e_kg": 1.24,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.1612,
+      "id": "petillant_de_fruits"
+    },
+    {
+      "type": "Rhum",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "rhum"
+    },
+    {
+      "type": "Saké ou Alcool de riz",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.11200000000000002,
+      "id": "sake_ou_alcool_de_riz"
+    },
+    {
+      "type": "Sangria",
+      "facteur_emissions_kgco2e_kg": 1.43,
+      "volume_l_ou_kg": 0.13,
+      "facteur_emissions_kgco2e_boisson": 0.1859,
+      "id": "sangria"
+    },
+    {
+      "type": "Smoothie",
+      "facteur_emissions_kgco2e_kg": 0.695,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.17375,
+      "id": "smoothie"
+    },
+    {
+      "type": "Thé infusé",
+      "facteur_emissions_kgco2e_kg": 0.0394,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.00985,
+      "id": "the_infuse"
+    },
+    {
+      "type": "Tisane infusée sucrée",
+      "facteur_emissions_kgco2e_kg": 0.0394,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.00985,
+      "id": "tisane_infusee_sucree"
+    },
+    {
+      "type": "Tonic ou bitter",
+      "facteur_emissions_kgco2e_kg": 0.512,
+      "volume_l_ou_kg": 0.25,
+      "facteur_emissions_kgco2e_boisson": 0.128,
+      "id": "tonic_ou_bitter"
+    },
+    {
+      "type": "Vin blanc",
+      "facteur_emissions_kgco2e_kg": 1.23,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.123,
+      "id": "vin_blanc"
+    },
+    {
+      "type": "Vin doux",
+      "facteur_emissions_kgco2e_kg": 1.1,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.11000000000000001,
+      "id": "vin_doux"
+    },
+    {
+      "type": "Vin rosé 11°",
+      "facteur_emissions_kgco2e_kg": 1.19,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.119,
+      "id": "vin_rose_11"
+    },
+    {
+      "type": "Vin rouge",
+      "facteur_emissions_kgco2e_kg": 1.19,
+      "volume_l_ou_kg": 0.1,
+      "facteur_emissions_kgco2e_boisson": 0.119,
+      "id": "vin_rouge"
+    },
+    {
+      "type": "Vodka",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "vodka"
+    },
+    {
+      "type": "Whisky",
+      "facteur_emissions_kgco2e_kg": 1.12,
+      "volume_l_ou_kg": 0.025,
+      "facteur_emissions_kgco2e_boisson": 0.028000000000000004,
+      "id": "whisky"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

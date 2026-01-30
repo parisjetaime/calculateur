@@ -1,0 +1,90 @@
+{
+  "section": "8. Communication",
+  "table": "supports_physiques",
+  "data": [
+    {
+      "type": "Affiches 4m²",
+      "id": "affiches_4m",
+      "grammage_g_m2": 175.0,
+      "source": "Lien",
+      "surface": 4.0,
+      "masse_kg": 0.7,
+      "empreinte_kgco2e": 0.6433
+    },
+    {
+      "type": "Affiches 8m²",
+      "id": "affiches_8m",
+      "grammage_g_m2": 175.0,
+      "source": "Lien",
+      "surface": 8.0,
+      "masse_kg": 1.4,
+      "empreinte_kgco2e": 1.2866
+    },
+    {
+      "type": "Affiches 12m²",
+      "id": "affiches_12m",
+      "grammage_g_m2": 175.0,
+      "source": "Lien",
+      "surface": 12.0,
+      "masse_kg": 2.1,
+      "empreinte_kgco2e": 1.9299000000000002
+    },
+    {
+      "type": "Flyer A6 - 10,5 x 14,8 cm",
+      "id": "flyer_a6_10_5_x_14_8_cm",
+      "grammage_g_m2": 300.0,
+      "source": "Lien",
+      "surface": 0.01554,
+      "masse_kg": 0.004662,
+      "empreinte_kgco2e": 0.004284378
+    },
+    {
+      "type": "Flyer 1/3 de A4 - 9,9 x 21 cm",
+      "id": "flyer_1_3_de_a4_9_9_x_21_cm",
+      "grammage_g_m2": 300.0,
+      "source": "Lien",
+      "surface": 0.02079,
+      "masse_kg": 0.006237,
+      "empreinte_kgco2e": 0.005731803000000001
+    },
+    {
+      "type": "Flyer A5 - 14,8 x 21 cm",
+      "id": "flyer_a5_14_8_x_21_cm",
+      "grammage_g_m2": 300.0,
+      "source": "Lien",
+      "surface": 0.03108,
+      "masse_kg": 0.009324,
+      "empreinte_kgco2e": 0.008568756
+    },
+    {
+      "type": "Flyer A4 - 21 x 29,7 cm",
+      "id": "flyer_a4_21_x_29_7_cm",
+      "grammage_g_m2": 300.0,
+      "source": "Lien",
+      "surface": 0.062369999999999995,
+      "masse_kg": 0.018711,
+      "empreinte_kgco2e": 0.017195409
+    },
+    {
+      "type": "Dépliant standard",
+      "id": "depliant_standard",
+      "grammage_g_m2": 150.0,
+      "source": "Lien",
+      "surface": 0.062369999999999995,
+      "masse_kg": 0.0093555,
+      "empreinte_kgco2e": 0.0085977045
+    },
+    {
+      "type": "Kakemono",
+      "id": "kakemono",
+      "grammage_g_m2": null,
+      "source": null,
+      "surface": null,
+      "masse_kg": 3.0,
+      "empreinte_kgco2e": 7.740900000000001
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

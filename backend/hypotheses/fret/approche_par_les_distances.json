@@ -1,0 +1,164 @@
+{
+  "section": "9. Fret",
+  "table": "approche_par_les_distances",
+  "data": [
+    {
+      "type": "VUL < 3,5 tonnes",
+      "id": "vul_3_5_tonnes",
+      "motorisation": "Essence",
+      "kgco2_t_km": 1.16,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Rigide - 3,5 à 7,5 tonnes",
+      "id": "rigide_3_5_a_7_5_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.378,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Rigide - 7,5 à 12 tonnes",
+      "id": "rigide_7_5_a_12_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.241,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Rigide - 12 à 20 tonnes",
+      "id": "rigide_12_a_20_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.16,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Rigide - 20 à 26  tonnes",
+      "id": "rigide_20_a_26_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.135,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Rigide - 26 à 32  tonnes",
+      "id": "rigide_26_a_32_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.105,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Articulé < 34 tonnes",
+      "id": "articule_34_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.0853,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Articulé 34 à 40 tonnes",
+      "id": "articule_34_a_40_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.0823,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Articulé 40 à 44  tonnes",
+      "id": "articule_40_a_44_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.0711,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Articulé 44  à 60 tonnes",
+      "id": "articule_44_a_60_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.0674,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Articulé 60 à 72 tonnes",
+      "id": "articule_60_a_72_tonnes",
+      "motorisation": "Diesel routier, incorporation 7 % de biodiesel",
+      "kgco2_t_km": 0.0675,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo/10 à 25 tonnes, 500 - 1000 kms",
+      "id": "avion_cargo_10_a_25_tonnes_500_1000_kms",
+      "motorisation": null,
+      "kgco2_t_km": 3.47,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo/10 à 25 tonnes, <500 kms",
+      "id": "avion_cargo_10_a_25_tonnes_500_kms",
+      "motorisation": null,
+      "kgco2_t_km": 3.1,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo/26 à 100 tonnes, 500 - 1000 kms",
+      "id": "avion_cargo_26_a_100_tonnes_500_1000_kms",
+      "motorisation": null,
+      "kgco2_t_km": 3.45,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo/26 à 100 tonnes <500 - 1000 kms",
+      "id": "avion_cargo_26_a_100_tonnes_500_1000_kms",
+      "motorisation": null,
+      "kgco2_t_km": 5.43,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo > 100 tonnes > 3500 kms",
+      "id": "avion_cargo_100_tonnes_3500_kms",
+      "motorisation": null,
+      "kgco2_t_km": 1.08,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo > 100 tonnes, 1000 - 3500 kms",
+      "id": "avion_cargo_100_tonnes_1000_3500_kms",
+      "motorisation": null,
+      "kgco2_t_km": 1.74,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo > 100 tonnes, 500 - 1000 kms",
+      "id": "avion_cargo_100_tonnes_500_1000_kms",
+      "motorisation": null,
+      "kgco2_t_km": 2.56,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Avion cargo > 100 tonnes <500 kms",
+      "id": "avion_cargo_100_tonnes_500_kms",
+      "motorisation": null,
+      "kgco2_t_km": 3.47,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Train moyen en France",
+      "id": "train_moyen_en_france",
+      "motorisation": null,
+      "kgco2_t_km": 0.00959,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Navire de charge 10 000 à 20 000 tonnes/HFO-MGO",
+      "id": "navire_de_charge_10_000_a_20_000_tonnes_hfo_mgo",
+      "motorisation": null,
+      "kgco2_t_km": 0.0132,
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Navire de charge < 10 000 tonnes/HFO-MGO",
+      "id": "navire_de_charge_10_000_tonnes_hfo_mgo",
+      "motorisation": null,
+      "kgco2_t_km": 0.0191,
+      "source": "Base Carbone"
+    }
+  ],
+  "meta": {
+    "unite": "kgCO2/t.km",
+    "source": "Paramètres et hypothèses"
+  }
+}

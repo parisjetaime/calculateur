@@ -1,0 +1,16 @@
+{
+  "section": "8. Communication",
+  "table": "streaming_mobile",
+  "data": [
+    {
+      "type": "Streaming 1080p 60 fps via une connexion mobile",
+      "id": "streaming_1080p_60_fps_via_une_connexion_mobile",
+      "facteur_emissions": 0.104,
+      "unite": "kgCO2e/h",
+      "source": "NegaOctet"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

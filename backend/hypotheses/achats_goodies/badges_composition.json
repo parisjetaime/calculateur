@@ -1,0 +1,83 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "badges_composition",
+  "data": [
+    {
+      "type": "Plastique souple",
+      "id": "plastique_souple",
+      "composition": [
+        {
+          "type": "Plastique",
+          "kg": 0.005,
+          "id": "plastique",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Textile",
+          "kg": 0.007,
+          "id": "textile",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Papier",
+          "kg": 0.001,
+          "id": "papier",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Aluminium",
+          "kg": 0.005,
+          "id": "aluminium",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Total",
+          "kg": 0.018000000000000002,
+          "id": "total",
+          "source": "Pesée badge"
+        }
+      ]
+    },
+    {
+      "type": "Plastique rigide",
+      "id": "plastique_rigide",
+      "composition": [
+        {
+          "type": "Plastique",
+          "kg": 0.008,
+          "id": "plastique",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Textile",
+          "kg": 0.007,
+          "id": "textile",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Papier",
+          "kg": 0.001,
+          "id": "papier",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Aluminium",
+          "kg": 0.005,
+          "id": "aluminium",
+          "source": "Pesée badge"
+        },
+        {
+          "type": "Total",
+          "kg": 0.021,
+          "id": "total",
+          "source": "Pesée badge"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kg",
+    "source_donnees": "Pesée badge"
+  }
+}

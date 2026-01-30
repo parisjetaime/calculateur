@@ -1,0 +1,238 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "accessoires_sportifs",
+  "data": [
+    {
+      "type": "Ballon, Basket-ball",
+      "id": "ballon_basket_ball",
+      "perimetre": "France continentale",
+      "valeur": 4.6
+    },
+    {
+      "type": "Ballon, Football",
+      "id": "ballon_football",
+      "perimetre": "France continentale",
+      "valeur": 4.12
+    },
+    {
+      "type": "Ballon, Volley-ball",
+      "id": "ballon_volley_ball",
+      "perimetre": "France continentale",
+      "valeur": 2.25
+    },
+    {
+      "type": "equitation, bombe",
+      "id": "equitation_bombe",
+      "perimetre": "Monde",
+      "valeur": 2.6
+    },
+    {
+      "type": "equitation, cravache",
+      "id": "equitation_cravache",
+      "perimetre": "Monde",
+      "valeur": 2.4
+    },
+    {
+      "type": "equitation, harnais",
+      "id": "equitation_harnais",
+      "perimetre": "Monde",
+      "valeur": 24.0
+    },
+    {
+      "type": "equitation, pantalon",
+      "id": "equitation_pantalon",
+      "perimetre": "Monde",
+      "valeur": 4.0
+    },
+    {
+      "type": "equitation, selle",
+      "id": "equitation_selle",
+      "perimetre": "Monde",
+      "valeur": 160.0
+    },
+    {
+      "type": "equitation, Veste",
+      "id": "equitation_veste",
+      "perimetre": "Monde",
+      "valeur": 4.0
+    },
+    {
+      "type": "escrime, épée",
+      "id": "escrime_epee",
+      "perimetre": "Monde",
+      "valeur": 2.2
+    },
+    {
+      "type": "escrime, fleuret",
+      "id": "escrime_fleuret",
+      "perimetre": "Monde",
+      "valeur": 1.6
+    },
+    {
+      "type": "masque, escrime",
+      "id": "masque_escrime",
+      "perimetre": "Monde",
+      "valeur": 7.7
+    },
+    {
+      "type": "pantalon, escrime",
+      "id": "pantalon_escrime",
+      "perimetre": "Monde",
+      "valeur": 6.4
+    },
+    {
+      "type": "escrime, Sabre",
+      "id": "escrime_sabre",
+      "perimetre": "Monde",
+      "valeur": 1.6
+    },
+    {
+      "type": "balle, golf",
+      "id": "balle_golf",
+      "perimetre": "Monde",
+      "valeur": 12.21
+    },
+    {
+      "type": "golf, club",
+      "id": "golf_club",
+      "perimetre": "Monde",
+      "valeur": 3.7
+    },
+    {
+      "type": "gymnastique, chaussons",
+      "id": "gymnastique_chaussons",
+      "perimetre": "Monde",
+      "valeur": 2.0
+    },
+    {
+      "type": "Ballon, handball",
+      "id": "ballon_handball",
+      "perimetre": "Monde",
+      "valeur": 2.5
+    },
+    {
+      "type": "short, handball",
+      "id": "short_handball",
+      "perimetre": "Monde",
+      "valeur": 0.9
+    },
+    {
+      "type": "judo, kimono",
+      "id": "judo_kimono",
+      "perimetre": "Monde",
+      "valeur": 16.0
+    },
+    {
+      "type": "judo, pantalon de kimono",
+      "id": "judo_pantalon_de_kimono",
+      "perimetre": "Monde",
+      "valeur": 5.0
+    },
+    {
+      "type": "natation, lunettes",
+      "id": "natation_lunettes",
+      "perimetre": "Monde",
+      "valeur": 0.2
+    },
+    {
+      "type": "maillot, natation",
+      "id": "maillot_natation",
+      "perimetre": "Monde",
+      "valeur": 0.4
+    },
+    {
+      "type": "natation, pince nez",
+      "id": "natation_pince_nez",
+      "perimetre": "Monde",
+      "valeur": 0.04
+    },
+    {
+      "type": "bouteille de plongée",
+      "id": "bouteille_de_plongee",
+      "perimetre": "Monde",
+      "valeur": 4.4
+    },
+    {
+      "type": "plongée, masque",
+      "id": "plongee_masque",
+      "perimetre": "Monde",
+      "valeur": 0.4
+    },
+    {
+      "type": "plongée, tuba",
+      "id": "plongee_tuba",
+      "perimetre": "Monde",
+      "valeur": 0.1
+    },
+    {
+      "type": "tennis, Raquette",
+      "id": "tennis_raquette",
+      "perimetre": "France continentale",
+      "valeur": 20.2
+    },
+    {
+      "type": "Sac à dos, randonnée",
+      "id": "sac_a_dos_randonnee",
+      "perimetre": "France continentale",
+      "valeur": 6.01
+    },
+    {
+      "type": "sport d'hiver, casque",
+      "id": "sport_d_hiver_casque",
+      "perimetre": "Monde",
+      "valeur": 1.2
+    },
+    {
+      "type": "sport d'hiver, skis",
+      "id": "sport_d_hiver_skis",
+      "perimetre": "Monde",
+      "valeur": 15.0
+    },
+    {
+      "type": "sport d'hiver, snowboard",
+      "id": "sport_d_hiver_snowboard",
+      "perimetre": "Monde",
+      "valeur": 8.6
+    },
+    {
+      "type": "sport nautique, planche à voile",
+      "id": "sport_nautique_planche_a_voile",
+      "perimetre": "Monde",
+      "valeur": 220.0
+    },
+    {
+      "type": "Balle de tennis",
+      "id": "balle_de_tennis",
+      "perimetre": "Monde",
+      "valeur": 0.2
+    },
+    {
+      "type": "maillot, tout sport",
+      "id": "maillot_tout_sport",
+      "perimetre": "Monde",
+      "valeur": 1.0
+    },
+    {
+      "type": "chaussettes",
+      "id": "chaussettes",
+      "perimetre": "Monde",
+      "valeur": 0.3
+    },
+    {
+      "type": "short",
+      "id": "short",
+      "perimetre": "Monde",
+      "valeur": 0.8
+    },
+    {
+      "type": "volley, genouillères",
+      "id": "volley_genouilleres",
+      "perimetre": "Monde",
+      "valeur": 1.1
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2e/unité"
+  }
+}

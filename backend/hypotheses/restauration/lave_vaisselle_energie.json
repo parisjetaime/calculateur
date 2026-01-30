@@ -1,0 +1,16 @@
+{
+  "section": "5. Restauration",
+  "table": "lave_vaisselle_energie",
+  "data": [
+    {
+      "consommation": 0.009642857142857142,
+      "unite": "kWh/pièce",
+      "source": "Lien",
+      "co2_lavage_kg_par_piece": 0.0005014285714285714,
+      "id": "lave_vaisselle_professionnel"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

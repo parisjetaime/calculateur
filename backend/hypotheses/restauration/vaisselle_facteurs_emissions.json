@@ -1,0 +1,39 @@
+{
+  "section": "5. Restauration",
+  "table": "vaisselle_facteurs_emissions",
+  "data": [
+    {
+      "type": "Facteur d'émissions (kgCO2/kg)- Base Carbone",
+      "id": "facteur_d_emissions_kgco2_kg_base_carbone",
+      "carton_jetable": 0.39,
+      "verre_ceramique": 0.923,
+      "plastique_pp_reutilisable": 2.0,
+      "plastique_pet_jetable": 3.27,
+      "plastique_ps_jetable": 2.83,
+      "inox": 2.211
+    },
+    {
+      "type": "Nombre d'usages (non jetable)",
+      "id": "nombre_d_usages_non_jetable",
+      "carton_jetable": 1.0,
+      "verre_ceramique": 500.0,
+      "plastique_pp_reutilisable": 35.0,
+      "plastique_pet_jetable": 1.0,
+      "plastique_ps_jetable": 1.0,
+      "inox": 1000.0
+    },
+    {
+      "type": "Source nombre d'usage",
+      "id": "source_nombre_d_usage",
+      "carton_jetable": "/",
+      "verre_ceramique": "CIRAIG",
+      "plastique_pp_reutilisable": "Grandchamp & al",
+      "plastique_pet_jetable": "/",
+      "plastique_ps_jetable": "/",
+      "inox": "Hypothèse"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

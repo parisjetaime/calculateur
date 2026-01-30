@@ -1,0 +1,34 @@
+{
+  "section": "1. Général",
+  "table": "types_evenements",
+  "data": {
+    "Evenement_professionnel": [
+      "Salon professionnel international",
+      "Salon professionnel national",
+      "Salon grand public",
+      "Evenement d'entreprise: conventions et AG",
+      "Evenement d'entreprise: communication extérieure",
+      "Evenement d'entreprise: séminaire",
+      "Evenement d'entreprise: soirée d'entreprise",
+      "Congrès national",
+      "Congrès international"
+    ],
+    "Evenement_culturel": [
+      "Festival",
+      "Exposition",
+      "Spectacle en salle (concert, théatre, …)",
+      "Evenement/spectacle en plein air",
+      "Tournage de spots/film"
+    ],
+    "Evenement_sportif": [
+      "Course à pied (marathons, trails, …)",
+      "Course hippique",
+      "Sport en salle (escrime, basketball, …)",
+      "Evenement en stade (match de football, athlétisme, …)",
+      "Autre évènement extérieur (beach-volley, régate, …)"
+    ]
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

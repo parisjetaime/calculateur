@@ -1,0 +1,15 @@
+{
+  "section": "5. Restauration",
+  "table": "ratio_monetaire",
+  "data": [
+    {
+      "type": "Service - Hébergement et restauration",
+      "valeur": 320.0,
+      "id": "service_hebergement_et_restauration"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2/k€"
+  }
+}

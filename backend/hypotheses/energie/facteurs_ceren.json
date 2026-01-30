@@ -1,0 +1,48 @@
+{
+  "section": "Energie",
+  "table": "facteurs_ceren",
+  "data": {
+    "unite": "kgCO2e/m2/an",
+    "valeurs": {
+      "Bureaux": {
+        "climatisation": 2.0,
+        "chauffage": 43.2,
+        "electricite_specifique": 6.3,
+        "id": "bureaux"
+      },
+      "Commerces": {
+        "climatisation": 1.9,
+        "chauffage": 36.6,
+        "electricite_specifique": 6.6,
+        "id": "commerces"
+      },
+      "Santé": {
+        "climatisation": 2.1,
+        "chauffage": 40.7,
+        "electricite_specifique": 3.5,
+        "id": "sante"
+      },
+      "Cafés, hôtels et restaurants": {
+        "climatisation": 1.6,
+        "chauffage": 48.6,
+        "electricite_specifique": 4.1,
+        "id": "cafes_hotels_et_restaurants"
+      },
+      "Sport, loisir et culture": {
+        "climatisation": 1.0,
+        "chauffage": 48.6,
+        "electricite_specifique": 4.3,
+        "id": "sport_loisir_et_culture"
+      },
+      "Enseignement": {
+        "climatisation": 1.5,
+        "chauffage": 31.0,
+        "electricite_specifique": 0.8,
+        "id": "enseignement"
+      }
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

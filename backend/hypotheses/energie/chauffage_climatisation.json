@@ -1,0 +1,24 @@
+{
+  "section": "Energie",
+  "table": "hypotheses_chauffage_climatisation",
+  "data": {
+    "climatisation": {
+      "debut": "2022-07-15T00:00:00",
+      "fin": "2022-09-15T00:00:00",
+      "source": "Hypothèse"
+    },
+    "chauffage": {
+      "debut": "2022-10-15T00:00:00",
+      "fin": "2022-04-15T00:00:00",
+      "source": "Hypothèse"
+    },
+    "jours_par_an": {
+      "chauffage": 183,
+      "climatisation": 62,
+      "source": "Hypothèse"
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

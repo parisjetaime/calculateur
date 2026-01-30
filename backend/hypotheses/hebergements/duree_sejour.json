@@ -1,0 +1,105 @@
+{
+  "section": "6. Hébergements",
+  "table": "duree_sejour",
+  "data": [
+    {
+      "type": "Congrès national",
+      "duree_sejour_nuits": 2.0,
+      "id": "congres_national"
+    },
+    {
+      "type": "Congrès international",
+      "duree_sejour_nuits": 2.0,
+      "id": "congres_international"
+    },
+    {
+      "type": "Salon professionnel international",
+      "duree_sejour_nuits": 2.0,
+      "id": "salon_professionnel_international"
+    },
+    {
+      "type": "Salon professionnel national",
+      "duree_sejour_nuits": 2.0,
+      "id": "salon_professionnel_national"
+    },
+    {
+      "type": "Salon grand public",
+      "duree_sejour_nuits": 2.0,
+      "id": "salon_grand_public"
+    },
+    {
+      "type": "Evenement d'entreprise: conventions et AG",
+      "duree_sejour_nuits": 2.0,
+      "id": "evenement_d_entreprise_conventions_et_ag"
+    },
+    {
+      "type": "Evenement d'entreprise: communication extérieure",
+      "duree_sejour_nuits": 2.0,
+      "id": "evenement_d_entreprise_communication_exterieure"
+    },
+    {
+      "type": "Evenement d'entreprise: séminaire",
+      "duree_sejour_nuits": 2.0,
+      "id": "evenement_d_entreprise_seminaire"
+    },
+    {
+      "type": "Evenement d'entreprise: soirée d'entreprise",
+      "duree_sejour_nuits": 2.0,
+      "id": "evenement_d_entreprise_soiree_d_entreprise"
+    },
+    {
+      "type": "Course à pied (marathons, trails, …)",
+      "duree_sejour_nuits": 2.0,
+      "id": "course_a_pied_marathons_trails"
+    },
+    {
+      "type": "Course hippique",
+      "duree_sejour_nuits": 2.0,
+      "id": "course_hippique"
+    },
+    {
+      "type": "Sport en salle (escrime, basketball, …)",
+      "duree_sejour_nuits": 2.0,
+      "id": "sport_en_salle_escrime_basketball"
+    },
+    {
+      "type": "Evenement en stade (match de football, athlétisme, …)",
+      "duree_sejour_nuits": 2.0,
+      "id": "evenement_en_stade_match_de_football_athletisme"
+    },
+    {
+      "type": "Autre évènement extérieur (beach-volley, régate, …)",
+      "duree_sejour_nuits": 2.0,
+      "id": "autre_evenement_exterieur_beach_volley_regate"
+    },
+    {
+      "type": "Festival",
+      "duree_sejour_nuits": 2.0,
+      "id": "festival"
+    },
+    {
+      "type": "Exposition",
+      "duree_sejour_nuits": 1.0,
+      "id": "exposition"
+    },
+    {
+      "type": "Spectacle en salle (concert, théatre, …)",
+      "duree_sejour_nuits": 1.0,
+      "id": "spectacle_en_salle_concert_theatre"
+    },
+    {
+      "type": "Evenement/spectacle en plein air",
+      "duree_sejour_nuits": 1.0,
+      "id": "evenement_spectacle_en_plein_air"
+    },
+    {
+      "type": "Tournage de spots/film",
+      "duree_sejour_nuits": 2.0,
+      "id": "tournage_de_spots_film"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "nuits"
+  }
+}

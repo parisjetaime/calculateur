@@ -1,0 +1,141 @@
+{
+  "section": "Transport",
+  "table": "approche_depenses_pivot_par_evenement",
+  "data": {
+    "Salon professionnel international": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 128,
+      "dépenses transports accès IDF (€/exposant étranger)": 355.8,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 97.5,
+      "dépenses transports locaux (€/visiteur étranger)": 79.75,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 48.4,
+      "dépenses transports locaux (€/visiteur francilien)": 18.93,
+      "dépenses transports locaux (€/exposant étranger)": 50.74,
+      "dépenses transports locaux (€/exposant français hors IDF)": 42.61,
+      "dépenses transports locaux (€/exposant francilien)": 42.39,
+      "id": "salon_professionnel_international"
+    },
+    "Salon professionnel national": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 80,
+      "dépenses transports accès IDF (€/exposant étranger)": 210,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 69.55,
+      "dépenses transports locaux (€/visiteur étranger)": 39.88,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 12.38,
+      "dépenses transports locaux (€/visiteur francilien)": 6.52,
+      "dépenses transports locaux (€/exposant étranger)": 25.37,
+      "dépenses transports locaux (€/exposant français hors IDF)": 21.3,
+      "dépenses transports locaux (€/exposant francilien)": 21.19,
+      "id": "salon_professionnel_national"
+    },
+    "Salon grand public": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 71,
+      "dépenses transports accès IDF (€/exposant étranger)": 210,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 85.19,
+      "dépenses transports locaux (€/visiteur étranger)": 80.14,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 22.39,
+      "dépenses transports locaux (€/visiteur francilien)": 15.9,
+      "dépenses transports locaux (€/exposant étranger)": 50.74,
+      "dépenses transports locaux (€/exposant français hors IDF)": 42.61,
+      "dépenses transports locaux (€/exposant francilien)": 42.39,
+      "id": "salon_grand_public"
+    },
+    "Congrès national": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 437,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 124,
+      "dépenses transports accès IDF (€/exposant étranger)": 210,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 69.55,
+      "dépenses transports locaux (€/visiteur étranger)": 35.09,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 19.33,
+      "dépenses transports locaux (€/visiteur francilien)": 21.64,
+      "dépenses transports locaux (€/exposant étranger)": 25.3,
+      "dépenses transports locaux (€/exposant français hors IDF)": 21.27,
+      "dépenses transports locaux (€/exposant francilien)": 21.27,
+      "id": "congres_national"
+    },
+    "Congrès international": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 579,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 234,
+      "dépenses transports accès IDF (€/exposant étranger)": 210,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 69.55,
+      "dépenses transports locaux (€/visiteur étranger)": 52.63,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 33.2,
+      "dépenses transports locaux (€/visiteur francilien)": 41.3,
+      "dépenses transports locaux (€/exposant étranger)": 38.06,
+      "dépenses transports locaux (€/exposant français hors IDF)": 31.9,
+      "dépenses transports locaux (€/exposant francilien)": 31.9,
+      "id": "congres_international"
+    },
+    "Evenement d'entreprise: conventions et AG": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 80,
+      "dépenses transports locaux (€/visiteur étranger)": 19.94,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 6.19,
+      "dépenses transports locaux (€/visiteur francilien)": 3.26,
+      "dépenses transports locaux (€/exposant étranger)": 0,
+      "dépenses transports locaux (€/exposant français hors IDF)": 0,
+      "dépenses transports locaux (€/exposant francilien)": 0,
+      "id": "evenement_d_entreprise_conventions_et_ag"
+    },
+    "Evenement d'entreprise: communication extérieure": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 80,
+      "dépenses transports locaux (€/visiteur étranger)": 19.94,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 6.19,
+      "dépenses transports locaux (€/visiteur francilien)": 3.26,
+      "dépenses transports locaux (€/exposant étranger)": 0,
+      "dépenses transports locaux (€/exposant français hors IDF)": 0,
+      "dépenses transports locaux (€/exposant francilien)": 0,
+      "id": "evenement_d_entreprise_communication_exterieure"
+    },
+    "Evenement d'entreprise: séminaire": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 80,
+      "dépenses transports locaux (€/visiteur étranger)": 19.94,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 6.19,
+      "dépenses transports locaux (€/visiteur francilien)": 3.26,
+      "dépenses transports locaux (€/exposant étranger)": 0,
+      "dépenses transports locaux (€/exposant français hors IDF)": 0,
+      "dépenses transports locaux (€/exposant francilien)": 0,
+      "id": "evenement_d_entreprise_seminaire"
+    },
+    "Evenement d'entreprise: soirée d'entreprise": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 80,
+      "dépenses transports locaux (€/visiteur étranger)": 19.94,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 6.19,
+      "dépenses transports locaux (€/visiteur francilien)": 3.26,
+      "dépenses transports locaux (€/exposant étranger)": 0,
+      "dépenses transports locaux (€/exposant français hors IDF)": 0,
+      "dépenses transports locaux (€/exposant francilien)": 0,
+      "id": "evenement_d_entreprise_soiree_d_entreprise"
+    },
+    "Evenements culturels et sportifs": {
+      "dépenses transports accès IDF (€/visiteur étranger)": 449,
+      "Source": "Données OTCP",
+      "dépenses transports accès IDF (€/visiteur français hors IDF)": 71,
+      "dépenses transports accès IDF (€/exposant étranger)": 210,
+      "dépenses transports accès IDF (€/exposant français hors IDF)": 85.19,
+      "dépenses transports locaux (€/visiteur étranger)": 8.14,
+      "dépenses transports locaux (€/visiteur français hors IDF)": 6.64,
+      "dépenses transports locaux (€/visiteur francilien)": 6.64,
+      "dépenses transports locaux (€/exposant étranger)": 8.14,
+      "dépenses transports locaux (€/exposant français hors IDF)": 6.64,
+      "dépenses transports locaux (€/exposant francilien)": 6.64,
+      "id": "evenements_culturels_et_sportifs"
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

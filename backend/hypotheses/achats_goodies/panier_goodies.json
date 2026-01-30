@@ -1,0 +1,114 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "panier_goodies",
+  "data": [
+    {
+      "type": "Salon professionnel international",
+      "id": "salon_professionnel_international",
+      "depenses_petite_fourniture_stylo_personne": 0.05,
+      "depenses_petite_fourniture_porte_carte_personne": 0.25,
+      "depenses_tote_bag_textile_personne": 0.69,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 4.5,
+      "depenses_panier_goodies_personne": 5.49,
+      "kgco2_personne": 2.3241
+    },
+    {
+      "type": "Salon professionnel national",
+      "id": "salon_professionnel_national",
+      "depenses_petite_fourniture_stylo_personne": 0.05,
+      "depenses_petite_fourniture_porte_carte_personne": 0.25,
+      "depenses_tote_bag_textile_personne": 0.69,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 4.5,
+      "depenses_panier_goodies_personne": 5.49,
+      "kgco2_personne": 2.3241
+    },
+    {
+      "type": "Salon grand public",
+      "id": "salon_grand_public",
+      "depenses_petite_fourniture_stylo_personne": 0.05,
+      "depenses_petite_fourniture_porte_carte_personne": 0.25,
+      "depenses_tote_bag_textile_personne": 0.69,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 4.5,
+      "depenses_panier_goodies_personne": 5.49,
+      "kgco2_personne": 2.3241
+    },
+    {
+      "type": "Congrès national",
+      "id": "congres_national",
+      "depenses_petite_fourniture_stylo_personne": 0.05,
+      "depenses_petite_fourniture_porte_carte_personne": 0.25,
+      "depenses_tote_bag_textile_personne": 0.69,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 4.5,
+      "depenses_panier_goodies_personne": 5.49,
+      "kgco2_personne": 2.3241
+    },
+    {
+      "type": "Congrès international",
+      "id": "congres_international",
+      "depenses_petite_fourniture_stylo_personne": 0.05,
+      "depenses_petite_fourniture_porte_carte_personne": 0.25,
+      "depenses_tote_bag_textile_personne": 0.69,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 4.5,
+      "depenses_panier_goodies_personne": 5.49,
+      "kgco2_personne": 2.3241
+    },
+    {
+      "type": "Evenement d'entreprise: conventions et AG",
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "depenses_petite_fourniture_stylo_personne": 0.0,
+      "depenses_petite_fourniture_porte_carte_personne": 0.0,
+      "depenses_tote_bag_textile_personne": 0.0,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 0.0,
+      "depenses_panier_goodies_personne": 0.0
+    },
+    {
+      "type": "Evenement d'entreprise: communication extérieure",
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "depenses_petite_fourniture_stylo_personne": 0.0,
+      "depenses_petite_fourniture_porte_carte_personne": 0.0,
+      "depenses_tote_bag_textile_personne": 0.0,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 0.0,
+      "depenses_panier_goodies_personne": 0.0
+    },
+    {
+      "type": "Evenement d'entreprise: séminaire",
+      "id": "evenement_d_entreprise_seminaire",
+      "depenses_petite_fourniture_stylo_personne": 0.0,
+      "depenses_petite_fourniture_porte_carte_personne": 0.0,
+      "depenses_tote_bag_textile_personne": 0.0,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 0.0,
+      "depenses_panier_goodies_personne": 0.0
+    },
+    {
+      "type": "Evenement d'entreprise: soirée d'entreprise",
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "depenses_petite_fourniture_stylo_personne": 0.0,
+      "depenses_petite_fourniture_porte_carte_personne": 0.0,
+      "depenses_tote_bag_textile_personne": 0.0,
+      "depenses_cle_usb_produit_electronique_et_informatique_personne": 0.0,
+      "depenses_panier_goodies_personne": 0.0
+    },
+    {
+      "type": "Evenement culturel",
+      "id": "evenement_culturel",
+      "depenses_tote_bag_textile_personne": 3.23,
+      "depenses_mug_verre_personne": 2.0,
+      "depenses_gobelet_grab_plastique_personne": 1.23,
+      "depenses_panier_goodies_personne": 6.460000000000001,
+      "kgco2_personne": 6.522
+    },
+    {
+      "type": "Evenements sportifs",
+      "id": "evenements_sportifs",
+      "depenses_t_shirt_textile_personne": 3.5,
+      "depenses_medaille_objet_metallique_personne": 3.7,
+      "depenses_panier_goodies_personne": 7.2,
+      "kgco2_personne": 4.32
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "€/personne ou kgCO2/personne (selon poste)",
+    "source_donnees": "OTCP"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "section": "4. Aménagements et accueil",
+  "table": "Approche par les dépenses moyennes",
+  "data": {
+    "Salon professionnel international": {
+      "dépenses moyennes location site (€)": 138985.0,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 6876183.6,
+      "dépenses moyennes transport/manutention/stockage (€)": 250461.8,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 155.74003569427674
+    },
+    "Salon professionnel national": {
+      "dépenses moyennes location site (€)": 99330.0,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 1624935.6,
+      "dépenses moyennes transport/manutention/stockage (€)": 57172.8,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 109.4201776924744
+    },
+    "Salon grand public": {
+      "dépenses moyennes location site (€)": 128587.5,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 2009051.1,
+      "dépenses moyennes transport/manutention/stockage (€)": 69646.8,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 52.68864676754995
+    },
+    "Congrès national": {
+      "dépenses moyennes location site (€)": 44507.1,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 152462.3,
+      "dépenses moyennes transport/manutention/stockage (€)": 3602.7,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 253.24760101010102
+    },
+    "Congrès international": {
+      "dépenses moyennes location site (€)": 85469.9,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 232420.8,
+      "dépenses moyennes transport/manutention/stockage (€)": 4682.9,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 324.4489147271227
+    },
+    "Evenement d'entreprise: conventions et AG": {
+      "dépenses moyennes location site (€)": 22083.2,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 31744.6,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 180.63020134228188
+    },
+    "Evenement d'entreprise: communication extérieure": {
+      "dépenses moyennes location site (€)": 11517.5,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 8725.4,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 180.74017857142857
+    },
+    "Evenement d'entreprise: séminaire": {
+      "dépenses moyennes location site (€)": 2256.0,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 2857.6,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 54.400000000000006
+    },
+    "Evenement d'entreprise: soirée d'entreprise": {
+      "dépenses moyennes location site (€)": 13204.6,
+      "Source": "Données OTCP",
+      "dépenses moyennes aménagement du site (€)": 8436.2,
+      "dépenses moyennes aménagement (€/visiteur+exposant)": 114.50158730158732
+    }
+  }
+}

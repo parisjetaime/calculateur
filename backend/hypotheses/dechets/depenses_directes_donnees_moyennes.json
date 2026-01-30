@@ -1,0 +1,145 @@
+{
+  "section": "10. Déchets",
+  "table": "DEPENSES_DIRECTES_Donnees_moyennes",
+  "data": {
+    "Congrès national": {
+      "id": "congres_national",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 178028.48,
+        "Dépenses organisateur (€/visiteur+exposant)": 224.78343434343435,
+        "Part des coûts organisation : location du site": 0.25,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.31,
+        "Part des coûts organisation : reception/traiteur": 0.25,
+        "Dépenses directes totales exposants event-type (€)": 180136.0,
+        "Dépenses exposant étranger (€/entreprise exposante étrangère)": 13000.0,
+        "Dépenses exposant français (€/entreprise exposante française)": 11000.0,
+        "Part des coût exposants : aménagement du site/zone d'exposition (\"Forfait surface/Aménagement de l'espace\" + \"Aménagement de l'espace (conception, création et montage) + Accueil)": 0.54,
+        "Part des coûts exposants : transport/manutention/stockage": 0.02,
+        "Part des coûts exposants : reception/traiteur": 0.02
+      }
+    },
+    "Congrès international": {
+      "id": "congres_international",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 341879.69,
+        "Dépenses organisateur (€/visiteur+exposant)": 343.8672426625898,
+        "Part des coûts organisation : location du site": 0.25,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.31,
+        "Part des coûts organisation : reception/traiteur": 0.25,
+        "Dépenses directes totales exposants event-type (€)": 234144.6,
+        "Dépenses exposant étranger (€/entreprise exposante étrangère)": 13000.0,
+        "Dépenses exposant français (€/entreprise exposante française)": 11000.0,
+        "Part des coût exposants : aménagement du site/zone d'exposition (\"Forfait surface/Aménagement de l'espace\" + \"Aménagement de l'espace (conception, création et montage) + Accueil)": 0.54,
+        "Part des coûts exposants : transport/manutention/stockage": 0.02,
+        "Part des coûts exposants : reception/traiteur": 0.02
+      }
+    },
+    "Salon professionnel international": {
+      "id": "salon_professionnel_international",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 1263500.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 27.083339540601827,
+        "Part des coûts organisation : location du site": 0.11,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.09,
+        "Part des coûts organisation : exploitation": 0.12,
+        "Part des coûts organisation : Animation/Forum/Evènements": 0.23,
+        "Dépenses directes totales exposants event-type (€)": 12523090.0,
+        "Dépenses exposant étranger (€/entreprise exposante étrangère)": 49000.0,
+        "Dépenses exposant français (€/entreprise exposante française)": 22000.0,
+        "Part des coût exposants : aménagement du site/zone d'exposition (\"Forfait surface/Aménagement de l'espace\" + \"Aménagement de l'espace (conception, création et montage) + Accueil)": 0.54,
+        "Part des coûts exposants : transport/manutention/stockage": 0.02,
+        "Part des coûts exposants : reception/traiteur": 0.02
+      }
+    },
+    "Salon professionnel national": {
+      "id": "salon_professionnel_national",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 903000.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 55.464404750848736,
+        "Part des coûts organisation : location du site": 0.11,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.09,
+        "Part des coûts organisation : exploitation": 0.12,
+        "Part des coûts organisation : Animation/Forum/Evènements": 0.23,
+        "Dépenses directes totales exposants event-type (€)": 2858640.0,
+        "Dépenses exposant étranger (€/entreprise exposante étrangère)": 13000.0,
+        "Dépenses exposant français (€/entreprise exposante française)": 11000.0,
+        "Part des coût exposants : aménagement du site/zone d'exposition (\"Forfait surface/Aménagement de l'espace\" + \"Aménagement de l'espace (conception, création et montage) + Accueil)": 0.54,
+        "Part des coûts exposants : transport/manutention/stockage": 0.02,
+        "Part des coûts exposants : reception/traiteur": 0.02
+      }
+    },
+    "Salon grand public": {
+      "id": "salon_grand_public",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 857250.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 20.462846554180167,
+        "Part des coûts organisation : location du site": 0.15,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.15,
+        "Part des coûts organisation : exploitation": 0.12,
+        "Part des coûts organisation : Animation/Forum/Evènements": 0.23,
+        "Dépenses directes totales exposants event-type (€)": 3482340.0,
+        "Dépenses exposant étranger (€/entreprise exposante étrangère)": 13000.0,
+        "Dépenses exposant français (€/entreprise exposante française)": 9000.0,
+        "Part des coût exposants : aménagement du site/zone d'exposition (\"Forfait surface/Aménagement de l'espace\" + \"Aménagement de l'espace (conception, création et montage) + Accueil)": 0.54,
+        "Part des coûts exposants : transport/manutention/stockage": 0.02,
+        "Part des coûts exposants : reception/traiteur": 0.02
+      }
+    },
+    "Evenement d'entreprise: conventions et AG": {
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 138020.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 463.1543624161074,
+        "Part des coûts organisation : location du site": 0.16,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.23,
+        "Part des coûts organisation : reception/traiteur": 0.21
+      }
+    },
+    "Evenement d'entreprise: communication extérieure": {
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 34901.6,
+        "Dépenses organisateur (€/visiteur+exposant)": 311.62142857142857,
+        "Part des coûts organisation : location du site": 0.33,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.24,
+        "Part des coûts organisation : reception/traiteur": 0.25
+      }
+    },
+    "Evenement d'entreprise: séminaire": {
+      "id": "evenement_d_entreprise_seminaire",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 15040.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 160.0,
+        "Part des coûts organisation : location du site": 0.15,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.19,
+        "Part des coûts organisation : reception/traiteur": 0.24
+      }
+    },
+    "Evenement d'entreprise: soirée d'entreprise": {
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 36679.3,
+        "Dépenses organisateur (€/visiteur+exposant)": 194.0703703703704,
+        "Part des coûts organisation : location du site": 0.36,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.23,
+        "Part des coûts organisation : reception/traiteur": 0.28
+      }
+    },
+    "Evenements sportifs et culturels": {
+      "id": "evenements_sportifs_et_culturels",
+      "data": {
+        "Dépenses organisateur totales event-type (€)": 0.0,
+        "Dépenses organisateur (€/visiteur+exposant)": 0.0,
+        "Part des coûts organisation : location du site": 0.0,
+        "Part des coûts organisation : aménagement du site (\"Matériel technique et aménagement du site\" + \"Montage de la zone d'exposition standard\" + \"Acceuil sur le Congrès\" + \"Autres\")": 0.0,
+        "Part des coûts organisation : reception/traiteur": 0.0,
+        "Part des coûts organisation : exploitation": 0.0,
+        "Part des coûts organisation : Animation/Forum/Evènements": 0.0,
+        "Dépenses directes totales exposants event-type (€)": 0.0
+      }
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "badges_intensite",
+  "data": [
+    {
+      "type": "Plastique souple",
+      "intensite_carbone": 0.130419,
+      "id": "plastique_souple"
+    },
+    {
+      "type": "Plastique rigide",
+      "intensite_carbone": 0.136419,
+      "id": "plastique_rigide"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2e/badge"
+  }
+}

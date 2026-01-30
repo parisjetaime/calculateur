@@ -1,0 +1,229 @@
+{
+  "section": "10. Déchets",
+  "table": "DEPENSES_INDIRECTES_Donnees_moyennes",
+  "data": {
+    "Salon professionnel international": {
+      "id": "salon_professionnel_international",
+      "nb_visiteurs_moyen": 45000.0,
+      "pct_visiteurs_etrangers": 0.15,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.445,
+      "nombre_exposants_moyen": 1652.297,
+      "retombees_indirectes_eur": 17834965.69,
+      "retombees_indirectes_eur_par_personne": 382.2955532071658,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Salon professionnel national": {
+      "id": "salon_professionnel_national",
+      "nb_visiteurs_moyen": 15000.0,
+      "pct_visiteurs_etrangers": 0.03,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.485,
+      "nombre_exposants_moyen": 1280.7119999999998,
+      "retombees_indirectes_eur": 1979261.05,
+      "retombees_indirectes_eur_par_personne": 121.57091471183816,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Salon grand public": {
+      "id": "salon_grand_public",
+      "nb_visiteurs_moyen": 40000.0,
+      "pct_visiteurs_etrangers": 0.005,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.498,
+      "nombre_exposants_moyen": 1892.9985,
+      "retombees_indirectes_eur": 2753828.35,
+      "retombees_indirectes_eur_par_personne": 65.73481127162573,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Evenement d'entreprise: conventions et AG": {
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "nb_visiteurs_moyen": 298.0,
+      "pct_visiteurs_etrangers": 0.15,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.51,
+      "nombre_exposants_moyen": 0.0,
+      "retombees_indirectes_eur": 21770.45,
+      "retombees_indirectes_eur_par_personne": 73.05520134228188,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Evenement d'entreprise: communication extérieure": {
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "nb_visiteurs_moyen": 112.0,
+      "pct_visiteurs_etrangers": 0.17,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.64,
+      "nombre_exposants_moyen": 0.0,
+      "retombees_indirectes_eur": 7764.29,
+      "retombees_indirectes_eur_par_personne": 69.32401785714286,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Evenement d'entreprise: séminaire": {
+      "id": "evenement_d_entreprise_seminaire",
+      "nb_visiteurs_moyen": 94.0,
+      "pct_visiteurs_etrangers": 0.13,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.58,
+      "nombre_exposants_moyen": 0.0,
+      "retombees_indirectes_eur": 6261.38,
+      "retombees_indirectes_eur_par_personne": 66.6104255319149,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Evenement d'entreprise: soirée d'entreprise": {
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "nb_visiteurs_moyen": 189.0,
+      "pct_visiteurs_etrangers": 0.04,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.69,
+      "nombre_exposants_moyen": 0.0,
+      "retombees_indirectes_eur": 9079.41,
+      "retombees_indirectes_eur_par_personne": 48.039206349206346,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Congrès national": {
+      "id": "congres_national",
+      "nb_visiteurs_moyen": 712.0,
+      "pct_visiteurs_etrangers": 0.02,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.417,
+      "nombre_exposants_moyen": 80.0,
+      "retombees_indirectes_eur": 208759.6,
+      "retombees_indirectes_eur_par_personne": 263.58535353535353,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Congrès international": {
+      "id": "congres_international",
+      "nb_visiteurs_moyen": 893.0,
+      "pct_visiteurs_etrangers": 0.547,
+      "pct_visiteurs_franciliens_parmi_nationaux": 0.143,
+      "nombre_exposants_moyen": 101.22,
+      "retombees_indirectes_eur": 911025.77,
+      "retombees_indirectes_eur_par_personne": 916.3221118062401,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Course à pied (marathons, trails, …)": {
+      "id": "course_a_pied_marathons_trails",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Course hippique": {
+      "id": "course_hippique",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Sport en salle (escrime, basketball, …)": {
+      "id": "sport_en_salle_escrime_basketball",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Evenement en stade (match de football, athlétisme, …)": {
+      "id": "evenement_en_stade_match_de_football_athletisme",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Autre évènement extérieur (beach-volley, régate, …)": {
+      "id": "autre_evenement_exterieur_beach_volley_regate",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Festival": {
+      "id": "festival",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Exposition": {
+      "id": "exposition",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Spectacle en salle (concert, théatre, …)": {
+      "id": "spectacle_en_salle_concert_theatre",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Evenement/spectacle en plein air": {
+      "id": "evenement_spectacle_en_plein_air",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    },
+    "Tournage de spots/film": {
+      "id": "tournage_de_spots_film",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 2.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 2.0
+    },
+    "Evenements sportifs et culturels": {
+      "id": "evenements_sportifs_et_culturels",
+      "nb_visiteurs_moyen": null,
+      "pct_visiteurs_etrangers": null,
+      "pct_visiteurs_franciliens_parmi_nationaux": null,
+      "nombre_exposants_moyen": null,
+      "retombees_indirectes_eur": null,
+      "retombees_indirectes_eur_par_personne": null,
+      "duree_sejour_visiteur_jours": 1.0,
+      "duree_sejour_exposant_sportif_artiste_jours": 1.0
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

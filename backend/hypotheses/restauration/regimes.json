@@ -1,0 +1,57 @@
+{
+  "section": "5. Restauration",
+  "table": "regimes",
+  "data": [
+    {
+      "type": "à dominante animale (avec boeuf)",
+      "facteur_emissions": 7.26,
+      "unite": "kgCO2/repas",
+      "id": "a_dominante_animale_avec_boeuf"
+    },
+    {
+      "type": "à dominante animale (avec poulet)",
+      "facteur_emissions": 1.58,
+      "unite": "kgCO2/repas",
+      "id": "a_dominante_animale_avec_poulet"
+    },
+    {
+      "type": "à dominante végétale (avec boeuf)",
+      "facteur_emissions": 2.01,
+      "unite": "kgCO2/repas",
+      "id": "a_dominante_vegetale_avec_boeuf"
+    },
+    {
+      "type": "à dominante végétale (avec poulet)",
+      "facteur_emissions": 0.8,
+      "unite": "kgCO2/repas",
+      "id": "a_dominante_vegetale_avec_poulet"
+    },
+    {
+      "type": "classique (avec boeuf)",
+      "facteur_emissions": 6.29,
+      "unite": "kgCO2/repas",
+      "id": "classique_avec_boeuf"
+    },
+    {
+      "type": "classique (avec poulet)",
+      "facteur_emissions": 1.35,
+      "unite": "kgCO2/repas",
+      "id": "classique_avec_poulet"
+    },
+    {
+      "type": "moyen",
+      "facteur_emissions": 2.04,
+      "unite": "kgCO2/repas",
+      "id": "moyen"
+    },
+    {
+      "type": "végétarien",
+      "facteur_emissions": 0.51,
+      "unite": "kgCO2/repas",
+      "id": "vegetarien"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

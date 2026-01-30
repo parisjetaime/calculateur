@@ -1,0 +1,34 @@
+{
+  "section": "Energie",
+  "table": "reseaux_froid",
+  "data": {
+    "unite": "kgCO2e/kWh",
+    "valeurs": {
+      "Essonne": {
+        "Saclay": 0.053
+      },
+      "Hauts-de-Seine": {
+        "Courbevoie": 0.023,
+        "LEVALLOIS PERRET": 0.019,
+        "Suresnes": 0.033,
+        "Boulogne-Billancourt": 0.026
+      },
+      "Paris": {
+        "PARIS": 0.016
+      },
+      "Seine-Saint-Denis": {
+        "LE BOURGET": 0.073,
+        "Saint-Denis": 0.012
+      },
+      "Val-d'Oise": {
+        "ROISSY-EN-FRANCE": 0.02
+      },
+      "Val-de-Marne": {
+        "Orly": 0.017
+      }
+    }
+  },
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

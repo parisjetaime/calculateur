@@ -1,0 +1,45 @@
+{
+  "section": "8. Communication",
+  "table": "ratio_monetaire",
+  "data": [
+    {
+      "type": "Communication (général)",
+      "id": "communication_general",
+      "valeur": 170.0
+    },
+    {
+      "type": "Télécommunications",
+      "id": "telecommunications",
+      "valeur": 170.0
+    },
+    {
+      "type": "Edition",
+      "id": "edition",
+      "valeur": 280.0
+    },
+    {
+      "type": "Films, enregistrement sonores, télévision et radio",
+      "id": "films_enregistrement_sonores_television_et_radio",
+      "valeur": 310.0
+    },
+    {
+      "type": "Activités créatives, artistiques, culturelles, bibliothèques, et organisation de jeux de hasard",
+      "id": "activites_creatives_artistiques_culturelles_bibliotheques_et_organisation_de_jeux_de_hasard",
+      "valeur": 210.0
+    },
+    {
+      "type": "Activités sportives, récréatives et de loisirs",
+      "id": "activites_sportives_recreatives_et_de_loisirs",
+      "valeur": 270.0
+    },
+    {
+      "type": "Courrier",
+      "id": "courrier",
+      "valeur": 130.0
+    }
+  ],
+  "meta": {
+    "unite": "kgCO2/k€",
+    "source": "Paramètres et hypothèses"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "ratio_categorie",
+  "data": [
+    {
+      "type": "Objet en papier ou carton",
+      "valeur": 900.0,
+      "id": "objet_en_papier_ou_carton"
+    },
+    {
+      "type": "Livres, journaux, revues",
+      "valeur": 280.0,
+      "id": "livres_journaux_revues"
+    },
+    {
+      "type": "Produits minéraux (verre, ciment, etc)",
+      "valeur": 1800.0,
+      "id": "produits_mineraux_verre_ciment_etc"
+    },
+    {
+      "type": "Objet en plastiques et caoutchouc",
+      "valeur": 800.0,
+      "id": "objet_en_plastiques_et_caoutchouc"
+    },
+    {
+      "type": "Article en bois",
+      "valeur": 500.0,
+      "id": "article_en_bois"
+    },
+    {
+      "type": "Textile et habillement",
+      "valeur": 600.0,
+      "id": "textile_et_habillement"
+    },
+    {
+      "type": "Objet métallique",
+      "valeur": 600.0,
+      "id": "objet_metallique"
+    },
+    {
+      "type": "Produit électronique et informatique",
+      "valeur": 400.0,
+      "id": "produit_electronique_et_informatique"
+    },
+    {
+      "type": "Produit agroalimentaire",
+      "valeur": 1000.0,
+      "id": "produit_agroalimentaire"
+    },
+    {
+      "type": "Consommables bureautique",
+      "valeur": 917.0,
+      "id": "consommables_bureautique"
+    },
+    {
+      "type": "Petite fourniture",
+      "valeur": 367.0,
+      "id": "petite_fourniture"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2/k€"
+  }
+}

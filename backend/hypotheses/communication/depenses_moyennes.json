@@ -1,0 +1,82 @@
+{
+  "section": "8. Communication",
+  "table": "depenses_moyennes",
+  "data": [
+    {
+      "type": "Salon professionnel international",
+      "id": "salon_professionnel_international",
+      "depenses_moyennes_communication": 1505009.0,
+      "nombre_de_visiteurs": 45000.0,
+      "nombre_d_exposants_personnes": 1652.297,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 32.26012644136258
+    },
+    {
+      "type": "Salon professionnel national",
+      "id": "salon_professionnel_national",
+      "depenses_moyennes_communication": 466464.0,
+      "nombre_de_visiteurs": 15000.0,
+      "nombre_d_exposants_personnes": 1280.7119999999998,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 28.65132679700986
+    },
+    {
+      "type": "Salon grand public",
+      "id": "salon_grand_public",
+      "depenses_moyennes_communication": 605409.0,
+      "nombre_de_visiteurs": 40000.0,
+      "nombre_d_exposants_personnes": 1892.9985,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 14.45131696648546
+    },
+    {
+      "type": "Congrès national",
+      "id": "congres_national",
+      "depenses_moyennes_communication": 48278.4,
+      "nombre_de_visiteurs": 712.0,
+      "nombre_d_exposants_personnes": 80.0,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 60.95757575757576
+    },
+    {
+      "type": "Congrès international",
+      "id": "congres_international",
+      "depenses_moyennes_communication": 81534.0,
+      "nombre_de_visiteurs": 893.0,
+      "nombre_d_exposants_personnes": 101.22,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 82.00800627627687
+    },
+    {
+      "type": "Evenement d'entreprise: conventions et AG",
+      "id": "evenement_d_entreprise_conventions_et_ag",
+      "depenses_moyennes_communication": 6901.0,
+      "nombre_de_visiteurs": 298.0,
+      "nombre_d_exposants_personnes": 0.0,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 23.15771812080537
+    },
+    {
+      "type": "Evenement d'entreprise: communication extérieure",
+      "id": "evenement_d_entreprise_communication_exterieure",
+      "depenses_moyennes_communication": 2443.1,
+      "nombre_de_visiteurs": 112.0,
+      "nombre_d_exposants_personnes": 0.0,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 21.813392857142855
+    },
+    {
+      "type": "Evenement d'entreprise: séminaire",
+      "id": "evenement_d_entreprise_seminaire",
+      "depenses_moyennes_communication": 902.4,
+      "nombre_de_visiteurs": 94.0,
+      "nombre_d_exposants_personnes": 0.0,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 9.6
+    },
+    {
+      "type": "Evenement d'entreprise: soirée d'entreprise",
+      "id": "evenement_d_entreprise_soiree_d_entreprise",
+      "depenses_moyennes_communication": 733.6,
+      "nombre_de_visiteurs": 189.0,
+      "nombre_d_exposants_personnes": 0.0,
+      "depenses_moyennes_communication_personne_visiteurs_exposants": 3.8814814814814818
+    }
+  ],
+  "meta": {
+    "source_donnees": "Données OTCP",
+    "source": "Paramètres et hypothèses"
+  }
+}

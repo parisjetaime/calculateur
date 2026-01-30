@@ -1,0 +1,38 @@
+{
+  "section": "7. Achats et goodies",
+  "table": "badges_facteurs_materiaux",
+  "data": [
+    {
+      "type": "Plastique PP",
+      "valeur": 2.0,
+      "id": "plastique_pp",
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Papier",
+      "valeur": 0.919,
+      "id": "papier",
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Aluminium",
+      "valeur": 7.8,
+      "id": "aluminium",
+      "source": "Base Carbone"
+    },
+    {
+      "type": "Textile polyester",
+      "valeur": 11.5,
+      "id": "textile_polyester",
+      "source": "ADEME"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2e/kg",
+    "source_donnees": [
+      "ADEME",
+      "Base Carbone"
+    ]
+  }
+}

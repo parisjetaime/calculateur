@@ -1,0 +1,20 @@
+{
+  "section": "8. Communication",
+  "table": "composition_kakemono",
+  "data": [
+    {
+      "type": "Plastique",
+      "id": "plastique",
+      "kg": 2.7
+    },
+    {
+      "type": "Aluminium",
+      "id": "aluminium",
+      "kg": 0.30000000000000004
+    }
+  ],
+  "meta": {
+    "unite": "kg",
+    "source": "Paramètres et hypothèses"
+  }
+}

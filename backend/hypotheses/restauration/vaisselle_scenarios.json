@@ -1,0 +1,21 @@
+{
+  "section": "5. Restauration",
+  "table": "vaisselle_scenarios",
+  "data": [
+    {
+      "type": "Repas (petit-déjeuner, déjeuner et dîner)",
+      "jetable": "Gobelet jetable en carton + assiette repas jetable en carton + fourchette + cuillère + couteau jetables en carton",
+      "reutilisable": "Verre + assiette repas céramique + fourchette + cuillère + couteau en inox",
+      "id": "repas_petit_dejeuner_dejeuner_et_diner"
+    },
+    {
+      "type": "Collation",
+      "jetable": "Gobelet jetable en carton + assiette collation jetable en carton",
+      "reutilisable": "Verre + assiette collation en céramique",
+      "id": "collation"
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses"
+  }
+}

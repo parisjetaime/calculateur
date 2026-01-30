@@ -1,0 +1,38 @@
+{
+  "section": "6. Hébergements",
+  "table": "moyennes_emissions",
+  "data": [
+    {
+      "type": "moyenne_visiteur_etranger_et_hors_france_metropolitaine",
+      "id": "moyenne_visiteur_etranger_et_hors_france_metropolitaine",
+      "congres_national": 12.3176049,
+      "congres_international": 12.3176049,
+      "salon_professionnel_international": 6.941670400000001,
+      "salon_professionnel_national": 6.941670400000001,
+      "salon_grand_public": 6.941670400000001,
+      "evenement_d_entreprise_conventions_et_ag": 6.941670400000001,
+      "evenement_d_entreprise_communication_exterieure": 6.941670400000001,
+      "evenement_d_entreprise_seminaire": 6.941670400000001,
+      "evenement_d_entreprise_soiree_d_entreprise": 6.941670400000001,
+      "evenements_sportifs_et_culturels": 8.172559999999999
+    },
+    {
+      "type": "moyenne_visiteur_national_non_francilien",
+      "id": "moyenne_visiteur_national_non_francilien",
+      "congres_national": 7.8819648,
+      "congres_international": 7.8819648,
+      "salon_professionnel_international": 3.2552999999999996,
+      "salon_professionnel_national": 2.8527762839999995,
+      "salon_grand_public": 1.9344154600000003,
+      "evenement_d_entreprise_conventions_et_ag": 1.9344154600000003,
+      "evenement_d_entreprise_communication_exterieure": 1.9344154600000003,
+      "evenement_d_entreprise_seminaire": 1.9344154600000003,
+      "evenement_d_entreprise_soiree_d_entreprise": 1.9344154600000003,
+      "evenements_sportifs_et_culturels": 4.969799999999999
+    }
+  ],
+  "meta": {
+    "source": "Paramètres et hypothèses",
+    "unite": "kgCO2e/nuit"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "section": "4. Aménagements et accueil",
+  "table": "Approche par les dépenses",
+  "data": {
+    "Construction": 360.0,
+    "Achat de meubles": 600.0,
+    "Réparation et installation d'équipements": 390.0,
+    "Matériel de transport": 700.0,
+    "Bois et articles en bois": 500.0,
+    "Papier et carton": 900.0,
+    "Textile": 600.0,
+    "Entreposage et services auxiliaires des transports": 170.0,
+    "Location site": 170.0,
+    "Informatique et équipements électroniques": 400.0,
+    "Aménagement moyen (service imprimerie, publicité, architecture et ingénierie, maintenance multi-technique des bâtiments)": 170.0,
+    "Accueil": 170.0
+  },
+  "meta": {
+    "unite": "kgCO2/k€"
+  }
+}
