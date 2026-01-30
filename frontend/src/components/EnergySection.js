@@ -171,14 +171,14 @@ const BUILDING_TYPES = [
   { id: "Auditorium", label: "Auditorium", climatisation: 2.0, chauffage: 43.2, electricite: 6.3 },
   { id: "Stade", label: "Stade", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Gymnase", label: "Gymnase", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
-  { id: "Salle de spectacle polyvalente", label: "Salle de spectacle polyvalente", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Salle de spectacle polyvalente (ex : AccorHotelArena)", label: "Salle de spectacle polyvalente (ex : AccorHotelArena)", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Hippodrome", label: "Hippodrome", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Patinoire", label: "Patinoire", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Vélodrome", label: "Vélodrome", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Piscine", label: "Piscine", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Musées", label: "Musées", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Monuments", label: "Monuments", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
-  { id: "Centre d'exposition", label: "Centre d'exposition", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
+  { id: "Centre d'exposition (ex : Grande halle de la Villette)", label: "Centre d'exposition (ex : Grande halle de la Villette)", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
   { id: "Galeries d'art", label: "Galeries d'art", climatisation: 1.0, chauffage: 48.6, electricite: 4.3 },
 ];
 
