@@ -4,55 +4,104 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Recycle, Calculator, Trash2 } from "lucide-react";
+import { Trash2, Calculator, Recycle } from "lucide-react";
 
-// Facteurs d'émission déchets (kgCO2e/kg)
-const WASTE_FACTORS = {
-  "Plastique polypropylène souple": 0.33,
-  "Plastique polypropylène rigide": 0.33,
-  "Plastique (PET)": 0.27,
-  "Textile": 0.32,
-  "Papier": 0.13,
-  "Carton": 0.13,
-  "Aluminium": 0.28,
-  "Verre": 0.05,
-  "Déchets alimentaires": 0.15,
-  "Ameublement (moyen)": 0.25,
-  "DEEE (électronique)": 0.45,
-  "Déchets verts": 0.10,
-  "Ordures ménagères": 0.45,
-};
+// Types de déchets et facteurs d'émission (source: hypotheses/dechets)
+const WASTE_TYPES = [
+  { id: "plastique_pp_souple", label: "Plastique polypropylène souple", factor: 0.158 },
+  { id: "plastique_pp_rigide", label: "Plastique polypropylène rigide", factor: 0.205 },
+  { id: "plastique_pet", label: "Plastique PET", factor: 0.198 },
+  { id: "textile", label: "Textile", factor: 0.256 },
+  { id: "papier", label: "Papier", factor: 0.089 },
+  { id: "carton", label: "Carton", factor: 0.089 },
+  { id: "aluminium", label: "Aluminium", factor: 0.165 },
+  { id: "verre", label: "Verre", factor: 0.025 },
+  { id: "ameublement", label: "Ameublement (moyen)", factor: 0.450 },
+  { id: "alimentaire", label: "Déchets alimentaires", factor: 0.085 },
+  { id: "electronique", label: "Équipements électroniques", factor: 0.890 },
+];
 
-const WasteSection = ({ onSave, initialData, calculatedValues }) => {
+const WasteSection = ({ onSave, initialData, eventData, calculatedValues }) => {
   const [formData, setFormData] = useState({
-    // Déchets divers
-    waste_items: [
-      { type: "Ameublement (moyen)", weight: 0 },
-      { type: "Plastique (PET)", weight: 0 },
-      { type: "Carton", weight: 0 },
-      { type: "Papier", weight: 0 },
-      { type: "Verre", weight: 0 },
-      { type: "Déchets alimentaires", weight: 0 },
+    // Badges (calculés automatiquement depuis le module 7)
+    badges_plastic_soft_kg: 0,
+    badges_plastic_rigid_kg: 0,
+    badges_textile_kg: 0,
+    badges_paper_kg: 0,
+    badges_aluminum_kg: 0,
+    
+    // Vaisselle (calculés automatiquement depuis le module 5)
+    dishware_plastic_kg: 0,
+    dishware_cardboard_kg: 0,
+    
+    // Communication (calculés automatiquement depuis le module 8)
+    comm_paper_kg: 0,
+    comm_plastic_kg: 0,
+    comm_aluminum_kg: 0,
+    
+    // Déchets divers (saisie manuelle)
+    misc_waste: [
+      { type: "", weight: 0 },
+      { type: "", weight: 0 },
+      { type: "", weight: 0 },
+      { type: "", weight: 0 },
+      { type: "", weight: 0 },
     ],
     
     ...initialData,
   });
 
   const [calculatedEmissions, setCalculatedEmissions] = useState({
-    waste_items_emissions: [],
+    badges_emissions: 0,
+    dishware_emissions: 0,
+    communication_emissions: 0,
+    misc_emissions: [],
+    total_badges: 0,
+    total_dishware: 0,
+    total_communication: 0,
+    total_misc: 0,
     total: 0,
   });
 
   const calculateEmissions = useCallback(() => {
-    const wasteEmissions = formData.waste_items.map(item => {
-      const factor = WASTE_FACTORS[item.type] || 0;
-      return item.weight * factor;
+    // Émissions badges
+    const badgesEmissions = 
+      formData.badges_plastic_soft_kg * 0.158 +
+      formData.badges_plastic_rigid_kg * 0.205 +
+      formData.badges_textile_kg * 0.256 +
+      formData.badges_paper_kg * 0.089 +
+      formData.badges_aluminum_kg * 0.165;
+
+    // Émissions vaisselle
+    const dishwareEmissions = 
+      formData.dishware_plastic_kg * 0.198 +
+      formData.dishware_cardboard_kg * 0.089;
+
+    // Émissions communication
+    const communicationEmissions = 
+      formData.comm_paper_kg * 0.089 +
+      formData.comm_plastic_kg * 0.205 +
+      formData.comm_aluminum_kg * 0.165;
+
+    // Émissions déchets divers
+    const miscEmissions = formData.misc_waste.map(item => {
+      if (!item.type || !item.weight) return 0;
+      const wasteType = WASTE_TYPES.find(w => w.id === item.type);
+      return wasteType ? item.weight * wasteType.factor : 0;
     });
-    
-    const total = wasteEmissions.reduce((sum, e) => sum + e, 0);
+    const totalMisc = miscEmissions.reduce((sum, e) => sum + e, 0);
+
+    const total = badgesEmissions + dishwareEmissions + communicationEmissions + totalMisc;
 
     setCalculatedEmissions({
-      waste_items_emissions: wasteEmissions,
+      badges_emissions: badgesEmissions,
+      dishware_emissions: dishwareEmissions,
+      communication_emissions: communicationEmissions,
+      misc_emissions: miscEmissions,
+      total_badges: badgesEmissions,
+      total_dishware: dishwareEmissions,
+      total_communication: communicationEmissions,
+      total_misc: totalMisc,
       total,
     });
   }, [formData]);
@@ -61,129 +110,202 @@ const WasteSection = ({ onSave, initialData, calculatedValues }) => {
     calculateEmissions();
   }, [calculateEmissions]);
 
-  const handleWasteChange = (index, field, value) => {
-    const newWaste = [...formData.waste_items];
-    if (field === 'type') {
-      newWaste[index] = { ...newWaste[index], type: value };
-    } else {
-      newWaste[index] = { ...newWaste[index], weight: parseFloat(value) || 0 };
-    }
-    setFormData(prev => ({ ...prev, waste_items: newWaste }));
+  const handleChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleMiscChange = (index, field, value) => {
+    const newArray = [...formData.misc_waste];
+    newArray[index] = { ...newArray[index], [field]: value };
+    setFormData(prev => ({ ...prev, misc_waste: newArray }));
   };
 
   const handleSave = () => {
     if (onSave) {
-      onSave({ ...formData, total_emissions: calculatedEmissions.total });
+      onSave({
+        ...formData,
+        total_emissions: calculatedEmissions.total,
+      });
     }
   };
-
-  const wasteTypes = Object.keys(WASTE_FACTORS);
 
   return (
     <div className="max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-6">
+        {/* COLONNE GAUCHE - SAISIE */}
         <Card className="border-2 border-[#0d5f4d] shadow-lg">
           <CardHeader className="bg-[#0d5f4d] text-white py-3">
-            <CardTitle className="flex items-center gap-2 text-lg">
+            <CardTitle className="flex items-center gap-2 text-lg" style={{ fontFamily: 'Manrope, sans-serif' }}>
               <Recycle className="h-5 w-5" />
-              10. Déchets - Saisie
+              10. Déchets - Saisie des données
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-4 space-y-4">
-            <p className="text-sm text-gray-600">
-              Renseignez les quantités de déchets générés par l'événement.
-            </p>
-            
-            <div className="border-t pt-4">
-              <h4 className="text-sm font-semibold text-[#0d5f4d] mb-3 flex items-center gap-1">
-                <Trash2 className="h-4 w-4" /> Déchets divers
-              </h4>
-              
-              <div className="grid grid-cols-3 gap-2 mb-2 text-xs font-medium text-gray-600">
-                <div>Type de déchet</div>
-                <div>Poids (kg)</div>
-                <div></div>
-              </div>
-              
-              {formData.waste_items.map((item, i) => (
-                <div key={i} className="grid grid-cols-3 gap-2 items-center mb-2">
-                  <Select value={item.type} onValueChange={(val) => handleWasteChange(i, 'type', val)}>
-                    <SelectTrigger className="h-8 text-xs">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {wasteTypes.map(t => (
-                        <SelectItem key={t} value={t}>{t}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <Input
-                    type="number" min="0"
-                    value={item.weight || ''}
-                    onChange={(e) => handleWasteChange(i, 'weight', e.target.value)}
-                    className="h-8 text-sm"
-                    placeholder="0"
-                  />
-                  <span className="text-xs text-[#0d5f4d] font-medium">
-                    {calculatedEmissions.waste_items_emissions[i]?.toFixed(2) || 0} kgCO2e
-                  </span>
-                </div>
-              ))}
+            {/* Info message */}
+            <div className="bg-[#f0f7f5] border border-[#0d5f4d] rounded-lg p-3">
+              <p className="text-sm text-[#0d5f4d] font-medium">
+                Les déchets des badges, vaisselle et supports de communication sont calculés automatiquement 
+                à partir des données saisies dans les modules précédents.
+              </p>
             </div>
 
-            <div className="text-xs text-gray-500 mt-4 bg-gray-50 p-3 rounded">
-              <p className="font-medium mb-1">Note :</p>
-              <p>Les émissions liées aux badges, à la vaisselle et aux supports de communication 
-              sont calculées automatiquement à partir des données saisies dans les modules précédents.</p>
+            {/* Badges - générés automatiquement */}
+            <div className="pt-4 border-t border-gray-200">
+              <h4 className="text-sm font-semibold text-[#0d5f4d] mb-3">Badges (calculé automatiquement)</h4>
+              
+              <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
+                <div>
+                  <p>Plastique souple: {formData.badges_plastic_soft_kg.toFixed(2)} kg</p>
+                  <p>Plastique rigide: {formData.badges_plastic_rigid_kg.toFixed(2)} kg</p>
+                  <p>Textile: {formData.badges_textile_kg.toFixed(2)} kg</p>
+                </div>
+                <div>
+                  <p>Papier: {formData.badges_paper_kg.toFixed(2)} kg</p>
+                  <p>Aluminium: {formData.badges_aluminum_kg.toFixed(2)} kg</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vaisselle */}
+            <div className="pt-4 border-t border-gray-200">
+              <h4 className="text-sm font-semibold text-[#0d5f4d] mb-3">Vaisselle (calculé automatiquement)</h4>
+              
+              <div className="text-sm text-gray-600">
+                <p>Plastique PET: {formData.dishware_plastic_kg.toFixed(2)} kg</p>
+                <p>Carton: {formData.dishware_cardboard_kg.toFixed(2)} kg</p>
+              </div>
+            </div>
+
+            {/* Communication */}
+            <div className="pt-4 border-t border-gray-200">
+              <h4 className="text-sm font-semibold text-[#0d5f4d] mb-3">Supports de communication (calculé automatiquement)</h4>
+              
+              <div className="text-sm text-gray-600">
+                <p>Papier: {formData.comm_paper_kg.toFixed(2)} kg</p>
+                <p>Plastique: {formData.comm_plastic_kg.toFixed(2)} kg</p>
+                <p>Aluminium: {formData.comm_aluminum_kg.toFixed(2)} kg</p>
+              </div>
+            </div>
+
+            {/* Déchets divers - saisie manuelle */}
+            <div className="pt-4 border-t border-gray-200">
+              <h4 className="text-sm font-semibold text-[#0d5f4d] mb-3 flex items-center gap-2">
+                <Trash2 className="h-4 w-4" />
+                Déchets divers (saisie manuelle)
+              </h4>
+              
+              <div className="space-y-2">
+                <div className="grid grid-cols-12 gap-2 text-xs font-medium text-gray-600 mb-1">
+                  <div className="col-span-6">Type de déchet</div>
+                  <div className="col-span-3">Poids (kg)</div>
+                  <div className="col-span-3">kgCO2e</div>
+                </div>
+                
+                {formData.misc_waste.map((item, index) => (
+                  <div key={index} className="grid grid-cols-12 gap-2">
+                    <div className="col-span-6">
+                      <Select 
+                        value={item.type} 
+                        onValueChange={(val) => handleMiscChange(index, 'type', val)}
+                      >
+                        <SelectTrigger className="h-8 text-xs">
+                          <SelectValue placeholder="Type de déchet..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {WASTE_TYPES.map(type => (
+                            <SelectItem key={type.id} value={type.id}>{type.label}</SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="col-span-3">
+                      <Input
+                        type="number"
+                        min="0"
+                        step="0.1"
+                        value={item.weight || ''}
+                        onChange={(e) => handleMiscChange(index, 'weight', parseFloat(e.target.value) || 0)}
+                        className="h-8 text-xs"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div className="col-span-3 text-xs text-[#0d5f4d] font-medium flex items-center">
+                      {calculatedEmissions.misc_emissions[index]?.toFixed(2) || 0}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>
 
+        {/* COLONNE DROITE - CALCULS */}
         <Card className="border-2 border-[#0d5f4d] shadow-lg">
           <CardHeader className="bg-[#f0f7f5] py-3 border-b border-[#0d5f4d]">
-            <CardTitle className="flex items-center gap-2 text-lg text-[#0d5f4d]">
+            <CardTitle className="flex items-center gap-2 text-lg text-[#0d5f4d]" style={{ fontFamily: 'Manrope, sans-serif' }}>
               <Calculator className="h-5 w-5" />
               10. Déchets - Émissions calculées
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-4">
+            <h4 className="text-sm font-semibold text-[#0d5f4d] mb-2">Badges, vaisselle et communication</h4>
+            <div className="space-y-1 mb-4">
+              <div className="grid grid-cols-12 gap-2 py-1 px-2 hover:bg-gray-50 text-sm">
+                <div className="col-span-7">Déchets badges</div>
+                <div className="col-span-3 text-right font-bold text-[#0d5f4d]">
+                  {calculatedEmissions.total_badges.toFixed(1)}
+                </div>
+                <div className="col-span-2 text-gray-600">kgCO2e</div>
+              </div>
+              
+              <div className="grid grid-cols-12 gap-2 py-1 px-2 hover:bg-gray-50 text-sm">
+                <div className="col-span-7">Déchets vaisselle</div>
+                <div className="col-span-3 text-right font-bold text-[#0d5f4d]">
+                  {calculatedEmissions.total_dishware.toFixed(1)}
+                </div>
+                <div className="col-span-2 text-gray-600">kgCO2e</div>
+              </div>
+              
+              <div className="grid grid-cols-12 gap-2 py-1 px-2 hover:bg-gray-50 text-sm">
+                <div className="col-span-7">Déchets communication</div>
+                <div className="col-span-3 text-right font-bold text-[#0d5f4d]">
+                  {calculatedEmissions.total_communication.toFixed(1)}
+                </div>
+                <div className="col-span-2 text-gray-600">kgCO2e</div>
+              </div>
+            </div>
+
             <h4 className="text-sm font-semibold text-[#0d5f4d] mb-2">Déchets divers</h4>
             <div className="space-y-1 mb-4">
-              {formData.waste_items.map((item, i) => (
-                item.weight > 0 && (
-                  <div key={i} className="grid grid-cols-12 gap-2 py-1 px-2 text-sm hover:bg-gray-50">
-                    <div className="col-span-7">{item.type}</div>
+              {formData.misc_waste.map((item, index) => (
+                item.type && item.weight > 0 && (
+                  <div key={index} className="grid grid-cols-12 gap-2 py-1 px-2 hover:bg-gray-50 text-sm">
+                    <div className="col-span-7">{WASTE_TYPES.find(w => w.id === item.type)?.label}</div>
                     <div className="col-span-3 text-right font-bold text-[#0d5f4d]">
-                      {calculatedEmissions.waste_items_emissions[i]?.toFixed(2) || 0}
+                      {calculatedEmissions.misc_emissions[index]?.toFixed(1) || 0}
                     </div>
                     <div className="col-span-2 text-gray-600">kgCO2e</div>
                   </div>
                 )
               ))}
               
-              {formData.waste_items.every(item => !item.weight) && (
-                <p className="text-sm text-gray-500 text-center py-4">
-                  Aucun déchet renseigné
-                </p>
-              )}
-            </div>
-
-            <div className="border-t-2 border-[#0d5f4d] pt-3">
-              <div className="grid grid-cols-12 gap-2 py-3 px-2 bg-[#e8f5f0] rounded">
-                <div className="col-span-7 font-bold">TOTAL DÉCHETS</div>
-                <div className="col-span-3 text-right font-bold text-[#0d5f4d] text-lg">
-                  {calculatedEmissions.total.toFixed(2)}
+              <div className="grid grid-cols-12 gap-2 py-2 px-2 bg-[#f0f7f5] rounded text-sm">
+                <div className="col-span-7 font-semibold">Total déchets divers</div>
+                <div className="col-span-3 text-right font-bold text-[#0d5f4d]">
+                  {calculatedEmissions.total_misc.toFixed(1)}
                 </div>
                 <div className="col-span-2 text-gray-600">kgCO2e</div>
               </div>
             </div>
 
-            <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-              <p className="text-xs text-amber-800">
-                <strong>Rappel :</strong> Les déchets générés par les badges, la vaisselle jetable 
-                et les supports de communication papier sont liés aux quantités renseignées dans 
-                les modules 7 (Achats), 5 (Restauration) et 8 (Communication).
-              </p>
+            <div className="border-t-2 border-[#0d5f4d] pt-3">
+              <div className="grid grid-cols-12 gap-2 py-3 px-2 bg-[#e8f5f0] rounded text-sm">
+                <div className="col-span-7 font-bold">TOTAL DÉCHETS</div>
+                <div className="col-span-3 text-right font-bold text-[#0d5f4d] text-lg">
+                  {calculatedEmissions.total.toFixed(1)}
+                </div>
+                <div className="col-span-2 text-gray-600">kgCO2e</div>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -191,7 +313,11 @@ const WasteSection = ({ onSave, initialData, calculatedValues }) => {
 
       {onSave && (
         <div className="mt-6 flex justify-center">
-          <Button onClick={handleSave} className="bg-[#0d5f4d] hover:bg-[#0a4a3d] text-white px-8 py-3">
+          <Button
+            data-testid="save-waste-btn"
+            onClick={handleSave}
+            className="bg-[#0d5f4d] hover:bg-[#0a4a3d] text-white px-8 py-3 text-base"
+          >
             Enregistrer la section Déchets
           </Button>
         </div>
