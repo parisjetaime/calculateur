@@ -87,10 +87,10 @@ def get_emission_factors():
         for regime in hyp['restauration']['regimes']:
             catering_dict[regime['id']] = regime['facteur_emissions']
         
-        # Helper pour les supports de communication
-        comm_dict = {}
-        for support in hyp['communication']['supports_physiques']:
-            comm_dict[support['id']] = support['empreinte_kgco2e']
+        # Communication ratio - utiliser la première valeur (général)
+        comm_ratio = 170.0  # kgCO2/k€ - Communication général par défaut
+        if hyp['communication']['ratio_monetaire'] and len(hyp['communication']['ratio_monetaire']) > 0:
+            comm_ratio = hyp['communication']['ratio_monetaire'][0]['valeur']
         
         # Helper pour ratio goodies
         goodies_dict = {}
